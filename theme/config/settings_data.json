@@ -1,0 +1,21 @@
+{
+  "current": {
+    "color_ink": "#0A0A0A",
+    "color_paper": "#F4F1EC",
+    "color_brass": "#9A8868",
+    "font_display": "fraunces_n4",
+    "font_body": "inter_n4",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {}
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "tagline": "Clinically informed hair density formulas for men who act early."
+        }
+      }
+    }
+  }
+}

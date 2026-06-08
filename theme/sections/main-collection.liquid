@@ -1,0 +1,50 @@
+<section class="kestrel-collection">
+  <div class="page-width">
+    <div class="kestrel-collection__header">
+      <h1 class="kestrel-collection__title">{{ collection.title | default: "All Formulas" }}</h1>
+      <p class="kestrel-collection__count">{{ collection.products_count | default: 8 }} products</p>
+    </div>
+
+    <div class="kestrel-collection__grid">
+      {%- for product in collection.products -%}
+        <a href="{{ product.url }}" class="kestrel-product-card">
+          <div class="kestrel-product-card__image">
+            {%- if product.featured_image -%}
+              <img src="{{ product.featured_image | image_url: width: 600 }}"
+                   alt="{{ product.featured_image.alt | escape }}"
+                   width="600" height="600" loading="lazy">
+            {%- else -%}
+              <div style="width:70%;height:70%;background:linear-gradient(135deg,#ddd,#bbb);border-radius:4px;"></div>
+            {%- endif -%}
+          </div>
+          <p class="kestrel-product-card__name">{{ product.title }}</p>
+          <div class="kestrel-product-card__reviews">
+            <span class="kestrel-product-card__stars">
+              {%- for i in (1..5) -%}
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              {%- endfor -%}
+            </span>
+            <span class="kestrel-product-card__review-count">(128 reviews)</span>
+          </div>
+          <p class="kestrel-product-card__price">{{ product.price | money }}</p>
+        </a>
+      {%- else -%}
+        {%- for i in (1..8) -%}
+          <a href="#" class="kestrel-product-card">
+            <div class="kestrel-product-card__image">
+              <div style="width:70%;height:70%;background:linear-gradient(135deg,#ddd,#bbb);border-radius:4px;"></div>
+            </div>
+            <p class="kestrel-product-card__name">Botanical Serum</p>
+            <div class="kestrel-product-card__reviews">
+              <span class="kestrel-product-card__stars">
+                {%- for i in (1..5) -%}<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>{%- endfor -%}
+              </span>
+              <span class="kestrel-product-card__review-count">(128 reviews)</span>
+            </div>
+            <p class="kestrel-product-card__price">$49.00</p>
+          </a>
+        {%- endfor -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</section>

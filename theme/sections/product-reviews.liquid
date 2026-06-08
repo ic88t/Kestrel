@@ -1,0 +1,75 @@
+<section class="kestrel-reviews">
+  <div class="page-width">
+    <div class="kestrel-reviews__header">
+      <span class="kestrel-reviews__rating">4.8</span>
+      <span class="kestrel-reviews__stars">
+        {%- for i in (1..5) -%}
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        {%- endfor -%}
+      </span>
+      <span class="kestrel-reviews__count">Based on 332 reviews</span>
+    </div>
+
+    <div class="kestrel-reviews__bars">
+      <div class="kestrel-reviews__bar">
+        <span class="kestrel-reviews__bar-label">5</span>
+        <div class="kestrel-reviews__bar-track"><div class="kestrel-reviews__bar-fill" style="width:84%"></div></div>
+        <span class="kestrel-reviews__bar-count">281</span>
+      </div>
+      <div class="kestrel-reviews__bar">
+        <span class="kestrel-reviews__bar-label">4</span>
+        <div class="kestrel-reviews__bar-track"><div class="kestrel-reviews__bar-fill" style="width:12%"></div></div>
+        <span class="kestrel-reviews__bar-count">39</span>
+      </div>
+      <div class="kestrel-reviews__bar">
+        <span class="kestrel-reviews__bar-label">3</span>
+        <div class="kestrel-reviews__bar-track"><div class="kestrel-reviews__bar-fill" style="width:2%"></div></div>
+        <span class="kestrel-reviews__bar-count">6</span>
+      </div>
+      <div class="kestrel-reviews__bar">
+        <span class="kestrel-reviews__bar-label">2</span>
+        <div class="kestrel-reviews__bar-track"><div class="kestrel-reviews__bar-fill" style="width:1%"></div></div>
+        <span class="kestrel-reviews__bar-count">4</span>
+      </div>
+      <div class="kestrel-reviews__bar">
+        <span class="kestrel-reviews__bar-label">1</span>
+        <div class="kestrel-reviews__bar-track"><div class="kestrel-reviews__bar-fill" style="width:1%"></div></div>
+        <span class="kestrel-reviews__bar-count">2</span>
+      </div>
+    </div>
+
+    <div class="kestrel-reviews__actions">
+      <button class="kestrel-reviews__btn">Filters</button>
+      <button class="kestrel-reviews__btn kestrel-reviews__btn--primary">Write a Review</button>
+    </div>
+
+    <!-- Review list -->
+    {%- for i in (1..5) -%}
+      <div class="kestrel-review">
+        <div>
+          <p class="kestrel-review__author">Mark D.</p>
+          <p class="kestrel-review__verified">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Verified Buyer
+          </p>
+          <p class="kestrel-review__recommend">I recommend this product</p>
+        </div>
+        <div class="kestrel-review__body">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+            <span class="kestrel-review__stars">
+              {%- for i in (1..5) -%}<svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>{%- endfor -%}
+            </span>
+            <span class="kestrel-review__date">1 week ago</span>
+          </div>
+          <p class="kestrel-review__title-text">Great results after 3 months</p>
+          <p class="kestrel-review__text">I've been using the serum for about 3 months now and I'm genuinely impressed. My hair feels thicker and I've noticed significantly less shedding in the shower. The texture is light and doesn't leave any residue.</p>
+          <p class="kestrel-review__helpful">Was this helpful? 👍 0 👎 0</p>
+        </div>
+      </div>
+    {%- endfor -%}
+
+    <div style="text-align:center;margin-top:32px;">
+      <button class="kestrel-reviews__btn" style="min-width:160px;">Show More</button>
+    </div>
+  </div>
+</section>

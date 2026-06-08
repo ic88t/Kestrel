@@ -1,0 +1,91 @@
+[
+  {
+    "handle": "botanical-serum-01",
+    "name": "Botanical Serum",
+    "number": "01",
+    "ritual": "scalp",
+    "size": "59 ml",
+    "price": 58,
+    "tagline": "Daily plant-based scalp serum.",
+    "description": "A water-light leave-on serum built around rosemary leaf extract, ginger root, baicalin, and a Chlorella + Spirulina complex for hydration and follicular vitality. Engineered to be massaged into the scalp every morning, then forgotten.",
+    "ingredients": [
+      { "name": "Rosemary Leaf Extract", "role": "Follicular stimulant" },
+      { "name": "Ginger Root", "role": "Scalp circulation" },
+      { "name": "Chlorella + Spirulina", "role": "Algal hydration complex" },
+      { "name": "Baicalin", "role": "Anti-inflammatory" },
+      { "name": "Niacinamide", "role": "Sebum balance" },
+      { "name": "Vitamin C + E", "role": "Antioxidant pair" },
+      { "name": "Licorice Root", "role": "Scalp calming" }
+    ],
+    "howTo": [
+      "Apply 6-8 drops to a clean, dry scalp.",
+      "Massage for 1-2 minutes along the part line and crown.",
+      "Do not rinse. Wait 1-2 hours before washing.",
+      "Use every morning. Patience is the active ingredient."
+    ],
+    "claims": [
+      "Plant-based formula",
+      "Vegan, cruelty-free",
+      "Free of sulfates, silicones, parabens"
+    ]
+  },
+  {
+    "handle": "peptide-serum-02",
+    "name": "Peptide Serum",
+    "number": "02",
+    "ritual": "scalp",
+    "size": "30 ml",
+    "price": 88,
+    "tagline": "Overnight peptide regrowth serum.",
+    "description": "A higher-potency PM serum built on five biomimetic peptides (sh-Polypeptide-1, -9, -11; sh-Oligopeptide-2, -10) with saw palmetto and rosemary CO2. Engineered for the man addressing visible density change — applied to the part line three nights a week.",
+    "ingredients": [
+      { "name": "sh-Polypeptide-1, -9, -11", "role": "Follicular signalling" },
+      { "name": "sh-Oligopeptide-2, -10", "role": "Density support peptides" },
+      { "name": "Saw Palmetto", "role": "DHT-modulating extract" },
+      { "name": "Rosemary CO2", "role": "5a-reductase modulation" },
+      { "name": "Arginine", "role": "Strand strength" },
+      { "name": "Eucalyptus", "role": "Scalp clarifier" }
+    ],
+    "howTo": [
+      "Apply 4-6 drops to a dry scalp before bed.",
+      "Massage gently along the part line and crown.",
+      "Do not rinse. Use Mon / Wed / Fri.",
+      "Allow 12 weeks for visible new growth at the part line."
+    ],
+    "claims": [
+      "Five biomimetic peptides",
+      "Hormone-free, vegan, cruelty-free",
+      "Fragrance-free, silicone-free"
+    ]
+  },
+  {
+    "handle": "scalp-oil-03",
+    "name": "Scalp Oil",
+    "number": "03",
+    "ritual": "scalp",
+    "size": "30 ml",
+    "price": 48,
+    "tagline": "Weekly pre-wash scalp treatment.",
+    "description": "A cold-pressed blend of jojoba, argan, castor, and almond oils with ginseng, peppermint, rosemary, and tea tree. Massaged into a dry scalp twenty minutes before shampoo, it loosens sebum casts, calms reactivity, and conditions the follicle in a way no rinse-off product can.",
+    "ingredients": [
+      { "name": "Jojoba Oil", "role": "Sebum-mimetic carrier" },
+      { "name": "Argan Oil", "role": "Antioxidant emollient" },
+      { "name": "Castor Oil", "role": "Strand thickening" },
+      { "name": "Panax Ginseng", "role": "Follicular stimulant" },
+      { "name": "Rosemary Leaf Oil", "role": "Microcirculation" },
+      { "name": "Peppermint", "role": "Cooling activation" },
+      { "name": "Tea Tree", "role": "Antimicrobial" }
+    ],
+    "howTo": [
+      "Part hair into sections.",
+      "Apply one drop to each section of the scalp.",
+      "Massage until fully absorbed.",
+      "Leave 20 minutes, then shampoo as normal. Once weekly."
+    ],
+    "claims": [
+      "Cold-pressed oils only",
+      "No mineral oil, no silicones",
+      "100% essential-oil scent profile"
+    ]
+  }
+]

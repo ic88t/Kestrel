@@ -1,0 +1,35 @@
+<section class="kestrel-account" style="padding-top:80px;">
+  <div class="page-width">
+    <div class="kestrel-account__inner">
+      <p style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--color-text-muted);margin-bottom:12px;">Account</p>
+      <h1 class="kestrel-account__title">Create account.</h1>
+      <p class="kestrel-account__subtitle">Join KESTREL for exclusive access and updates.</p>
+
+      {%- form 'create_customer', novalidate: 'novalidate' -%}
+        {%- if form.errors -%}
+          <p style="color:#c00;font-size:13px;margin-bottom:16px;">{{ form.errors | default_errors }}</p>
+        {%- endif -%}
+        <div class="kestrel-account__field">
+          <label for="FirstName">First name</label>
+          <input type="text" id="FirstName" name="customer[first_name]" autocomplete="given-name" placeholder="John">
+        </div>
+        <div class="kestrel-account__field">
+          <label for="LastName">Last name</label>
+          <input type="text" id="LastName" name="customer[last_name]" autocomplete="family-name" placeholder="Doe">
+        </div>
+        <div class="kestrel-account__field">
+          <label for="Email">Email</label>
+          <input type="email" id="Email" name="customer[email]" autocomplete="email" autocorrect="off" autocapitalize="off" {% if form.errors contains 'email' %}aria-invalid="true"{% endif %} placeholder="you@example.com" required>
+        </div>
+        <div class="kestrel-account__field">
+          <label for="CreatePassword">Password</label>
+          <input type="password" id="CreatePassword" name="customer[password]" autocomplete="new-password" {% if form.errors contains 'password' %}aria-invalid="true"{% endif %} placeholder="••••••••" required>
+        </div>
+        <button type="submit" class="kestrel-account__submit">Create Account</button>
+        <div class="kestrel-account__links" style="justify-content:center;">
+          <a href="/account/login">Already have an account? Sign in</a>
+        </div>
+      {%- endform -%}
+    </div>
+  </div>
+</section>

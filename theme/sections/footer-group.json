@@ -1,0 +1,13 @@
+{
+  "name": "Footer Group",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "settings": {
+        "tagline": "Clinically informed hair density formulas for men who act early."
+      }
+    }
+  },
+  "order": ["footer"]
+}

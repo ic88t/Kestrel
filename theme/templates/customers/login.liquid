@@ -1,0 +1,28 @@
+<section class="kestrel-account" style="padding-top:80px;">
+  <div class="page-width">
+    <div class="kestrel-account__inner">
+      <p style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--color-text-muted);margin-bottom:12px;">Account</p>
+      <h1 class="kestrel-account__title">Sign in.</h1>
+      <p class="kestrel-account__subtitle">Use your email to sign in or create an account.</p>
+
+      {%- form 'customer_login', novalidate: 'novalidate' -%}
+        {%- if form.errors -%}
+          <p style="color:#c00;font-size:13px;margin-bottom:16px;">{{ form.errors | default_errors }}</p>
+        {%- endif -%}
+        <div class="kestrel-account__field">
+          <label for="CustomerEmail">Email</label>
+          <input type="email" id="CustomerEmail" name="customer[email]" autocomplete="email" autocorrect="off" autocapitalize="off" {% if form.errors contains 'form' %}aria-invalid="true"{% endif %} placeholder="you@example.com" required>
+        </div>
+        <div class="kestrel-account__field">
+          <label for="CustomerPassword">Password</label>
+          <input type="password" id="CustomerPassword" name="customer[password]" autocomplete="current-password" {% if form.errors contains 'form' %}aria-invalid="true"{% endif %} placeholder="••••••••" required>
+        </div>
+        <button type="submit" class="kestrel-account__submit">Sign In</button>
+        <div class="kestrel-account__links">
+          <a href="/account/register">Create account</a>
+          <a href="#recover">Forgot password?</a>
+        </div>
+      {%- endform -%}
+    </div>
+  </div>
+</section>

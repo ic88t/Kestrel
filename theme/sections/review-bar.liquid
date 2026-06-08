@@ -1,0 +1,134 @@
+{% comment %}
+  Kestrel Review Bar
+  — Marquee of review quotes with Trustpilot score
+{% endcomment %}
+
+<style>
+  .kestrel-review-bar {
+    background: var(--color-white);
+    border-bottom: 1px solid rgba(10,10,10,0.1);
+    overflow: hidden;
+    padding: 12px 0;
+  }
+  .kestrel-review-bar__track {
+    display: flex;
+    width: max-content;
+    gap: 32px;
+    align-items: center;
+    animation: marquee 40s linear infinite;
+  }
+  @media (min-width: 768px) {
+    .kestrel-review-bar__track { gap: 48px; }
+  }
+  .kestrel-review-bar__score {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+  .kestrel-review-bar__stars {
+    display: flex;
+    gap: 2px;
+  }
+  .kestrel-review-bar__stars svg {
+    width: 14px;
+    height: 14px;
+    fill: var(--color-ink);
+    color: var(--color-ink);
+  }
+  .kestrel-review-bar__rating {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-ink);
+  }
+  .kestrel-review-bar__source {
+    font-size: 12px;
+    color: rgba(10,10,10,0.5);
+    text-decoration: underline;
+  }
+  .kestrel-review-bar__quote {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: rgba(10,10,10,0.6);
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+  .kestrel-review-bar__dot {
+    color: rgba(10,10,10,0.3);
+  }
+  .kestrel-review-bar__quote-text {
+    font-style: italic;
+  }
+</style>
+
+<div class="kestrel-review-bar">
+  <div class="kestrel-review-bar__track">
+    <span class="kestrel-review-bar__score">
+      <span class="kestrel-review-bar__stars">
+        {%- for i in (1..5) -%}
+          <svg viewBox="0 0 20 20" fill="currentColor">
+            <path d="M9.53834 1.60996C9.70914 1.19932 10.2909 1.19932 10.4617 1.60996L12.5278 6.57744C12.5998 6.75056 12.7626 6.86885 12.9495 6.88383L18.3123 7.31376C18.7556 7.3493 18.9354 7.90256 18.5976 8.19189L14.5117 11.6919C14.3693 11.8139 14.3071 12.0053 14.3506 12.1876L15.5989 17.4208C15.7021 17.8534 15.2315 18.1954 14.8519 17.9635L10.2606 15.1592C10.1006 15.0615 9.89938 15.0615 9.73937 15.1592L5.14806 17.9635C4.76851 18.1954 4.29788 17.8534 4.40108 17.4208L5.64939 12.1876C5.69289 12.0053 5.6307 11.8139 5.48831 11.6919L1.40241 8.19189C1.06464 7.90256 1.24441 7.3493 1.68768 7.31376L7.05054 6.88383C7.23744 6.86885 7.40024 6.75056 7.47225 6.57744L9.53834 1.60996Z" />
+          </svg>
+        {%- endfor -%}
+      </span>
+      <span class="kestrel-review-bar__rating">{{ section.settings.rating }}</span>
+      <span class="kestrel-review-bar__source">on {{ section.settings.source }}</span>
+    </span>
+
+    {%- assign quotes = section.settings.quotes | newline_to_br | split: '<br />' -%}
+    {%- for q in quotes -%}
+      {%- assign quote = q | strip -%}
+      {%- if quote != '' -%}
+        <span class="kestrel-review-bar__quote">
+          <span class="kestrel-review-bar__dot">·</span>
+          <span class="kestrel-review-bar__quote-text">"{{ quote }}"</span>
+          <span class="kestrel-review-bar__dot">·</span>
+        </span>
+      {%- endif -%}
+    {%- endfor -%}
+    {%- for q in quotes -%}
+      {%- assign quote = q | strip -%}
+      {%- if quote != '' -%}
+        <span class="kestrel-review-bar__quote">
+          <span class="kestrel-review-bar__dot">·</span>
+          <span class="kestrel-review-bar__quote-text">"{{ quote }}"</span>
+          <span class="kestrel-review-bar__dot">·</span>
+        </span>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Review Bar",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "rating",
+      "label": "Rating",
+      "default": "4.8"
+    },
+    {
+      "type": "text",
+      "id": "source",
+      "label": "Review Source",
+      "default": "Trustpilot"
+    },
+    {
+      "type": "textarea",
+      "id": "quotes",
+      "label": "Review Quotes (one per line)",
+      "default": "I have noticed hair growth\nI'm so glad I've found their products\nA hair serum which actually works\nMy hairdresser noticed the improvement\nMuch thicker and much healthier\nThe results are fantastic\nVisible difference in just 3 months"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Review Bar"
+    }
+  ]
+}
+{% endschema %}

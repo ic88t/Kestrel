@@ -1,0 +1,184 @@
+<section class="kestrel-product">
+  <div class="page-width">
+    <div class="kestrel-product__grid">
+      <!-- Product Media -->
+      <div class="kestrel-product__media">
+        <div class="kestrel-product__main-image">
+          {%- if product.featured_image -%}
+            <img data-product-main-image src="{{ product.featured_image | image_url: width: 1200 }}"
+                 alt="{{ product.featured_image.alt | escape }}" width="800" height="800" loading="eager">
+          {%- else -%}
+            <div style="width:75%;height:75%;background:linear-gradient(135deg,#ddd,#bbb);border-radius:8px;"></div>
+          {%- endif -%}
+        </div>
+        <div class="kestrel-product__thumbs">
+          {%- for image in product.images limit: 5 -%}
+            <div class="kestrel-product__thumb {% if forloop.first %}is-active{% endif %}" data-product-thumb>
+              <img src="{{ image | image_url: width: 200 }}" data-src="{{ image | image_url: width: 1200 }}"
+                   alt="{{ image.alt | escape }}" width="200" height="200" loading="lazy">
+            </div>
+          {%- else -%}
+            <div class="kestrel-product__thumb is-active" data-product-thumb>
+              <div style="width:70%;height:70%;background:linear-gradient(135deg,#ddd,#bbb);border-radius:4px;"></div>
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+
+      <!-- Product Info -->
+      <div class="kestrel-product__info">
+        <h1 class="kestrel-product__title">{{ product.title | default: "SH1 | Daily Thickening Shampoo" }}</h1>
+
+        <div class="kestrel-product__reviews-summary">
+          <span class="kestrel-product__stars">
+            {%- for i in (1..5) -%}
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            {%- endfor -%}
+          </span>
+          <span class="kestrel-product__review-count">4.8 (132 Reviews)</span>
+        </div>
+
+        <p class="kestrel-product__tagline">{{ product.metafields.custom.tagline | default: "Blocks DHT | Promotes Growth | Clinically Tested" }}</p>
+
+        {%- form 'product', product, id: 'product-form', novalidate: 'novalidate' -%}
+          <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+
+          <!-- Purchase Options -->
+          <div class="kestrel-product__options">
+            <div class="kestrel-product__option is-selected">
+              <div class="kestrel-product__option-left">
+                <span class="kestrel-product__option-radio"></span>
+                <div>
+                  <div class="kestrel-product__option-label">Auto Reorder and Save</div>
+                  <div class="kestrel-product__option-sublabel">Delivered every 60 days</div>
+                </div>
+              </div>
+              <div class="kestrel-product__option-price">
+                <span style="text-decoration:line-through;color:var(--color-text-muted);">{{ product.compare_at_price | default: 4900 | money }}</span>
+                {{ product.price | default: 4410 | money }}
+                <span class="save">Save 10%</span>
+              </div>
+            </div>
+            <div class="kestrel-product__option">
+              <div class="kestrel-product__option-left">
+                <span class="kestrel-product__option-radio"></span>
+                <div>
+                  <div class="kestrel-product__option-label">Just Once</div>
+                </div>
+              </div>
+              <div class="kestrel-product__option-price">{{ product.price | default: 4900 | money }}</div>
+            </div>
+          </div>
+
+          <!-- Quantity + ATC -->
+          <div class="kestrel-product__actions">
+            <div class="kestrel-product__qty">
+              <button type="button" data-qty-minus>−</button>
+              <input type="number" name="quantity" value="1" min="1" data-qty-input>
+              <button type="button" data-qty-plus>+</button>
+            </div>
+            <button type="submit" class="kestrel-product__atc" name="add">
+              Add to Cart — {{ product.price | default: 4900 | money }}
+            </button>
+          </div>
+        {%- endform -%}
+
+        <p class="kestrel-product__payment-note">
+          Or 4 interest-free payments with <strong>afterpay</strong> or <strong>Klarna</strong>.
+        </p>
+
+        <!-- Accordion -->
+        <div class="kestrel-accordion" data-accordion-group>
+          <div class="kestrel-accordion__item" data-accordion-item>
+            <button class="kestrel-accordion__trigger" data-accordion-trigger>
+              Description
+              <span class="kestrel-accordion__icon"></span>
+            </button>
+            <div class="kestrel-accordion__content">
+              <div class="kestrel-accordion__body">
+                {{ product.description | default: "<p>Our clinically tested peptide complex supports hair density and reduces shedding. Formulated with biomimetic peptides, rosemary extract, and saw palmetto for visible results in 90 days.</p>" }}
+              </div>
+            </div>
+          </div>
+          <div class="kestrel-accordion__item" data-accordion-item>
+            <button class="kestrel-accordion__trigger" data-accordion-trigger>
+              How to Use
+              <span class="kestrel-accordion__icon"></span>
+            </button>
+            <div class="kestrel-accordion__content">
+              <div class="kestrel-accordion__body">
+                <p>Apply 1ml to dry or towel-dried scalp, focusing on thinning areas. Massage gently for 30 seconds. Use daily, morning or evening. Do not rinse. For best results, use consistently for 90 days.</p>
+              </div>
+            </div>
+          </div>
+          <div class="kestrel-accordion__item" data-accordion-item>
+            <button class="kestrel-accordion__trigger" data-accordion-trigger>
+              Key Actives
+              <span class="kestrel-accordion__icon"></span>
+            </button>
+            <div class="kestrel-accordion__content">
+              <div class="kestrel-accordion__body">
+                <p><strong>Redensyl®</strong> — Targets stem cells to reactivate hair growth.</p>
+                <p><strong>Procapil®</strong> — Strengthens follicles and improves anchoring.</p>
+                <p><strong>Rosemary Extract</strong> — Natural DHT modulator with clinical backing.</p>
+                <p><strong>Biotin Peptide</strong> — Supports keratin infrastructure.</p>
+              </div>
+            </div>
+          </div>
+          <div class="kestrel-accordion__item" data-accordion-item>
+            <button class="kestrel-accordion__trigger" data-accordion-trigger>
+              Ingredients
+              <span class="kestrel-accordion__icon"></span>
+            </button>
+            <div class="kestrel-accordion__content">
+              <div class="kestrel-accordion__body">
+                <p>Water (Aqua), Propanediol, Glycerin, Redensyl, Procapil, Rosemary Officinalis Leaf Extract, Biotinoyl Tripeptide-1, Apigenin, Oleanolic Acid, Caffeine, Niacinamide, Panthenol, Allantoin, Phenoxyethanol, Ethylhexylglycerin.</p>
+              </div>
+            </div>
+          </div>
+          <div class="kestrel-accordion__item" data-accordion-item>
+            <button class="kestrel-accordion__trigger" data-accordion-trigger>
+              Shipping and Returns
+              <span class="kestrel-accordion__icon"></span>
+            </button>
+            <div class="kestrel-accordion__content">
+              <div class="kestrel-accordion__body">
+                <p>Free shipping on orders over $60. Orders ship within 1 business day via USPS or UPS. 30-day satisfaction guarantee — return any unopened product for a full refund.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Works Well With -->
+        <div class="kestrel-wtw">
+          <p class="kestrel-wtw__title">Works Well With</p>
+          <div class="kestrel-wtw__list">
+            {%- for i in (1..3) -%}
+              <div class="kestrel-wtw__item">
+                <div class="kestrel-wtw__thumb">
+                  <div style="width:80%;height:80%;background:linear-gradient(135deg,#ddd,#bbb);border-radius:4px;"></div>
+                </div>
+                <div class="kestrel-wtw__info">
+                  <p class="kestrel-wtw__name">CD1 | Stimulating Conditioner</p>
+                  <span class="kestrel-wtw__stars">
+                    {%- for i in (1..5) -%}<svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>{%- endfor -%}
+                  </span>
+                  <p class="kestrel-wtw__price">$39.00</p>
+                </div>
+                <button class="kestrel-wtw__add">Add</button>
+              </div>
+            {%- endfor -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Main Product",
+  "settings": [],
+  "blocks": []
+}
+{% endschema %}

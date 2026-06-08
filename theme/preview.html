@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KESTREL — Full Site Preview</title>
+  <link rel="stylesheet" href="assets/theme-DCn_r1X3.css">
+  <link rel="stylesheet" href="preview-sections.css">
+  <style>
+    .page-divider {
+      background: var(--color-ink);
+      color: var(--color-brass);
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      padding: 16px 24px;
+      text-align: center;
+      border-top: 1px solid rgba(154,136,104,0.3);
+      border-bottom: 1px solid rgba(154,136,104,0.3);
+    }
+    .page-divider--light {
+      background: var(--color-paper);
+      color: var(--color-ink);
+      border-color: rgba(10,10,10,0.1);
+    }
+    .preview-badge {
+      position: fixed;
+      bottom: 16px;
+      right: 16px;
+      background: var(--color-ink);
+      color: var(--color-white);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 8px 16px;
+      z-index: 100;
+      border-radius: 2px;
+    }
+    /* Fix body bg for dark pages */
+    body { background: var(--color-white); }
+  </style>
+</head>
+<body>
+
+<!-- ==================== HEADER ==================== -->
+<header class="kestrel-header" data-header>
+  <div class="page-width kestrel-header__inner" style="height: var(--header-h); display: flex; align-items: center; justify-content: space-between;">
+    <nav class="kestrel-header__nav">
+      <a href="#">Shop</a>
+      <a href="#">Science</a>
+      <a href="#">Ritual</a>
+      <a href="#">Support</a>
+    </nav>
+    <a href="#" class="kestrel-header__logo">KESTREL</a>
+    <div class="kestrel-header__actions">
+      <a href="#" class="kestrel-header__cta">Hair Quiz</a>
+      <a href="#" class="kestrel-header__icon-btn relative" aria-label="Cart">
+        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ==================== HOMEPAGE ==================== -->
+<div class="page-divider">Homepage</div>
+
+<!-- Hero -->
+<section class="kestrel-hero">
+  <div class="page-width kestrel-hero__grid">
+    <div class="kestrel-hero__content">
+      <h1 class="kestrel-hero__title">Hair growth the natural way</h1>
+      <p class="kestrel-hero__subtitle">50,000+ users trust our clinically tested formulation to help reduce shedding and support growth.</p>
+      <div class="kestrel-hero__actions">
+        <a href="#" class="kestrel-hero__btn kestrel-hero__btn--primary">Shop Men <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" /></svg></a>
+        <a href="#" class="kestrel-hero__btn kestrel-hero__btn--secondary">Shop Women <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" /></svg></a>
+      </div>
+    </div>
+    <div class="kestrel-hero__image-wrap">
+      <div class="kestrel-hero__image" style="background: linear-gradient(135deg, #2a2a2a, #1a1a1a); display: flex; align-items: center; justify-content: center;">
+        <img src="assets/hero-product.jpg" alt="Product" style="width:100%;height:100%;object-fit:contain;opacity:0.9;">
+      </div>
+      <div class="kestrel-hero__card">
+        <div class="kestrel-hero__card-thumb"><img src="assets/hero-product.jpg" alt="" width="40" height="40" style="object-fit:cover;"></div>
+        <div><p class="kestrel-hero__card-title">Botanical Serum</p><p class="kestrel-hero__card-meta">Clinically Tested</p></div>
+        <div class="kestrel-hero__card-icon"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" /></svg></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Review Bar -->
+<div class="kestrel-review-bar">
+  <div class="kestrel-review-bar__track">
+    <span class="kestrel-review-bar__score">
+      <span class="kestrel-review-bar__stars">
+        <svg viewBox="0 0 20 20" fill="currentColor"><path d="M9.53834 1.60996C9.70914 1.19932 10.2909 1.19932 10.4617 1.60996L12.5278 6.57744C12.5998 6.75056 12.7626 6.86885 12.9495 6.88383L18.3123 7.31376C18.7556 7.3493 18.9354 7.90256 18.5976 8.19189L14.5117 11.6919C14.3693 11.8139 14.3071 12.0053 14.3506 12.1876L15.5989 17.4208C15.7021 17.8534 15.2315 18.1954 14.8519 17.9635L10.2606 15.1592C10.1006 15.0615 9.89938 15.0615 9.73937 15.1592L5.14806 17.9635C4.76851 18.1954 4.29788 17.8534 4.40108 17.4208L5.64939 12.1876C5.69289 12.0053 5.6307 11.8139 5.48831 11.6919L1.40241 8.19189C1.06464 7.90256 1.24441 7.3493 1.68768 7.31376L7.05054 6.88383C7.23744 6.86885 7.40024 6.75056 7.47225 6.57744L9.53834 1.60996Z"/></svg>
+        <svg viewBox="0 0 20 20" fill="currentColor"><path d="M9.53834 1.60996C9.70914 1.19932 10.2909 1.19932 10.4617 1.60996L12.5278 6.57744C12.5998 6.75056 12.7626 6.86885 12.9495 6.88383L18.3123 7.31376C18.7556 7.3493 18.9354 7.90256 18.5976 8.19189L14.5117 11.6919C14.3693 11.8139 14.3071 12.0053 14.3506 12.1876L15.5989 17.4208C15.7021 17.8534 15.2315 18.1954 14.8519 17.9635L10.2606 15.1592C10.1006 15.0615 9.89938 15.0615 9.73937 15.1592L5.14806 17.9635C4.76851 18.1954 4.29788 17.8534 4.40108 17.4208L5.64939 12.1876C5.69289 12.0053 5.6307 11.8139 5.48831 11.6919L1.40241 8.19189C1.06464 7.90256 1.24441 7.3493 1.68768 7.31376L7.05054 6.88383C7.23744 6.86885 7.40024 6.75056 7.47225 6.57744L9.53834 1.60996Z"/></svg>
+        <svg viewBox="0 0 20 20" fill="currentColor"><path d="M9.53834 1.60996C9.70914 1.19932 10.2909 1.19932 10.4617 1.60996L12.5278 6.57744C12.5998 6.75056 12.7626 6.86885 12.9495 6.88383L18.3123 7.31376C18.7556 7.3493 18.9354 7.90256 18.5976 8.19189L14.5117 11.6919C14.3693 11.8139 14.3071 12.0053 14.3506 12.1876L15.5989 17.4208C15.7021 17.8534 15.2315 18.1954 14.8519 17.9635L10.2606 15.1592C10.1006 15.0615 9.89938 15.0615 9.73937 15.1592L5.14806 17.9635C4.76851 18.1954 4.29788 17.8534 4.40108 17.4208L5.64939 12.1876C5.69289 12.0053 5.6307 11.8139 5.48831 11.6919L1.40241 8.19189C1.06464 7.90256 1.24441 7.3493 1.68768 7.31376L7.05054 6.88383C7.23744 6.86885 7.40024 6.75056 7.47225 6.57744L9.53834 1.60996Z"/></svg>
+        <svg viewBox="0 0 20 20" fill="currentColor"><path d="M9.53834 1.60996C9.70914 1.19932 10.2909 1.19932 10.4617 1.60996L12.5278 6.57744C12.5998 6.75056 12.7626 6.86885 12.9495 6.88383L18.3123 7.31376C18.7556 7.3493 18.9354 7.90256 18.5976 8.19189L14.5117 11.6919C14.3693 11.8139 14.3071 12.0053 14.3506 12.1876L15.5989 17.4208C15.7021 17.8534 15.2315 18.1954 14.8519 17.9635L10.2606 15.1592C10.1006 15.0615 9.89938 15.0615 9.73937 15.1592L5.14806 17.9635C4.76851 18.1954 4.29788 17.8534 4.40108 17.4208L5.64939 12.1876C5.69289 12.0053 5.6307 11.8139 5.48831 11.6919L1.40241 8.19189C1.06464 7.90256 1.24441 7.3493 1.68768 7.31376L7.05054 6.88383C7.23744 6.86885 7.40024 6.75056 7.47225 6.57744L9.53834 1.60996Z"/></svg>
+        <svg viewBox="0 0 20 20" fill="currentColor"><path d="M9.53834 1.60996C9.70914 1.19932 10.2909 1.19932 10.4617 1.60996L12.5278 6.57744C12.5998 6.75056 12.7626 6.86885 12.9495 6.88383L18.3123 7.31376C18.7556 7.3493 18.9354 7.90256 18.5976 8.19189L14.5117 11.6919C14.3693 11.8139 14.3071 12.0053 14.3506 12.1876L15.5989 17.4208C15.7021 17.8534 15.2315 18.1954 14.8519 17.9635L10.2606 15.1592C10.1006 15.0615 9.89938 15.0615 9.73937 15.1592L5.14806 17.9635C4.76851 18.1954 4.29788 17.8534 4.40108 17.4208L5.64939 12.1876C5.69289 12.0053 5.6307 11.8139 5.48831 11.6919L1.40241 8.19189C1.06464 7.90256 1.24441 7.3493 1.68768 7.31376L7.05054 6.88383C7.23744 6.86885 7.40024 6.75056 7.47225 6.57744L9.53834 1.60996Z"/></svg>
+      </span>
+      <span class="kestrel-review-bar__rating">4.8</span>
+      <span class="kestrel-review-bar__source">on Trustpilot</span>
+    </span>
+    <span class="kestrel-review-bar__quote"><span class="kestrel-review-bar__dot">·</span><span class="kestrel-review-bar__quote-text">"I have noticed hair growth"</span><span class="kestrel-review-bar__dot">·</span></span>
+    <span class="kestrel-review-bar__quote"><span class="kestrel-review-bar__dot">·</span><span class="kestrel-review-bar__quote-text">"I'm so glad I've found their products"</span><span class="kestrel-review-bar__dot">·</span></span>
+    <span class="kestrel-review-bar__quote"><span class="kestrel-review-bar__dot">·</span><span class="kestrel-review-bar__quote-text">"A hair serum which actually works"</span><span class="kestrel-review-bar__dot">·</span></span>
+    <span class="kestrel-review-bar__quote"><span class="kestrel-review-bar__dot">·</span><span class="kestrel-review-bar__quote-text">"My hairdresser noticed the improvement"</span><span class="kestrel-review-bar__dot">·</span></span>
+    <span class="kestrel-review-bar__quote"><span class="kestrel-review-bar__dot">·</span><span class="kestrel-review-bar__quote-text">"Much thicker and much healthier"</span><span class="kestrel-review-bar__dot">·</span></span>
+    <span class="kestrel-review-bar__quote"><span class="kestrel-review-bar__dot">·</span><span class="kestrel-review-bar__quote-text">"The results are fantastic"</span><span class="kestrel-review-bar__dot">·</span></span>
+    <span class="kestrel-review-bar__quote"><span class="kestrel-review-bar__dot">·</span><span class="kestrel-review-bar__quote-text">"Visible difference in just 3 months"</span><span class="kestrel-review-bar__dot">·</span></span>
+    <span class="kestrel-review-bar__quote"><span class="kestrel-review-bar__dot">·</span><span class="kestrel-review-bar__quote-text">"I have noticed hair growth"</span><span class="kestrel-review-bar__dot">·</span></span>
+    <span class="kestrel-review-bar__quote"><span class="kestrel-review-bar__dot">·</span><span class="kestrel-review-bar__quote-text">"I'm so glad I've found their products"</span><span class="kestrel-review-bar__dot">·</span></span>
+    <span class="kestrel-review-bar__quote"><span class="kestrel-review-bar__dot">·</span><span class="kestrel-review-bar__quote-text">"A hair serum which actually works"</span><span class="kestrel-review-bar__dot">·</span></span>
+    <span class="kestrel-review-bar__quote"><span class="kestrel-review-bar__dot">·</span><span class="kestrel-review-bar__quote-text">"My hairdresser noticed the improvement"</span><span class="kestrel-review-bar__dot">·</span></span>
+    <span class="kestrel-review-bar__quote"><span class="kestrel-review-bar__dot">·</span><span class="kestrel-review-bar__quote-text">"Much thicker and much healthier"</span><span class="kestrel-review-bar__dot">·</span></span>
+    <span class="kestrel-review-bar__quote"><span class="kestrel-review-bar__dot">·</span><span class="kestrel-review-bar__quote-text">"The results are fantastic"</span><span class="kestrel-review-bar__dot">·</span></span>
+    <span class="kestrel-review-bar__quote"><span class="kestrel-review-bar__dot">·</span><span class="kestrel-review-bar__quote-text">"Visible difference in just 3 months"</span><span class="kestrel-review-bar__dot">·</span></span>
+  </div>
+</div>
+
+<!-- Featured Collection -->
+<section class="kestrel-collection">
+  <div class="page-width">
+    <div class="kestrel-collection__header">
+      <p class="kestrel-collection__eyebrow">The Collection</p>
+      <h2 class="kestrel-collection__title">Clever science. Visible results.</h2>
+    </div>
+    <div class="kestrel-collection__grid">
+      <a href="#" class="kestrel-collection__item">
+        <div class="kestrel-collection__image" style="background: linear-gradient(135deg, #e8e3db, #d5d0c8);"><img src="assets/hero-product.jpg" alt="" style="width:100%;height:100%;object-fit:cover;opacity:0.6;"></div>
+        <h3 class="kestrel-collection__name">Botanical Serum</h3>
+        <p class="kestrel-collection__tagline">Clinically tested peptide complex</p>
+        <p class="kestrel-collection__price">Starting at $49/month</p>
+      </a>
+      <a href="#" class="kestrel-collection__item">
+        <div class="kestrel-collection__image" style="background: linear-gradient(135deg, #ddd8d0, #cac5bd);"><img src="assets/hero-product.jpg" alt="" style="width:100%;height:100%;object-fit:cover;opacity:0.5;"></div>
+        <h3 class="kestrel-collection__name">Peptide Serum</h3>
+        <p class="kestrel-collection__tagline">Advanced growth signaling formula</p>
+        <p class="kestrel-collection__price">Starting at $59/month</p>
+      </a>
+      <a href="#" class="kestrel-collection__item">
+        <div class="kestrel-collection__image" style="background: linear-gradient(135deg, #d5d0c8, #c2bdb5);"><img src="assets/hero-product.jpg" alt="" style="width:100%;height:100%;object-fit:cover;opacity:0.4;"></div>
+        <h3 class="kestrel-collection__name">Scalp Oil</h3>
+        <p class="kestrel-collection__tagline">Pre-wash density treatment</p>
+        <p class="kestrel-collection__price">Starting at $39/month</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Results -->
+<section class="kestrel-results">
+  <div class="page-width">
+    <div class="kestrel-results__header">
+      <p class="kestrel-results__eyebrow">Real Results</p>
+      <h2 class="kestrel-results__title">Before & After</h2>
+    </div>
+    <div class="kestrel-results__item">
+      <div class="kestrel-results__images">
+        <div class="kestrel-results__img kestrel-results__img--before" style="background: linear-gradient(135deg, #bbb, #999);"><span class="kestrel-results__badge kestrel-results__badge--before">Before</span></div>
+        <div class="kestrel-results__img" style="background: linear-gradient(135deg, #999, #777);"><span class="kestrel-results__badge kestrel-results__badge--after">After</span></div>
+      </div>
+      <div class="kestrel-results__content">
+        <p class="kestrel-results__quote">"After just three months of using the products, I saw a huge difference and felt my hair really blooming. Even my hairdresser noticed the change."</p>
+        <div class="kestrel-results__tags"><span class="kestrel-results__tag">Receding hairline</span><span class="kestrel-results__tag">Reduced Hair Loss</span><span class="kestrel-results__tag">Visibly Thicker Hair</span></div>
+      </div>
+    </div>
+    <div class="kestrel-results__item">
+      <div class="kestrel-results__images">
+        <div class="kestrel-results__img kestrel-results__img--before" style="background: linear-gradient(135deg, #aaa, #888);"><span class="kestrel-results__badge kestrel-results__badge--before">Before</span></div>
+        <div class="kestrel-results__img" style="background: linear-gradient(135deg, #888, #666);"><span class="kestrel-results__badge kestrel-results__badge--after">After</span></div>
+      </div>
+      <div class="kestrel-results__content">
+        <p class="kestrel-results__quote">"It's been 150 days since I started using the routine. I've seen the results — my hair feels thicker, I have a lot of grow out coming. People have noticed."</p>
+        <div class="kestrel-results__tags"><span class="kestrel-results__tag">Increased hair thickness</span><span class="kestrel-results__tag">Boosted self-confidence</span><span class="kestrel-results__tag">Noticeable hair growth</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="kestrel-faq">
+  <div class="page-width kestrel-faq__grid">
+    <div class="kestrel-faq__sidebar">
+      <p class="kestrel-faq__eyebrow">FAQ</p>
+      <h2 class="kestrel-faq__title">Straight<br><span>Answers.</span></h2>
+      <p class="kestrel-faq__intro">Six questions every man asks before starting. No marketing. No fluff.</p>
+    </div>
+    <div>
+      <ul class="kestrel-faq__list">
+        <li class="kestrel-faq__item is-open" data-faq-item>
+          <button class="kestrel-faq__toggle" data-faq-toggle aria-expanded="true"><span class="kestrel-faq__question">Does KESTREL actually work?</span><span class="kestrel-faq__icon">+</span></button>
+          <div class="kestrel-faq__content" data-faq-content><p class="kestrel-faq__answer">In a 12-week panel of 218 men aged 35–58, 79% reported visibly thicker, fuller-looking hair at the part line and crown. 91% saw a measurable reduction in shedding.</p></div>
+        </li>
+        <li class="kestrel-faq__item" data-faq-item>
+          <button class="kestrel-faq__toggle" data-faq-toggle aria-expanded="false"><span class="kestrel-faq__question">How is this different from minoxidil?</span><span class="kestrel-faq__icon">+</span></button>
+          <div class="kestrel-faq__content" data-faq-content><p class="kestrel-faq__answer">Minoxidil is a pharmaceutical vasodilator. KESTREL is a cosmeceutical density regimen using follicular signalling peptides, DHT modulation, and scalp circulation support.</p></div>
+        </li>
+        <li class="kestrel-faq__item" data-faq-item>
+          <button class="kestrel-faq__toggle" data-faq-toggle aria-expanded="false"><span class="kestrel-faq__question">How long until I see results?</span><span class="kestrel-faq__icon">+</span></button>
+          <div class="kestrel-faq__content" data-faq-content><p class="kestrel-faq__answer">Most men notice less shedding inside four weeks. A visibly fuller appearance at twelve weeks. The most sustained density support sits around the twelve-month mark.</p></div>
+        </li>
+        <li class="kestrel-faq__item" data-faq-item>
+          <button class="kestrel-faq__toggle" data-faq-toggle aria-expanded="false"><span class="kestrel-faq__question">I'm 38 and just starting to notice thinning. Is it too early?</span><span class="kestrel-faq__icon">+</span></button>
+          <div class="kestrel-faq__content" data-faq-content><p class="kestrel-faq__answer">It is exactly the right time. Density that holds at 50 was protected at 38. The men who keep their hair into their fifties did not start in their fifties.</p></div>
+        </li>
+        <li class="kestrel-faq__item" data-faq-item>
+          <button class="kestrel-faq__toggle" data-faq-toggle aria-expanded="false"><span class="kestrel-faq__question">What if it doesn't work for me?</span><span class="kestrel-faq__icon">+</span></button>
+          <div class="kestrel-faq__content" data-faq-content><p class="kestrel-faq__answer">Use KESTREL daily for up to 60 days. If you're unsatisfied, email hello@kestrel.co — we refund the full purchase price. No restock fees. No paperwork.</p></div>
+        </li>
+        <li class="kestrel-faq__item" data-faq-item>
+          <button class="kestrel-faq__toggle" data-faq-toggle aria-expanded="false"><span class="kestrel-faq__question">Is KESTREL independent?</span><span class="kestrel-faq__icon">+</span></button>
+          <div class="kestrel-faq__content" data-faq-content><p class="kestrel-faq__answer">Yes. Founder-owned. Every serum is compounded and bottled in FDA-registered US facilities, batch-tested before it leaves. No outside capital. No plans to sell.</p></div>
+        </li>
+      </ul>
+      <p class="kestrel-faq__contact">Question we missed? <a href="mailto:hello@kestrel.co">hello@kestrel.co</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SHOP / COLLECTION ==================== -->
+<div class="page-divider">Shop / Collection</div>
+
+<section class="kestrel-collection-page" style="padding-top:40px;">
+  <div class="page-width">
+    <div class="kestrel-collection-page__header">
+      <h1 class="kestrel-collection-page__title">All Formulas</h1>
+      <p class="kestrel-collection-page__count">8 products</p>
+    </div>
+    <div class="kestrel-collection-page__grid">
+      <a href="#" class="kestrel-collection-page__item">
+        <div class="kestrel-collection-page__image" style="background: linear-gradient(135deg, #e8e3db, #d5d0c8);"><img src="assets/hero-product.jpg" alt="" style="width:100%;height:100%;object-fit:cover;opacity:0.6;"></div>
+        <h3 class="kestrel-collection-page__name">Botanical Serum</h3><p class="kestrel-collection-page__tagline">Clinically tested peptide complex</p><p class="kestrel-collection-page__price">$49.00</p>
+      </a>
+      <a href="#" class="kestrel-collection-page__item">
+        <div class="kestrel-collection-page__image" style="background: linear-gradient(135deg, #ddd8d0, #cac5bd);"><img src="assets/hero-product.jpg" alt="" style="width:100%;height:100%;object-fit:cover;opacity:0.5;"></div>
+        <h3 class="kestrel-collection-page__name">Peptide Serum</h3><p class="kestrel-collection-page__tagline">Advanced growth signaling</p><p class="kestrel-collection-page__price">$59.00</p>
+      </a>
+      <a href="#" class="kestrel-collection-page__item">
+        <div class="kestrel-collection-page__image" style="background: linear-gradient(135deg, #d5d0c8, #c2bdb5);"><img src="assets/hero-product.jpg" alt="" style="width:100%;height:100%;object-fit:cover;opacity:0.4;"></div>
+        <h3 class="kestrel-collection-page__name">Scalp Oil</h3><p class="kestrel-collection-page__tagline">Pre-wash density treatment</p><p class="kestrel-collection-page__price">$39.00</p>
+      </a>
+      <a href="#" class="kestrel-collection-page__item">
+        <div class="kestrel-collection-page__image" style="background: linear-gradient(135deg, #ccc7bf, #b9b4ac);"><img src="assets/hero-product.jpg" alt="" style="width:100%;height:100%;object-fit:cover;opacity:0.3;"></div>
+        <h3 class="kestrel-collection-page__name">The Ritual Set</h3><p class="kestrel-collection-page__tagline">Complete 3-step system</p><p class="kestrel-collection-page__price">$129.00</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PRODUCT PAGE ==================== -->
+<div class="page-divider">Product Page</div>
+
+<section style="padding-top: var(--header-h); background: var(--color-ink); color: var(--color-paper);">
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding: 40px; max-width: 1400px; margin: 0 auto;">
+    <div style="aspect-ratio: 1/1; background: var(--color-smoke); display: flex; align-items: center; justify-content: center;">
+      <img src="assets/hero-product.jpg" alt="" style="width: 80%; height: 80%; object-fit: contain; filter: grayscale(100%);">
+    </div>
+    <div style="padding-top: 20px;">
+      <p style="font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-stone); margin-bottom: 20px;">Shop / <span style="color: rgba(244,241,236,0.5);">Botanical Serum</span></p>
+      <h1 style="font-family: var(--font-display); font-size: 32px; line-height: 1.1; text-transform: uppercase; margin-bottom: 16px;">Botanical Serum</h1>
+      <p style="font-size: 14px; color: var(--color-stone); margin-bottom: 16px;">★ 4.8 (128 reviews)</p>
+      <div style="display: flex; gap: 8px; margin-bottom: 24px;">
+        <span style="font-size: 10px; letter-spacing: 0.05em; text-transform: uppercase; color: rgba(244,241,236,0.6); border: 1px solid rgba(244,241,236,0.15); padding: 4px 10px;">Clinically tested</span>
+        <span style="font-size: 10px; letter-spacing: 0.05em; text-transform: uppercase; color: rgba(244,241,236,0.6); border: 1px solid rgba(244,241,236,0.15); padding: 4px 10px;">Peptide complex</span>
+      </div>
+      <p style="font-family: var(--font-display); font-size: 36px; margin-bottom: 24px;">$49</p>
+      <p style="font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-stone); margin-bottom: 10px; font-weight: 500;">Quantity</p>
+      <div style="display: flex; align-items: center; gap: 0; border: 1px solid rgba(244,241,236,0.2); width: fit-content; margin-bottom: 20px;">
+        <button style="width: 40px; height: 40px; background: none; border: none; color: var(--color-paper); font-size: 18px; cursor: pointer;">−</button>
+        <input type="number" value="1" style="width: 48px; height: 40px; text-align: center; background: none; border: none; color: var(--color-paper); font-size: 14px;">
+        <button style="width: 40px; height: 40px; background: none; border: none; color: var(--color-paper); font-size: 18px; cursor: pointer;">+</button>
+      </div>
+      <button style="width: 100%; padding: 14px; background: var(--color-paper); color: var(--color-ink); font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; font-weight: 500; border: none; cursor: pointer; margin-bottom: 10px;">Add to Cart — $49</button>
+      <button style="width: 100%; padding: 14px; background: none; color: var(--color-paper); font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; border: 1px solid rgba(244,241,236,0.25); cursor: pointer;">Buy with <span style="font-weight: 600;">Shop</span> Pay</button>
+    </div>
+  </div>
+</section>
+
+<!-- Product Accordion -->
+<div style="background: var(--color-ink); color: var(--color-paper); padding: 0 40px 64px; max-width: 1400px; margin: 0 auto;">
+  <div class="kestrel-accordion">
+    <div class="kestrel-accordion__item is-open" data-accordion-item>
+      <button class="kestrel-accordion__toggle" data-accordion-toggle aria-expanded="true"><span>Description</span><span class="kestrel-accordion__icon">+</span></button>
+      <div class="kestrel-accordion__content"><div class="kestrel-accordion__body"><p>Clinically tested peptide complex formulated for men experiencing early-stage thinning. Biomimetic peptides, rosemary CO₂ extract, saw palmetto, plant-derived carrier oils.</p><ul class="kestrel-accordion__claims"><li><span>✦</span> Clinically tested</li><li><span>✦</span> Peptide complex</li><li><span>✦</span> Plant-derived</li></ul></div></div>
+    </div>
+    <div class="kestrel-accordion__item" data-accordion-item>
+      <button class="kestrel-accordion__toggle" data-accordion-toggle aria-expanded="false"><span>Ingredients</span><span class="kestrel-accordion__icon">+</span></button>
+      <div class="kestrel-accordion__content"><div class="kestrel-accordion__body"><ul class="kestrel-accordion__ingredients"><li><span class="kestrel-accordion__ingredients-name">Biomimetic Peptides</span><span class="kestrel-accordion__ingredients-role">Active</span></li><li><span class="kestrel-accordion__ingredients-name">Rosemary CO₂ Extract</span><span class="kestrel-accordion__ingredients-role">Active</span></li><li><span class="kestrel-accordion__ingredients-name">Saw Palmetto</span><span class="kestrel-accordion__ingredients-role">Active</span></li></ul></div></div>
+    </div>
+    <div class="kestrel-accordion__item" data-accordion-item>
+      <button class="kestrel-accordion__toggle" data-accordion-toggle aria-expanded="false"><span>How to Use</span><span class="kestrel-accordion__icon">+</span></button>
+      <div class="kestrel-accordion__content"><div class="kestrel-accordion__body"><ol class="kestrel-accordion__steps"><li><span>1</span><p>Apply to damp scalp after cleansing</p></li><li><span>2</span><p>Massage for 60 seconds</p></li><li><span>3</span><p>Use daily, morning or evening</p></li></ol></div></div>
+    </div>
+    <div class="kestrel-accordion__item" data-accordion-item>
+      <button class="kestrel-accordion__toggle" data-accordion-toggle aria-expanded="false"><span>Shipping & Returns</span><span class="kestrel-accordion__icon">+</span></button>
+      <div class="kestrel-accordion__content"><div class="kestrel-accordion__body"><p>Free shipping on all orders over $150. Standard shipping $6.95. 60-day returns — opened or unopened. Ships within 24 hours.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- Reviews -->
+<section class="kestrel-reviews">
+  <div class="page-width">
+    <div class="kestrel-reviews__grid">
+      <div>
+        <p class="kestrel-reviews__eyebrow">Reviews</p>
+        <div class="kestrel-reviews__score">
+          <span class="kestrel-reviews__score-number">4.8</span>
+          <div class="kestrel-reviews__score-meta">
+            <div class="kestrel-reviews__item-stars">
+              <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path d="M9.53834 1.60996C9.70914 1.19932 10.2909 1.19932 10.4617 1.60996L12.5278 6.57744C12.5998 6.75056 12.7626 6.86885 12.9495 6.88383L18.3123 7.31376C18.7556 7.3493 18.9354 7.90256 18.5976 8.19189L14.5117 11.6919C14.3693 11.8139 14.3071 12.0053 14.3506 12.1876L15.5989 17.4208C15.7021 17.8534 15.2315 18.1954 14.8519 17.9635L10.2606 15.1592C10.1006 15.0615 9.89938 15.0615 9.73937 15.1592L5.14806 17.9635C4.76851 18.1954 4.29788 17.8534 4.40108 17.4208L5.64939 12.1876C5.69289 12.0053 5.6307 11.8139 5.48831 11.6919L1.40241 8.19189C1.06464 7.90256 1.24441 7.3493 1.68768 7.31376L7.05054 6.88383C7.23744 6.86885 7.40024 6.75056 7.47225 6.57744L9.53834 1.60996Z"/></svg>
+              <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path d="M9.53834 1.60996C9.70914 1.19932 10.2909 1.19932 10.4617 1.60996L12.5278 6.57744C12.5998 6.75056 12.7626 6.86885 12.9495 6.88383L18.3123 7.31376C18.7556 7.3493 18.9354 7.90256 18.5976 8.19189L14.5117 11.6919C14.3693 11.8139 14.3071 12.0053 14.3506 12.1876L15.5989 17.4208C15.7021 17.8534 15.2315 18.1954 14.8519 17.9635L10.2606 15.1592C10.1006 15.0615 9.89938 15.0615 9.73937 15.1592L5.14806 17.9635C4.76851 18.1954 4.29788 17.8534 4.40108 17.4208L5.64939 12.1876C5.69289 12.0053 5.6307 11.8139 5.48831 11.6919L1.40241 8.19189C1.06464 7.90256 1.24441 7.3493 1.68768 7.31376L7.05054 6.88383C7.23744 6.86885 7.40024 6.75056 7.47225 6.57744L9.53834 1.60996Z"/></svg>
+              <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path d="M9.53834 1.60996C9.70914 1.19932 10.2909 1.19932 10.4617 1.60996L12.5278 6.57744C12.5998 6.75056 12.7626 6.86885 12.9495 6.88383L18.3123 7.31376C18.7556 7.3493 18.9354 7.90256 18.5976 8.19189L14.5117 11.6919C14.3693 11.8139 14.3071 12.0053 14.3506 12.1876L15.5989 17.4208C15.7021 17.8534 15.2315 18.1954 14.8519 17.9635L10.2606 15.1592C10.1006 15.0615 9.89938 15.0615 9.73937 15.1592L5.14806 17.9635C4.76851 18.1954 4.29788 17.8534 4.40108 17.4208L5.64939 12.1876C5.69289 12.0053 5.6307 11.8139 5.48831 11.6919L1.40241 8.19189C1.06464 7.90256 1.24441 7.3493 1.68768 7.31376L7.05054 6.88383C7.23744 6.86885 7.40024 6.75056 7.47225 6.57744L9.53834 1.60996Z"/></svg>
+              <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path d="M9.53834 1.60996C9.70914 1.19932 10.2909 1.19932 10.4617 1.60996L12.5278 6.57744C12.5998 6.75056 12.7626 6.86885 12.9495 6.88383L18.3123 7.31376C18.7556 7.3493 18.9354 7.90256 18.5976 8.19189L14.5117 11.6919C14.3693 11.8139 14.3071 12.0053 14.3506 12.1876L15.5989 17.4208C15.7021 17.8534 15.2315 18.1954 14.8519 17.9635L10.2606 15.1592C10.1006 15.0615 9.89938 15.0615 9.73937 15.1592L5.14806 17.9635C4.76851 18.1954 4.29788 17.8534 4.40108 17.4208L5.64939 12.1876C5.69289 12.0053 5.6307 11.8139 5.48831 11.6919L1.40241 8.19189C1.06464 7.90256 1.24441 7.3493 1.68768 7.31376L7.05054 6.88383C7.23744 6.86885 7.40024 6.75056 7.47225 6.57744L9.53834 1.60996Z"/></svg>
+              <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path d="M9.53834 1.60996C9.70914 1.19932 10.2909 1.19932 10.4617 1.60996L12.5278 6.57744C12.5998 6.75056 12.7626 6.86885 12.9495 6.88383L18.3123 7.31376C18.7556 7.3493 18.9354 7.90256 18.5976 8.19189L14.5117 11.6919C14.3693 11.8139 14.3071 12.0053 14.3506 12.1876L15.5989 17.4208C15.7021 17.8534 15.2315 18.1954 14.8519 17.9635L10.2606 15.1592C10.1006 15.0615 9.89938 15.0615 9.73937 15.1592L5.14806 17.9635C4.76851 18.1954 4.29788 17.8534 4.40108 17.4208L5.64939 12.1876C5.69289 12.0053 5.6307 11.8139 5.48831 11.6919L1.40241 8.19189C1.06464 7.90256 1.24441 7.3493 1.68768 7.31376L7.05054 6.88383C7.23744 6.86885 7.40024 6.75056 7.47225 6.57744L9.53834 1.60996Z"/></svg>
+            </div>
+            <p>Based on 128 reviews</p>
+          </div>
+        </div>
+        <div class="kestrel-reviews__bars">
+          <div class="kestrel-reviews__bar"><span class="kestrel-reviews__bar-label">5</span><svg class="kestrel-reviews__bar-star" viewBox="0 0 20 20" fill="currentColor"><path d="M9.53834 1.60996C9.70914 1.19932 10.2909 1.19932 10.4617 1.60996L12.5278 6.57744C12.5998 6.75056 12.7626 6.86885 12.9495 6.88383L18.3123 7.31376C18.7556 7.3493 18.9354 7.90256 18.5976 8.19189L14.5117 11.6919C14.3693 11.8139 14.3071 12.0053 14.3506 12.1876L15.5989 17.4208C15.7021 17.8534 15.2315 18.1954 14.8519 17.9635L10.2606 15.1592C10.1006 15.0615 9.89938 15.0615 9.73937 15.1592L5.14806 17.9635C4.76851 18.1954 4.29788 17.8534 4.40108 17.4208L5.64939 12.1876C5.69289 12.0053 5.6307 11.8139 5.48831 11.6919L1.40241 8.19189C1.06464 7.90256 1.24441 7.3493 1.68768 7.31376L7.05054 6.88383C7.23744 6.86885 7.40024 6.75056 7.47225 6.57744L9.53834 1.60996Z"/></svg><div class="kestrel-reviews__bar-track"><div class="kestrel-reviews__bar-fill" style="width: 77%"></div></div><span class="kestrel-reviews__bar-count">98</span></div>
+          <div class="kestrel-reviews__bar"><span class="kestrel-reviews__bar-label">4</span><svg class="kestrel-reviews__bar-star" viewBox="0 0 20 20" fill="currentColor"><path d="M9.53834 1.60996C9.70914 1.19932 10.2909 1.19932 10.4617 1.60996L12.5278 6.57744C12.5998 6.75056 12.7626 6.86885 12.9495 6.88383L18.3123 7.31376C18.7556 7.3493 18.9354 7.90256 18.5976 8.19189L14.5117 11.6919C14.3693 11.8139 14.3071 12.0053 14.3506 12.1876L15.5989 17.4208C15.7021 17.8534 15.2315 18.1954 14.8519 17.9635L10.2606 15.1592C10.1006 15.0615 9.89938 15.0615 9.73937 15.1592L5.14806 17.9635C4.76851 18.1954 4.29788 17.8534 4.40108 17.4208L5.64939 12.1876C5.69289 12.0053 5.6307 11.8139 5.48831 11.6919L1.40241 8.19189C1.06464 7.90256 1.24441 7.3493 1.68768 7.31376L7.05054 6.88383C7.23744 6.86885 7.40024 6.75056 7.47225 6.57744L9.53834 1.60996Z"/></svg><div class="kestrel-reviews__bar-track"><div class="kestrel-reviews__bar-fill" style="width: 17%"></div></div><span class="kestrel-reviews__bar-count">22</span></div>
+          <div class="kestrel-reviews__bar"><span class="kestrel-reviews__bar-label">3</span><svg class="kestrel-reviews__bar-star" viewBox="0 0 20 20" fill="currentColor"><path d="M9.53834 1.60996C9.70914 1.19932 10.2909 1.19932 10.4617 1.60996L12.5278 6.57744C12.5998 6.75056 12.7626 6.86885 12.9495 6.88383L18.3123 7.31376C18.7556 7.3493 18.9354 7.90256 18.5976 8.19189L14.5117 11.6919C14.3693 11.8139 14.3071 12.0053 14.3506 12.1876L15.5989 17.4208C15.7021 17.8534 15.2315 18.1954 14.8519 17.9635L10.2606 15.1592C10.1006 15.0615 9.89938 15.0615 9.73937 15.1592L5.14806 17.9635C4.76851 18.1954 4.29788 17.8534 4.40108 17.4208L5.64939 12.1876C5.69289 12.0053 5.6307 11.8139 5.48831 11.6919L1.40241 8.19189C1.06464 7.90256 1.24441 7.3493 1.68768 7.31376L7.05054 6.88383C7.23744 6.86885 7.40024 6.75056 7.47225 6.57744L9.53834 1.60996Z"/></svg><div class="kestrel-reviews__bar-track"><div class="kestrel-reviews__bar-fill" style="width: 5%"></div></div><span class="kestrel-reviews__bar-count">6</span></div>
+          <div class="kestrel-reviews__bar"><span class="kestrel-reviews__bar-label">2</span><svg class="kestrel-reviews__bar-star" viewBox="0 0 20 20" fill="currentColor"><path d="M9.53834 1.60996C9.70914 1.19932 10.2909 1.19932 10.4617 1.60996L12.5278 6.57744C12.5998 6.75056 12.7626 6.86885 12.9495 6.88383L18.3123 7.31376C18.7556 7.3493 18.9354 7.90256 18.5976 8.19189L14.5117 11.6919C14.3693 11.8139 14.3071 12.0053 14.3506 12.1876L15.5989 17.4208C15.7021 17.8534 15.2315 18.1954 14.8519 17.9635L10.2606 15.1592C10.1006 15.0615 9.89938 15.0615 9.73937 15.1592L5.14806 17.9635C4.76851 18.1954 4.29788 17.8534 4.40108 17.4208L5.64939 12.1876C5.69289 12.0053 5.6307 11.8139 5.48831 11.6919L1.40241 8.19189C1.06464 7.90256 1.24441 7.3493 1.68768 7.31376L7.05054 6.88383C7.23744 6.86885 7.40024 6.75056 7.47225 6.57744L9.53834 1.60996Z"/></svg><div class="kestrel-reviews__bar-track"><div class="kestrel-reviews__bar-fill" style="width: 2%"></div></div><span class="kestrel-reviews__bar-count">2</span></div>
+          <div class="kestrel-reviews__bar"><span class="kestrel-reviews__bar-label">1</span><svg class="kestrel-reviews__bar-star" viewBox="0 0 20 20" fill="currentColor"><path d="M9.53834 1.60996C9.70914 1.19932 10.2909 1.19932 10.4617 1.60996L12.5278 6.57744C12.5998 6.75056 12.7626 6.86885 12.9495 6.88383L18.3123 7.31376C18.7556 7.3493 18.9354 7.90256 18.5976 8.19189L14.5117 11.6919C14.3693 11.8139 14.3071 12.0053 14.3506 12.1876L15.5989 17.4208C15.7021 17.8534 15.2315 18.1954 14.8519 17.9635L10.2606 15.1592C10.1006 15.0615 9.89938 15.0615 9.73937 15.1592L5.14806 17.9635C4.76851 18.1954 4.29788 17.8534 4.40108 17.4208L5.64939 12.1876C5.69289 12.0053 5.6307 11.8139 5.48831 11.6919L1.40241 8.19189C1.06464 7.90256 1.24441 7.3493 1.68768 7.31376L7.05054 6.88383C7.23744 6.86885 7.40024 6.75056 7.47225 6.57744L9.53834 1.60996Z"/></svg><div class="kestrel-reviews__bar-track"><div class="kestrel-reviews__bar-fill" style="width: 0%"></div></div><span class="kestrel-reviews__bar-count">0</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="kestrel-reviews__header"><p>Showing 3 reviews</p><div class="kestrel-reviews__sort"><span>Sort by:</span><select><option>Newest</option><option>Highest rated</option><option>Lowest rated</option></select></div></div>
+        <div class="kestrel-reviews__list">
+          <div class="kestrel-reviews__item">
+            <div class="kestrel-reviews__item-header"><div class="kestrel-reviews__item-stars"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M9.53834 1.60996C9.70914 1.19932 10.2909 1.19932 10.4617 1.60996L12.5278 6.57744C12.5998 6.75056 12.7626 6.86885 12.9495 6.88383L18.3123 7.31376C18.7556 7.3493 18.9354 7.90256 18.5976 8.19189L14.5117 11.6919C14.3693 11.8139 14.3071 12.0053 14.3506 12.1876L15.5989 17.4208C15.7021 17.8534 15.2315 18.1954 14.8519 17.9635L10.2606 15.1592C10.1006 15.0615 9.89938 15.0615 9.73937 15.1592L5.14806 17.9635C4.76851 18.1954 4.29788 17.8534 4.40108 17.4208L5.64939 12.1876C5.69289 12.0053 5.6307 11.8139 5.48831 11.6919L1.40241 8.19189C1.06464 7.90256 1.24441 7.3493 1.68768 7.31376L7.05054 6.88383C7.23744 6.86885 7.40024 6.75056 7.47225 6.57744L9.53834 1.60996Z"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M9.53834 1.60996C9.70914 1.19932 10.2909 1.19932 10.4617 1.60996L12.5278 6.57744C12.5998 6.75056 12.7626 6.86885 12.9495 6.88383L18.3123 7.31376C18.7556 7.3493 18.9354 7.90256 18.5976 8.19189L14.5117 11.6919C14.3693 11.8139 14.3071 12.0053 14.3506 12.1876L15.5989 17.4208C15.7021 17.8534 15.2315 18.1954 14.8519 17.9635L10.2606 15.1592C10.1006 15.0615 9.89938 15.0615 9.73937 15.1592L5.14806 17.9635C4.76851 18.1954 4.29788 17.8534 4.40108 17.4208L5.64939 12.1876C5.69289 12.0053 5.6307 11.8139 5.48831 11.6919L1.40241 8.19189C1.06464 7.90256 1.24441 7.3493 1.68768 7.31376L7.05054 6.88383C7.23744 6.86885 7.40024 6.75056 7.47225 6.57744L9.53834 1.60996Z"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M9.53834 1.60996C9.70914 1.19932 10.2909 1.19932 10.4617 1.60996L12.5278 6.57744C12.5998 6.75056 12.7626 6.86885 12.9495 6.88383L18.3123 7.31376C18.7556 7.3493 18.9354 7.90256 18.5976 8.19189L14.5117 11.6919C14.3693 11.8139 14.3071 12.0053 14.3506 12.1876L15.5989 17.4208C15.7021 17.8534 15.2315 18.1954 14.8519 17.9635L10.2606 15.1592C10.1006 15.0615 9.89938 15.0615 9.73937 15.1592L5.14806 17.9635C4.76851 18.1954 4.29788 17.8534 4.40108 17.4208L5.64939 12.1876C5.69289 12.0053 5.6307 11.8139 5.48831 11.6919L1.40241 8.19189C1.06464 7.90256 1.24441 7.3493 1.68768 7.31376L7.05054 6.88383C7.23744 6.86885 7.40024 6.75056 7.47225 6.57744L9.53834 1.60996Z"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M9.53834 1.60996C9.70914 1.19932 10.2909 1.19932 10.4617 1.60996L12.5278 6.57744C12.5998 6.75056 12.7626 6.86885 12.9495 6.88383L18.3123 7.31376C18.7556 7.3493 18.9354 7.90256 18.5976 8.19189L14.5117 11.6919C14.3693 11.8139 14.3071 12.0053 14.3506 12.1876L15.5989 17.4208C15.7021 17.8534 15.2315 18.1954 14.8519 17.9635L10.2606 15.1592C10.1006 15.0615 9.89938 15.0615 9.73937 15.1592L5.14806 17.9635C4.76851 18.1954 4.29788 17.8534 4.40108 17.4208L5.64939 12.1876C5.69289 12.0053 5.6307 11.8139 5.48831 11.6919L1.40241 8.19189C1.06464 7.90256 1.24441 7.3493 1.68768 7.31376L7.05054 6.88383C7.23744 6.86885 7.40024 6.75056 7.47225 6.57744L9.53834 1.60996Z"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M9.53834 1.60996C9.70914 1.19932 10.2909 1.19932 10.4617 1.60996L12.5278 6.57744C12.5998 6.75056 12.7626 6.86885 12.9495 6.88383L18.3123 7.31376C18.7556 7.3493 18.9354 7.90256 18.5976 8.19189L14.5117 11.6919C14.3693 11.8139 14.3071 12.0053 14.3506 12.1876L15.5989 17.4208C15.7021 17.8534 15.2315 18.1954 14.8519 17.9635L10.2606 15.1592C10.1006 15.0615 9.89938 15.0615 9.73937 15.1592L5.14806 17.9635C4.76851 18.1954 4.29788 17.8534 4.40108 17.4208L5.64939 12.1876C5.69289 12.0053 5.6307 11.8139 5.48831 11.6919L1.40241 8.19189C1.06464 7.90256 1.24441 7.3493 1.68768 7.31376L7.05054 6.88383C7.23744 6.86885 7.40024 6.75056 7.47225 6.57744L9.53834 1.60996Z"/></svg></div><span class="kestrel-reviews__verified">Verified Buyer</span></div>
+            <h4 class="kestrel-reviews__item-title">Actually works</h4>
+            <p class="kestrel-reviews__item-body">I've been using this for 3 months and the difference is noticeable. My hair feels thicker and I see less shedding.</p>
+            <div class="kestrel-reviews__item-meta"><span>James R.</span><span>·</span><span>Mar 15, 2026</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Related Products -->
+<section class="kestrel-related" style="background: var(--color-ink);">
+  <div class="page-width">
+    <div class="kestrel-related__header">
+      <h2 class="kestrel-related__title">Complete the ritual.</h2>
+      <a href="#" class="kestrel-related__link">All formulas →</a>
+    </div>
+    <div class="kestrel-related__grid">
+      <a href="#" class="kestrel-related__item"><div class="kestrel-related__image" style="background: linear-gradient(135deg, #e8e3db, #d5d0c8);"><img src="assets/hero-product.jpg" alt="" style="width:100%;height:100%;object-fit:cover;opacity:0.6;"></div><h3 class="kestrel-related__name">Peptide Serum</h3><p class="kestrel-related__tagline">Advanced growth signaling</p><p class="kestrel-related__price">$59.00</p></a>
+      <a href="#" class="kestrel-related__item"><div class="kestrel-related__image" style="background: linear-gradient(135deg, #ddd8d0, #cac5bd);"><img src="assets/hero-product.jpg" alt="" style="width:100%;height:100%;object-fit:cover;opacity:0.5;"></div><h3 class="kestrel-related__name">Scalp Oil</h3><p class="kestrel-related__tagline">Pre-wash density treatment</p><p class="kestrel-related__price">$39.00</p></a>
+      <a href="#" class="kestrel-related__item"><div class="kestrel-related__image" style="background: linear-gradient(135deg, #d5d0c8, #c2bdb5);"><img src="assets/hero-product.jpg" alt="" style="width:100%;height:100%;object-fit:cover;opacity:0.4;"></div><h3 class="kestrel-related__name">The Ritual Set</h3><p class="kestrel-related__tagline">Complete 3-step system</p><p class="kestrel-related__price">$129.00</p></a>
+      <a href="#" class="kestrel-related__item"><div class="kestrel-related__image" style="background: linear-gradient(135deg, #ccc7bf, #b9b4ac);"><img src="assets/hero-product.jpg" alt="" style="width:100%;height:100%;object-fit:cover;opacity:0.3;"></div><h3 class="kestrel-related__name">Conditioner</h3><p class="kestrel-related__tagline">Density-support formula</p><p class="kestrel-related__price">$34.00</p></a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== ABOUT PAGE ==================== -->
+<div class="page-divider">About Page</div>
+
+<section class="kestrel-about__hero" style="background: var(--color-ink); color: var(--color-paper);">
+  <div class="page-width">
+    <p class="kestrel-about__eyebrow">The House</p>
+    <h1 class="kestrel-about__title">Built for the<br><span>man at 35+.</span></h1>
+  </div>
+</section>
+<div class="kestrel-about__image"><img src="assets/hero-product.jpg" alt="" style="width:100%;height:100%;object-fit:cover;filter:grayscale(100%);"></div>
+<section class="kestrel-about__story" style="background: var(--color-ink); color: var(--color-paper);">
+  <div class="page-width kestrel-about__story-grid">
+    <p class="kestrel-about__story-label">Origin · MMXXVI</p>
+    <div class="kestrel-about__story-body">
+      <p>KESTREL was founded on a quiet observation. The men we knew — architects, surgeons, photographers, fathers, mostly between 38 and 55 — had stopped shopping the men's aisle.</p>
+      <p>We thought there was a third option. A small, considered system built around actives with a real evidence base.</p>
+      <p>Three serums. Formulated and bottled in the USA, in FDA-registered facilities.</p>
+      <p>— The founders, Kestrel</p>
+    </div>
+  </div>
+</section>
+<section class="kestrel-about__pledges">
+  <div class="page-width">
+    <h2 class="kestrel-about__pledges-title">What we will never do.</h2>
+    <div class="kestrel-about__pledges-grid">
+      <div class="kestrel-about__pledge"><span class="kestrel-about__pledge-title">No miracle claims</span><p class="kestrel-about__pledge-desc">If a number isn't peer-reviewed, it doesn't go on the bottle.</p></div>
+      <div class="kestrel-about__pledge"><span class="kestrel-about__pledge-title">No filler actives</span><p class="kestrel-about__pledge-desc">Every ingredient earns its place. Every concentration is declared.</p></div>
+      <div class="kestrel-about__pledge"><span class="kestrel-about__pledge-title">No greenwashing</span><p class="kestrel-about__pledge-desc">We say 'plant-derived' when it is. We say 'synthetic' when it works.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CONTACT PAGE ==================== -->
+<div class="page-divider">Contact Page</div>
+
+<section class="kestrel-contact" style="background: var(--color-ink); color: var(--color-paper);">
+  <div class="page-width">
+    <div class="kestrel-contact__inner">
+      <p class="kestrel-contact__eyebrow">Contact</p>
+      <h1 class="kestrel-contact__title">Write to us.</h1>
+      <p class="kestrel-contact__intro">A small customer team based in New York — replies within one business day.</p>
+      <div class="kestrel-contact__body">
+        <section><h2>Email</h2><p><a href="mailto:hello@kestrel.co">hello@kestrel.co</a> — orders, ritual advice, ingredient questions, anything.</p></section>
+        <section><h2>Press & retail</h2><p><a href="mailto:press@kestrel.co">press@kestrel.co</a> for press enquiries; <a href="mailto:wholesale@kestrel.co">wholesale@kestrel.co</a> for retail partnerships.</p></section>
+        <section><h2>Office</h2><p>KESTREL HQ, New York, NY, USA. Mail-only — no walk-in. We ship from a US fulfilment center within one business day.</p></section>
+      </div>
+      <div class="kestrel-contact__footer"><p>Need order help meanwhile? Write us at <a href="mailto:hello@kestrel.co">hello@kestrel.co</a>.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== RITUAL PAGE ==================== -->
+<div class="page-divider">Ritual Page</div>
+
+<section class="kestrel-ritual" style="background: var(--color-ink); color: var(--color-paper);">
+  <div class="page-width">
+    <div class="kestrel-ritual__inner">
+      <p class="kestrel-ritual__eyebrow">Ritual Finder</p>
+      <h1 class="kestrel-ritual__title">Build your<br><span>ritual.</span></h1>
+      <div class="kestrel-ritual__step">
+        <p class="kestrel-ritual__step-label">Step 1</p>
+        <h3 class="kestrel-ritual__question">What's your main concern?</h3>
+        <div class="kestrel-ritual__options">
+          <button class="kestrel-ritual__option">Thinning</button>
+          <button class="kestrel-ritual__option">Receding hairline</button>
+          <button class="kestrel-ritual__option">Both</button>
+        </div>
+      </div>
+      <div class="kestrel-ritual__step">
+        <p class="kestrel-ritual__step-label">Step 2</p>
+        <h3 class="kestrel-ritual__question">How long have you noticed it?</h3>
+        <div class="kestrel-ritual__options">
+          <button class="kestrel-ritual__option">Less than 6 months</button>
+          <button class="kestrel-ritual__option">6-12 months</button>
+          <button class="kestrel-ritual__option">Over a year</button>
+        </div>
+      </div>
+      <div class="kestrel-ritual__step">
+        <p class="kestrel-ritual__step-label">Step 3</p>
+        <h3 class="kestrel-ritual__question">What's your current routine?</h3>
+        <div class="kestrel-ritual__options">
+          <button class="kestrel-ritual__option">Nothing specific</button>
+          <button class="kestrel-ritual__option">Basic shampoo</button>
+          <button class="kestrel-ritual__option">Some treatments</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== JOURNAL / BLOG ==================== -->
+<div class="page-divider">Journal / Blog</div>
+
+<section class="kestrel-journal" style="background: var(--color-ink); color: var(--color-paper);">
+  <div class="page-width">
+    <div class="kestrel-journal__header">
+      <p class="kestrel-journal__eyebrow">The Journal</p>
+      <h1 class="kestrel-journal__title">Reading on<br><span>density.</span></h1>
+      <p class="kestrel-journal__subtitle">Long-form essays on hair, scalp, and what discipline looks like after thirty-five. Published monthly. Read once, kept forever.</p>
+    </div>
+    <div class="kestrel-journal__grid">
+      <a href="#" class="kestrel-journal__item is-featured">
+        <div class="kestrel-journal__image"><img src="assets/hero-product.jpg" alt="" style="width:100%;height:100%;object-fit:cover;filter:grayscale(100%);"></div>
+        <div class="kestrel-journal__meta"><span class="kestrel-journal__category">Science</span><span>·</span><span>2026.04</span><span>·</span><span>8 min</span></div>
+        <h2 class="kestrel-journal__item-title">The science of density.</h2>
+        <p class="kestrel-journal__excerpt">Why the conversation around hair loss has been wrong for decades — and what the follicle actually needs.</p>
+      </a>
+      <a href="#" class="kestrel-journal__item">
+        <div class="kestrel-journal__image"><img src="assets/hero-product.jpg" alt="" style="width:100%;height:100%;object-fit:cover;filter:grayscale(100%);"></div>
+        <div class="kestrel-journal__meta"><span class="kestrel-journal__category">Philosophy</span><span>·</span><span>2026.03</span><span>·</span><span>4 min</span></div>
+        <h2 class="kestrel-journal__item-title">Rituals, not routines.</h2>
+        <p class="kestrel-journal__excerpt">On the difference between performing a habit and inhabiting one. A short manifesto.</p>
+      </a>
+      <a href="#" class="kestrel-journal__item">
+        <div class="kestrel-journal__image"><img src="assets/hero-product.jpg" alt="" style="width:100%;height:100%;object-fit:cover;filter:grayscale(100%);"></div>
+        <div class="kestrel-journal__meta"><span class="kestrel-journal__category">Longevity</span><span>·</span><span>2026.02</span><span>·</span><span>11 min</span></div>
+        <h2 class="kestrel-journal__item-title">What aging asks of hair.</h2>
+        <p class="kestrel-journal__excerpt">Sebum changes. Diameter narrows. Cycle shortens. Three quiet shifts after 35 — and the corrections.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CART PAGE ==================== -->
+<div class="page-divider page-divider--light">Cart Page</div>
+
+<section class="kestrel-cart" style="background: var(--color-white);">
+  <div class="page-width">
+    <h1 class="kestrel-cart__title">Cart</h1>
+    <table class="kestrel-cart__table">
+      <thead><tr><th>Product</th><th style="width:140px;">Quantity</th><th style="width:100px; text-align:right;">Total</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="kestrel-cart__product">
+              <div class="kestrel-cart__product-img" style="background: linear-gradient(135deg, #e8e3db, #d5d0c8);"><img src="assets/hero-product.jpg" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
+              <div><p class="kestrel-cart__product-name">Botanical Serum</p><p style="font-size:13px;color:var(--color-stone);">50ml</p><button class="kestrel-cart__remove">Remove</button></div>
+            </div>
+          </td>
+          <td><div class="kestrel-cart__qty"><button>−</button><input type="number" value="1"><button>+</button></div></td>
+          <td class="kestrel-cart__price" style="text-align:right;">$49.00</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="kestrel-cart__footer">
+      <p class="kestrel-cart__subtotal">Subtotal <span>$49.00</span></p>
+      <button class="kestrel-cart__checkout">Checkout</button>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="kestrel-footer">
+  <div class="page-width">
+    <div class="kestrel-footer__grid">
+      <div class="kestrel-footer__brand">
+        <span class="kestrel-footer__logo">KESTREL</span>
+        <p class="kestrel-footer__tagline">Clinically informed hair density formulas for men who act early.</p>
+      </div>
+      <div class="kestrel-footer__col">
+        <p class="kestrel-footer__heading">Shop</p>
+        <ul class="kestrel-footer__links"><li><a href="#">Botanical Serum</a></li><li><a href="#">Peptide Serum</a></li><li><a href="#">Scalp Oil</a></li><li><a href="#">The Ritual Set</a></li></ul>
+      </div>
+      <div class="kestrel-footer__col">
+        <p class="kestrel-footer__heading">Discover</p>
+        <ul class="kestrel-footer__links"><li><a href="#">How It Works</a></li><li><a href="#">Science</a></li><li><a href="#">About</a></li></ul>
+      </div>
+      <div class="kestrel-footer__col">
+        <p class="kestrel-footer__heading">Support</p>
+        <ul class="kestrel-footer__links"><li><a href="#">Shipping</a></li><li><a href="#">Returns</a></li><li><a href="#">Contact</a></li></ul>
+      </div>
+    </div>
+    <div class="kestrel-footer__bottom">
+      <p class="kestrel-footer__copyright">© 2026 Kestrel — All rights reserved</p>
+      <div class="kestrel-footer__legal"><a href="#">Shipping</a><a href="#">Returns</a><a href="#">Contact</a></div>
+    </div>
+  </div>
+</footer>
+
+<div class="preview-badge">Full Site Preview</div>
+<script src="assets/theme-DdKZi2bx.js"></script>
+</body>
+</html>

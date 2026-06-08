@@ -1,0 +1,219 @@
+{% comment %}
+  Kestrel Results Section
+  — Before/After images with quotes and tags
+{% endcomment %}
+
+<style>
+  .kestrel-results {
+    background: var(--color-cream);
+    padding: 64px 0;
+  }
+  @media (min-width: 768px) {
+    .kestrel-results { padding: 96px 0; }
+  }
+  .kestrel-results__header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  .kestrel-results__eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(10,10,10,0.4);
+    margin-bottom: 12px;
+  }
+  .kestrel-results__title {
+    font-family: var(--font-display);
+    font-size: 30px;
+    letter-spacing: -0.02em;
+    color: var(--color-ink);
+  }
+  @media (min-width: 768px) {
+    .kestrel-results__title { font-size: 36px; }
+  }
+  .kestrel-results__item {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  @media (min-width: 768px) {
+    .kestrel-results__item { grid-template-columns: 1fr 1fr; }
+  }
+  .kestrel-results__item + .kestrel-results__item {
+    margin-top: 64px;
+  }
+  .kestrel-results__images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .kestrel-results__img {
+    position: relative;
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    background: var(--color-white);
+  }
+  .kestrel-results__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .kestrel-results__img--before img {
+    filter: grayscale(100%);
+  }
+  .kestrel-results__badge {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    font-size: 10px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    font-weight: 500;
+  }
+  .kestrel-results__badge--before {
+    background: rgba(255,255,255,0.9);
+    color: var(--color-ink);
+  }
+  .kestrel-results__badge--after {
+    background: var(--color-ink);
+    color: var(--color-white);
+  }
+  .kestrel-results__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .kestrel-results__quote {
+    font-size: 18px;
+    line-height: 1.6;
+    color: rgba(10,10,10,0.8);
+    font-style: italic;
+  }
+  @media (min-width: 768px) {
+    .kestrel-results__quote { font-size: 20px; }
+  }
+  .kestrel-results__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 24px;
+  }
+  .kestrel-results__tag {
+    font-size: 10px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background: rgba(10,10,10,0.08);
+    color: var(--color-ink);
+    padding: 6px 12px;
+    font-weight: 500;
+  }
+</style>
+
+<section class="kestrel-results">
+  <div class="page-width">
+    <div class="kestrel-results__header">
+      <p class="kestrel-results__eyebrow">{{ section.settings.eyebrow }}</p>
+      <h2 class="kestrel-results__title">{{ section.settings.heading }}</h2>
+    </div>
+
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'result' -%}
+        <div class="kestrel-results__item" {{ block.shopify_attributes }}>
+          <div class="kestrel-results__images">
+            <div class="kestrel-results__img kestrel-results__img--before">
+              {%- if block.settings.before_image != blank -%}
+                <img src="{{ block.settings.before_image | image_url: width: 400 }}"
+                     alt="Before"
+                     width="{{ block.settings.before_image.width }}"
+                     height="{{ block.settings.before_image.height }}"
+                     loading="lazy">
+              {%- endif -%}
+              <span class="kestrel-results__badge kestrel-results__badge--before">Before</span>
+            </div>
+            <div class="kestrel-results__img">
+              {%- if block.settings.after_image != blank -%}
+                <img src="{{ block.settings.after_image | image_url: width: 400 }}"
+                     alt="After"
+                     width="{{ block.settings.after_image.width }}"
+                     height="{{ block.settings.after_image.height }}"
+                     loading="lazy">
+              {%- endif -%}
+              <span class="kestrel-results__badge kestrel-results__badge--after">After</span>
+            </div>
+          </div>
+          <div class="kestrel-results__content">
+            <p class="kestrel-results__quote">"{{ block.settings.quote }}"</p>
+            {%- if block.settings.tags != blank -%}
+              <div class="kestrel-results__tags">
+                {%- assign tags = block.settings.tags | split: ',' -%}
+                {%- for tag in tags -%}
+                  <span class="kestrel-results__tag">{{ tag | strip }}</span>
+                {%- endfor -%}
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Results",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Real Results"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Before & After"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "result",
+      "name": "Result",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "before_image",
+          "label": "Before Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "after_image",
+          "label": "After Image"
+        },
+        {
+          "type": "textarea",
+          "id": "quote",
+          "label": "Quote"
+        },
+        {
+          "type": "text",
+          "id": "tags",
+          "label": "Tags (comma separated)",
+          "info": "e.g. Receding hairline, Reduced Hair Loss, Visibly Thicker Hair"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Results",
+      "blocks": [
+        { "type": "result" },
+        { "type": "result" }
+      ]
+    }
+  ]
+}
+{% endschema %}

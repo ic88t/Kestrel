@@ -1,0 +1,20 @@
+<section class="kestrel-collection" style="padding-top:40px;">
+  <div class="page-width">
+    <h1 class="kestrel-collection__title">Collections</h1>
+    <div class="kestrel-collection__grid">
+      {%- for collection in collections -%}
+        <a href="{{ collection.url }}" class="kestrel-product-card">
+          <div class="kestrel-product-card__image">
+            {%- if collection.featured_image -%}
+              <img src="{{ collection.featured_image | image_url: width: 600 }}" alt="" width="600" height="600" loading="lazy">
+            {%- else -%}
+              <div style="width:70%;height:70%;background:linear-gradient(135deg,#ddd,#bbb);border-radius:4px;"></div>
+            {%- endif -%}
+          </div>
+          <p class="kestrel-product-card__name">{{ collection.title }}</p>
+          <p class="kestrel-product-card__price">{{ collection.products_count }} products</p>
+        </a>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>

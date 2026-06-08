@@ -1,0 +1,14 @@
+node_modules
+.next
+out
+.DS_Store
+.env.local
+.env*.local
+*.log
+.vercel
+next-env.d.ts
+
+# Shopify theme
+theme/node_modules
+theme/.vite
+theme/assets/.vite

@@ -1,0 +1,178 @@
+{% comment %}
+  Kestrel Product Accordion
+  — Description, Ingredients, How to Use, Shipping & Returns
+{% endcomment %}
+
+<style>
+  .kestrel-accordion {
+    border-top: 1px solid rgba(244,241,236,0.1);
+  }
+  .kestrel-accordion__item {
+    border-bottom: 1px solid rgba(244,241,236,0.1);
+  }
+  .kestrel-accordion__toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+  }
+  .kestrel-accordion__toggle span {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(244,241,236,0.8);
+    font-weight: 500;
+  }
+  .kestrel-accordion__icon {
+    font-size: 18px;
+    color: rgba(244,241,236,0.4);
+    transition: transform 0.3s ease;
+    line-height: 1;
+  }
+  .kestrel-accordion__item.is-open .kestrel-accordion__icon {
+    transform: rotate(45deg);
+  }
+  .kestrel-accordion__content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+  }
+  .kestrel-accordion__item.is-open .kestrel-accordion__content {
+    max-height: 600px;
+    opacity: 1;
+  }
+  .kestrel-accordion__body {
+    padding-bottom: 24px;
+    padding-right: 16px;
+    color: rgba(244,241,236,0.7);
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .kestrel-accordion__body p { margin-bottom: 12px; }
+  .kestrel-accordion__claims {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 16px;
+  }
+  .kestrel-accordion__claims li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: rgba(244,241,236,0.6);
+    font-size: 14px;
+    padding: 4px 0;
+  }
+  .kestrel-accordion__claims li span {
+    color: var(--color-brass);
+  }
+  .kestrel-accordion__ingredients {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .kestrel-accordion__ingredients li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(244,241,236,0.05);
+  }
+  .kestrel-accordion__ingredients li:last-child { border-bottom: none; }
+  .kestrel-accordion__ingredients-name {
+    color: var(--color-paper);
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .kestrel-accordion__ingredients-role {
+    color: var(--color-stone);
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    flex-shrink: 0;
+  }
+  .kestrel-accordion__steps {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .kestrel-accordion__steps li {
+    display: flex;
+    gap: 16px;
+    padding: 10px 0;
+  }
+  .kestrel-accordion__steps li span {
+    font-family: var(--font-display);
+    font-size: 18px;
+    color: var(--color-brass);
+    flex-shrink: 0;
+    width: 24px;
+  }
+  .kestrel-accordion__steps li p {
+    color: rgba(244,241,236,0.7);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+</style>
+
+<div class="kestrel-accordion">
+  {%- for block in section.blocks -%}
+    <div class="kestrel-accordion__item{% if forloop.first %} is-open{% endif %}" data-accordion-item {{ block.shopify_attributes }}>
+      <button class="kestrel-accordion__toggle" data-accordion-toggle aria-expanded="{{ forloop.first }}">
+        <span>{{ block.settings.title }}</span>
+        <span class="kestrel-accordion__icon">+</span>
+      </button>
+      <div class="kestrel-accordion__content">
+        <div class="kestrel-accordion__body">
+          {{ block.settings.content }}
+        </div>
+      </div>
+    </div>
+  {%- endfor -%}
+</div>
+
+{% schema %}
+{
+  "name": "Product Accordion",
+  "tag": "div",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "panel",
+      "name": "Panel",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Description"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content",
+          "default": "<p>Product description goes here.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Accordion",
+      "blocks": [
+        { "type": "panel", "settings": { "title": "Description", "content": "<p>Clinically tested peptide complex formulated for men experiencing early-stage thinning.</p>" } },
+        { "type": "panel", "settings": { "title": "Ingredients", "content": "<p>Biomimetic peptides, rosemary CO₂ extract, saw palmetto, plant-derived carrier oils.</p>" } },
+        { "type": "panel", "settings": { "title": "How to Use", "content": "<p>Apply to damp scalp after cleansing. Massage for 60 seconds. Use daily, morning or evening.</p>" } },
+        { "type": "panel", "settings": { "title": "Shipping & Returns", "content": "<p>Free shipping over $150. 60-day returns — opened or unopened. Ships within 24 hours.</p>" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

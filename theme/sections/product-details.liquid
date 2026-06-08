@@ -1,0 +1,24 @@
+<section class="kestrel-product-detail">
+  <div class="page-width">
+    <div class="kestrel-product-detail__grid">
+      <div class="kestrel-product-detail__image">
+        {%- if product.featured_image -%}
+          <img src="{{ product.featured_image | image_url: width: 800 }}" alt="" width="800" height="800" loading="lazy">
+        {%- else -%}
+          <div style="width:70%;height:70%;background:linear-gradient(135deg,#ddd,#bbb);border-radius:8px;"></div>
+        {%- endif -%}
+      </div>
+      <div class="kestrel-product-detail__content">
+        <h3>Key Actives</h3>
+        <ul>
+          <li><strong>Acetyl Tetrapeptide-3</strong>Strengthens follicles and supports visibly thicker hair.</li>
+          <li><strong>Red Clover Extract</strong>Natural DHT blocker that helps reduce hair loss.</li>
+          <li><strong>Saw Palmetto Extract</strong>Inhibits 5-alpha-reductase to limit DHT and shedding.</li>
+          <li><strong>Coffee Leaf/Seed Extract</strong>Caffeine energises follicles and prolongs growth phase.</li>
+          <li><strong>Rosemary Leaf Extract</strong>Promotes healthy scalp balance and reduces irritation.</li>
+          <li><strong>Tocopherol (Vitamin E)</strong>Provides antioxidant protection to preserve follicle longevity.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

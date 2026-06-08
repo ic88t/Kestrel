@@ -1,0 +1,51 @@
+<section class="kestrel-cart">
+  <div class="page-width">
+    <h1 class="kestrel-cart__title">Cart</h1>
+    {%- if cart.item_count > 0 -%}
+      <form action="/cart" method="post" novalidate>
+        <table class="kestrel-cart__table">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th style="width:140px;">Quantity</th>
+              <th style="width:100px;text-align:right;">Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            {%- for item in cart.items -%}
+              <tr>
+                <td>
+                  <div class="kestrel-cart__product">
+                    <div class="kestrel-cart__product-img">
+                      <img src="{{ item.image | image_url: width: 200 }}" alt="{{ item.title | escape }}" width="200" height="200" loading="lazy">
+                    </div>
+                    <div>
+                      <p class="kestrel-cart__product-name">{{ item.product.title }}</p>
+                      <p class="kestrel-cart__product-variant">{{ item.variant.title }}</p>
+                      <a href="/cart/change?line={{ forloop.index }}&quantity=0" class="kestrel-cart__remove">Remove</a>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="kestrel-cart__qty">
+                    <button type="button" data-qty-minus>−</button>
+                    <input type="number" name="updates[]" value="{{ item.quantity }}" min="0" data-qty-input>
+                    <button type="button" data-qty-plus>+</button>
+                  </div>
+                </td>
+                <td class="kestrel-cart__price" style="text-align:right;">{{ item.line_price | money }}</td>
+              </tr>
+            {%- endfor -%}
+          </tbody>
+        </table>
+        <div class="kestrel-cart__footer">
+          <p class="kestrel-cart__subtotal">Subtotal <span>{{ cart.total_price | money }}</span></p>
+          <button type="submit" name="checkout" class="kestrel-cart__checkout">Checkout</button>
+        </div>
+      </form>
+    {%- else -%}
+      <p style="color:var(--color-text-secondary);font-size:14px;">Your cart is empty.</p>
+      <a href="/collections/all" style="display:inline-block;margin-top:16px;font-size:12px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:underline;text-underline-offset:3px;">Continue Shopping</a>
+    {%- endif -%}
+  </div>
+</section>

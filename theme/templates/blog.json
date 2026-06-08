@@ -1,0 +1,9 @@
+{
+  "sections": {
+    "main": {
+      "type": "blog-journal",
+      "settings": {}
+    }
+  },
+  "order": ["main"]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "kestrel-shopify-theme",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "shopify": "shopify theme dev --store=kestrel-dev",
+    "deploy": "shopify theme push"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0",
+    "vite-plugin-shopify": "^3.2.0",
+    "vite-plugin-page-reload": "^0.2.3"
+  }
+}
