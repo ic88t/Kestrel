@@ -69,8 +69,8 @@ shopify theme push --store=kestrel-6933.myshopify.com --live --allow-live
 | 2 | `review-marquee.liquid` | Black bar, scrolling Trustpilot quotes |
 | 3 | `results-ba.liquid` | "Clever science. Visible results." — before/after images + customer quote |
 | 4 | `system-cards.liquid` | "Discover your system" — 3 product cards (Serum, Booster, Routine) |
-| 5 | `clinical-stats.liquid` | "Results demonstrated after 150 days" — 97% / 73% stat cards |
-| 6 | `media-strip.liquid` | Media logos: GQ, The Sun, Telegraph, Yahoo!, Men's Health, etc. |
+| 5 | `clinical-stats.liquid` | **"Success Stories"** — 5 customer testimonial cards (portrait + Month 1/5-6 inset photos + quote) |
+| 6 | ~~`media-strip.liquid`~~ | **Removed** from homepage |
 | 7 | `doctor-quote.liquid` | Dr. Sarah Chen testimonial with photo |
 | 8 | `science-section.liquid` | "Most products target one cause..." — 3 science points + product image |
 | 9 | `timeline.liquid` | Day 30/45/90/150 vertical timeline |
@@ -86,10 +86,11 @@ shopify theme push --store=kestrel-6933.myshopify.com --live --allow-live
 | File | Purpose |
 |------|---------|
 | `theme/frontend/entrypoints/theme.css` | **All CSS** — ~2,000 lines, single file, no component splitting |
-| `theme/frontend/entrypoints/theme.js` | Accordion toggle + mobile menu + scroll animations (Intersection Observer) |
+| `theme/frontend/entrypoints/theme.js` | Accordion + mobile menu + cart drawer AJAX + scroll animations |
 | `theme/layout/theme.liquid` | Master layout — includes vite-tag, header/footer groups, animation script |
 | `theme/templates/index.json` | Homepage section ordering |
-| `theme/sections/header.liquid` | Trust bar + sticky header + mobile menu |
+| `theme/sections/header.liquid` | Trust bar + sticky header + mobile menu + cart drawer trigger button |
+| `theme/sections/cart-drawer.liquid` | **AJAX slide-out cart drawer** — right panel, shipping bar, qty +/-, remove, checkout |
 | `theme/sections/main-product.liquid` | Full product page (sticky gallery, options, accordion, reviews, related) |
 | `theme/sections/main-collection.liquid` | 4-column collection grid |
 | `theme/sections/footer.liquid` | Footer with newsletter + links |
@@ -112,6 +113,20 @@ Scroll-triggered animations via **Intersection Observer** (inline script in `the
 Also: hero product has a **floating animation** (6s ease-in-out infinite).
 
 ---
+
+## Cart Drawer
+
+Slide-out AJAX cart drawer (right panel, max-width 420px):
+- Trigger: header cart icon button (`data-cart-drawer-trigger`)
+- Fetches `/cart.js` on open, renders items dynamically
+- Quantity +/- buttons with live update via `/cart/change.js`
+- Remove item (set qty to 0)
+- Free shipping progress bar (threshold: $99)
+- Subtotal / Discount / Total summary
+- Secure Checkout button → `/checkout`
+- 150-Day Money-Back Guarantee + payment icons (Visa, Mastercard, Amex, Apple Pay)
+- Escape key and overlay click to close
+- Body scroll locked when open
 
 ## Known Issues
 
@@ -143,6 +158,7 @@ Key images used across sections:
 
 ## What to Do Next (Open Ideas)
 
+- [x] ~~AJAX slide-out cart drawer~~ **Done**
 - [ ] Add real product photography
 - [ ] Build additional pages (About, Science, Ritual, Contact)
 - [ ] Add a quiz/flow section
