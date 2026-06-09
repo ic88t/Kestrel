@@ -4,8 +4,8 @@
       "type": "main-product",
       "settings": {}
     },
-    "product-results": {
-      "type": "product-results",
+    "product-testimonials": {
+      "type": "product-testimonials",
       "settings": {}
     },
     "product-science": {
@@ -13,5 +13,5 @@
       "settings": {}
     }
   },
-  "order": ["main-product", "product-results", "product-science"]
+  "order": ["main-product", "product-testimonials", "product-science"]
 }

@@ -4025,3 +4025,342 @@ input, textarea, select { font-family: inherit; }
   height: 100%;
   object-fit: cover;
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   PRODUCT TESTIMONIALS — Dark section with customer cards
+   ═══════════════════════════════════════════════════════════════ */
+
+.kestrel-testimonials {
+  padding: 80px 0;
+  background: #2A2A2A;
+  color: #FFFFFF;
+}
+
+.kestrel-testimonials__title {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 48px;
+  color: #FFFFFF;
+}
+
+@media (min-width: 768px) {
+  .kestrel-testimonials__title { font-size: 36px; }
+}
+
+.kestrel-testimonials__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .kestrel-testimonials__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .kestrel-testimonials__grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+}
+
+.kestrel-testimonial-card {
+  background: #333333;
+  border: 1px solid #444444;
+  border-radius: 14px;
+  padding: 28px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.35s var(--ease-out);
+}
+
+.kestrel-testimonial-card:hover {
+  border-color: #555555;
+  transform: translateY(-4px);
+}
+
+.kestrel-testimonial-card__avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 14px;
+  border: 2px solid #555555;
+}
+
+.kestrel-testimonial-card__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.kestrel-testimonial-card__stars {
+  display: flex;
+  gap: 3px;
+  color: #D4A853;
+  margin-bottom: 14px;
+}
+
+.kestrel-testimonial-card__headline {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 14px;
+}
+
+.kestrel-testimonial-card__quote {
+  font-size: 14px;
+  line-height: 1.65;
+  color: #CCCCCC;
+  margin-bottom: 18px;
+  flex: 1;
+}
+
+.kestrel-testimonial-card__author {
+  font-size: 13px;
+  font-weight: 500;
+  color: #FFFFFF;
+  margin-bottom: 6px;
+}
+
+.kestrel-testimonial-card__verified {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.kestrel-testimonial-card__meta {
+  font-size: 12px;
+  color: #AAAAAA;
+  margin-bottom: 2px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BEST SELLERS
+   ═══════════════════════════════════════════════════════════════ */
+
+.kestrel-bestsellers {
+  background: #0C0C0E;
+  padding: 80px 0 60px;
+}
+
+.kestrel-bestsellers__header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.kestrel-bestsellers__stars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  margin-bottom: 12px;
+  color: var(--color-star);
+}
+
+.kestrel-bestsellers__title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.kestrel-bestsellers__subtitle {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: rgba(255,255,255,0.6);
+  font-weight: 400;
+}
+
+.kestrel-bestsellers__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.kestrel-bestsellers__card {
+  text-align: center;
+}
+
+.kestrel-bestsellers__image {
+  display: block;
+  aspect-ratio: 1 / 1;
+  background: #D4A574;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 18px;
+  transition: transform 0.35s var(--ease-out);
+}
+
+.kestrel-bestsellers__image:hover {
+  transform: translateY(-4px);
+}
+
+.kestrel-bestsellers__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode: multiply;
+}
+
+.kestrel-bestsellers__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.kestrel-bestsellers__rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  color: var(--color-star);
+}
+
+.kestrel-bestsellers__rating-count {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: rgba(255,255,255,0.5);
+  margin-left: 4px;
+}
+
+.kestrel-bestsellers__name {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.35;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kestrel-bestsellers__name a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.kestrel-bestsellers__name a:hover {
+  color: var(--color-star);
+}
+
+.kestrel-bestsellers__price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.kestrel-bestsellers__price-current {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.kestrel-bestsellers__price-compare {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.4);
+  text-decoration: line-through;
+}
+
+.kestrel-bestsellers__btn {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  padding: 13px 20px;
+  background: #6B7B8D;
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.25s;
+  margin-top: 4px;
+}
+
+.kestrel-bestsellers__btn:hover {
+  background: #556673;
+}
+
+.kestrel-bestsellers__footer {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.kestrel-bestsellers__shopall {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.6);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: color 0.25s;
+}
+
+.kestrel-bestsellers__shopall:hover {
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  .kestrel-bestsellers__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .kestrel-bestsellers {
+    padding: 60px 0 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .kestrel-bestsellers__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .kestrel-bestsellers__title {
+    font-size: 24px;
+  }
+  .kestrel-bestsellers__subtitle {
+    font-size: 14px;
+  }
+  .kestrel-bestsellers__name {
+    font-size: 13px;
+    min-height: 36px;
+  }
+  .kestrel-bestsellers__btn {
+    font-size: 10px;
+    padding: 11px 14px;
+    letter-spacing: 0.08em;
+  }
+  .kestrel-bestsellers__image {
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+}

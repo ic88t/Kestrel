@@ -1,0 +1,80 @@
+<section class="kestrel-testimonials">
+  <div class="page-width">
+    <h2 class="kestrel-testimonials__title">50,000 Happy Customers and Counting...</h2>
+
+    <div class="kestrel-testimonials__grid">
+      <div class="kestrel-testimonial-card">
+        <div class="kestrel-testimonial-card__avatar">
+          <img src="{{ 'hero-lifestyle.jpg' | asset_url }}" alt="Ryan M." width="80" height="80" loading="lazy">
+        </div>
+        <div class="kestrel-testimonial-card__stars">
+          {%- for i in (1..5) -%}
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          {%- endfor -%}
+        </div>
+        <p class="kestrel-testimonial-card__headline">Patchy to Full</p>
+        <p class="kestrel-testimonial-card__quote">"Started with barely any growth in some areas. This oil changed everything. New growth filling in the patches, and my existing beard feels stronger. Finally growing a real beard!"</p>
+        <p class="kestrel-testimonial-card__author">Ryan M. - <span class="kestrel-testimonial-card__verified">Verified Buyer</span></p>
+        <p class="kestrel-testimonial-card__meta">Age: 28</p>
+        <p class="kestrel-testimonial-card__meta">6 weeks using Beard Growth Oil</p>
+      </div>
+
+      <div class="kestrel-testimonial-card">
+        <div class="kestrel-testimonial-card__avatar">
+          <img src="{{ 'hero-dark.jpg' | asset_url }}" alt="Jordan P." width="80" height="80" loading="lazy">
+        </div>
+        <div class="kestrel-testimonial-card__stars">
+          {%- for i in (1..5) -%}
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          {%- endfor -%}
+        </div>
+        <p class="kestrel-testimonial-card__headline">Overall Growth</p>
+        <p class="kestrel-testimonial-card__quote">"Game-changer for my beard journey. Not only filled in my patchy areas, but made my whole beard thicker and healthier. The oil absorbs quickly and isn't greasy at all."</p>
+        <p class="kestrel-testimonial-card__author">Jordan P. - <span class="kestrel-testimonial-card__verified">Verified Buyer</span></p>
+        <p class="kestrel-testimonial-card__meta">Age: 35</p>
+        <p class="kestrel-testimonial-card__meta">8 weeks using Beard Growth Oil</p>
+      </div>
+
+      <div class="kestrel-testimonial-card">
+        <div class="kestrel-testimonial-card__avatar">
+          <img src="{{ 'bottle-1.jpg' | asset_url }}" alt="Derek K." width="80" height="80" loading="lazy">
+        </div>
+        <div class="kestrel-testimonial-card__stars">
+          {%- for i in (1..5) -%}
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          {%- endfor -%}
+        </div>
+        <p class="kestrel-testimonial-card__headline">Quick Results</p>
+        <p class="kestrel-testimonial-card__quote">"Noticed new growth within weeks. The thin spots are filling in, and my beard feels stronger than ever. Perfect for daily use - just apply and go."</p>
+        <p class="kestrel-testimonial-card__author">Derek K. - <span class="kestrel-testimonial-card__verified">Verified Buyer</span></p>
+        <p class="kestrel-testimonial-card__meta">Age: 32</p>
+        <p class="kestrel-testimonial-card__meta">4 weeks using Beard Growth Oil</p>
+      </div>
+
+      <div class="kestrel-testimonial-card">
+        <div class="kestrel-testimonial-card__avatar">
+          <img src="{{ 'bottle-2.jpg' | asset_url }}" alt="Austin B." width="80" height="80" loading="lazy">
+        </div>
+        <div class="kestrel-testimonial-card__stars">
+          {%- for i in (1..5) -%}
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          {%- endfor -%}
+        </div>
+        <p class="kestrel-testimonial-card__headline">Complete Transformation</p>
+        <p class="kestrel-testimonial-card__quote">"From patchy to full coverage. This oil actually works. New growth in areas I thought would never fill in, plus my existing beard looks and feels healthier."</p>
+        <p class="kestrel-testimonial-card__author">Austin B. - <span class="kestrel-testimonial-card__verified">Verified Buyer</span></p>
+        <p class="kestrel-testimonial-card__meta">Age: 42</p>
+        <p class="kestrel-testimonial-card__meta">6 weeks using Beard Growth Oil</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Product Testimonials",
+  "settings": [],
+  "blocks": [],
+  "presets": [{ "name": "Product Testimonials" }]
+}
+{% endschema %}

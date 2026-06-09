@@ -1,51 +1,56 @@
-{%- assign card_images = "sh1.png,sh-plus.png,serum-1.jpg" | split: "," -%}
-
-<section class="kestrel-system">
+<section class="kestrel-bestsellers">
   <div class="page-width">
-    <div class="kestrel-system__header">
-      <h2 class="kestrel-system__title animate animate--fade-up">Discover your system</h2>
-      <div class="kestrel-system__actions animate animate--fade-up animate-delay-1">
-        <a href="/collections/all" class="kestrel-system__btn">Shop Men</a>
-        <a href="/collections/all" class="kestrel-system__btn">Shop Women</a>
+    <div class="kestrel-bestsellers__header">
+      <div class="kestrel-bestsellers__stars">
+        {%- for i in (1..5) -%}
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+        {%- endfor -%}
       </div>
+      <h2 class="kestrel-bestsellers__title animate animate--fade-up">Best Sellers</h2>
+      <p class="kestrel-bestsellers__subtitle animate animate--fade-up animate-delay-1">Top choices for looking and feeling more confident.</p>
     </div>
-    <div class="kestrel-system__grid">
-      <div class="kestrel-system__card animate animate--fade-up animate-delay-1">
-        <h3 class="kestrel-system__card-title">Bio-Pilixin® Activation Serum</h3>
-        <p class="kestrel-system__card-desc">Helps promote visibly reduced shedding as early as 45 days.</p>
-        <div class="kestrel-system__card-image">
-          <img src="{{ card_images[0] | asset_url }}" alt="" width="300" height="300" loading="lazy">
+
+    <div class="kestrel-bestsellers__grid">
+      {%- assign bestseller_products = "sh1.png|Root Activator Shampoo™|7822|4999|9999,nd1.png|Eye Repair Stick|7510|4999|9999,serum-1.jpg|No-Shave Hair Removal Spray|8240|4999|9999,bottle-1.jpg|Gray Reverse Bar™|7133|4999|9999" | split: "," -%}
+      {%- for product_str in bestseller_products -%}
+        {%- assign parts = product_str | split: "|" -%}
+        {%- assign img = parts[0] -%}
+        {%- assign title = parts[1] -%}
+        {%- assign reviews = parts[2] -%}
+        {%- assign price_cents = parts[3] | times: 1 -%}
+        {%- assign compare_cents = parts[4] | times: 1 -%}
+        {%- assign delay = forloop.index | plus: 1 -%}
+
+        <div class="kestrel-bestsellers__card animate animate--fade-up animate-delay-{{ delay }}">
+          <a href="/collections/all" class="kestrel-bestsellers__image">
+            <img src="{{ img | asset_url }}" alt="{{ title }}" width="400" height="400" loading="lazy">
+          </a>
+          <div class="kestrel-bestsellers__info">
+            <div class="kestrel-bestsellers__rating">
+              {%- for i in (1..5) -%}
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+              {%- endfor -%}
+              <span class="kestrel-bestsellers__rating-count">({{ reviews }})</span>
+            </div>
+            <h3 class="kestrel-bestsellers__name">
+              <a href="/collections/all">{{ title }}</a>
+            </h3>
+            <div class="kestrel-bestsellers__price">
+              <span class="kestrel-bestsellers__price-current">{{ price_cents | money }}</span>
+              <span class="kestrel-bestsellers__price-compare">{{ compare_cents | money }}</span>
+            </div>
+            <a href="/collections/all" class="kestrel-bestsellers__btn">Add to Cart</a>
+          </div>
         </div>
-        <div class="kestrel-system__card-actions">
-          <a href="/collections/all" class="kestrel-system__card-btn kestrel-system__card-btn--primary">Shop Men</a>
-          <a href="/collections/all" class="kestrel-system__card-btn kestrel-system__card-btn--primary">Shop Women</a>
-        </div>
-        <p class="kestrel-system__card-price">Starting at $49/month</p>
-      </div>
-      <div class="kestrel-system__card animate animate--fade-up animate-delay-2">
-        <span class="kestrel-system__card-badge">New</span>
-        <h3 class="kestrel-system__card-title">Hairline Booster</h3>
-        <p class="kestrel-system__card-desc">Catch receding hairlines early with precision targeting.</p>
-        <div class="kestrel-system__card-image">
-          <img src="{{ card_images[1] | asset_url }}" alt="" width="300" height="300" loading="lazy">
-        </div>
-        <div class="kestrel-system__card-actions">
-          <a href="/collections/all" class="kestrel-system__card-btn kestrel-system__card-btn--primary">Shop Now</a>
-        </div>
-        <p class="kestrel-system__card-price">Starting at $35/month</p>
-      </div>
-      <div class="kestrel-system__card animate animate--fade-up animate-delay-3">
-        <h3 class="kestrel-system__card-title">Hair Growth Routine</h3>
-        <p class="kestrel-system__card-desc">Support long-term growth & strength with complete system.</p>
-        <div class="kestrel-system__card-image">
-          <img src="{{ card_images[2] | asset_url }}" alt="" width="300" height="300" loading="lazy">
-        </div>
-        <div class="kestrel-system__card-actions">
-          <a href="/collections/all" class="kestrel-system__card-btn kestrel-system__card-btn--primary">Shop Men</a>
-          <a href="/collections/all" class="kestrel-system__card-btn kestrel-system__card-btn--primary">Shop Women</a>
-        </div>
-        <p class="kestrel-system__card-price">Starting at $89/month</p>
-      </div>
+      {%- endfor -%}
+    </div>
+
+    <div class="kestrel-bestsellers__footer animate animate--fade-up animate-delay-5">
+      <a href="/collections/all" class="kestrel-bestsellers__shopall">Shop All</a>
     </div>
   </div>
 </section>
