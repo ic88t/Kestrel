@@ -20,10 +20,6 @@
       "type": "clinical-stats",
       "settings": {}
     },
-    "timeline": {
-      "type": "timeline",
-      "settings": {}
-    },
     "articles": {
       "type": "articles",
       "settings": {}
@@ -35,7 +31,6 @@
     "results-ba",
     "system-cards",
     "clinical-stats",
-    "timeline",
     "articles"
   ]
 }
