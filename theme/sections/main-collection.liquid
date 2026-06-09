@@ -3,48 +3,64 @@
 <section class="kestrel-collection">
   <div class="page-width">
     <div class="kestrel-collection__header">
-      <h1 class="kestrel-collection__title">{{ collection.title | default: "All Formulas" }}</h1>
-      <p class="kestrel-collection__count">{{ collection.products_count | default: 8 }} products</p>
+      <h1 class="kestrel-collection__title">{{ collection.title | default: "Shop All" }}</h1>
     </div>
+
+    <nav class="kestrel-collection__tabs" aria-label="Product filters">
+      <a href="/collections/all" class="kestrel-collection__tab is-active">All Hair Loss</a>
+      <a href="/collections/all/no-hair-loss" class="kestrel-collection__tab">No Hair Loss</a>
+      <a href="/collections/all/mild-hair-loss" class="kestrel-collection__tab">Mild Hair Loss</a>
+      <a href="/collections/all/advanced-hair-loss" class="kestrel-collection__tab">Advanced Hair Loss</a>
+      <a href="/collections/all" class="kestrel-collection__tab">Shop All</a>
+    </nav>
 
     <div class="kestrel-collection__grid">
       {%- for product in collection.products -%}
-        <a href="{{ product.url }}" class="kestrel-product-card">
+        <a href="{{ product.url }}" class="kestrel-product-card animate animate--fade-up animate-delay-{{ forloop.index | modulo: 4 | plus: 1 }}">
           <div class="kestrel-product-card__image">
             {%- if product.featured_image -%}
-              <img src="{{ product.featured_image | image_url: width: 600 }}"
+              <img src="{{ product.featured_image | image_url: width: 900 }}"
                    alt="{{ product.featured_image.alt | escape }}"
-                   width="600" height="600" loading="lazy">
+                   width="900" height="900" loading="lazy">
             {%- else -%}
               <img src="{{ images[forloop.index0] | default: images[0] | asset_url }}" alt="" width="600" height="600" loading="lazy">
             {%- endif -%}
           </div>
-          <p class="kestrel-product-card__name">{{ product.title }}</p>
-          <div class="kestrel-product-card__reviews">
-            <span class="kestrel-product-card__stars">
-              {%- for i in (1..5) -%}
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              {%- endfor -%}
-            </span>
-            <span class="kestrel-product-card__review-count">(128 reviews)</span>
+          <div class="kestrel-product-card__info">
+            <p class="kestrel-product-card__name">{{ product.title | upcase }}</p>
+            <div class="kestrel-product-card__reviews">
+              <span class="kestrel-product-card__stars" aria-hidden="true">
+                {%- for i in (1..5) -%}
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                {%- endfor -%}
+              </span>
+              <span class="kestrel-product-card__rating">4.8</span>
+              <span class="kestrel-product-card__review-count">(128 reviews)</span>
+            </div>
+            <p class="kestrel-product-card__price">{{ product.price | money }}</p>
           </div>
-          <p class="kestrel-product-card__price">{{ product.price | money }}</p>
         </a>
       {%- else -%}
         {%- for i in (1..8) -%}
           {%- assign img_index = forloop.index0 | modulo: 8 -%}
-          <a href="#" class="kestrel-product-card">
+          {%- assign demo_titles = "Plus Range | Ultra Thickening Anti-Hair Loss Set,Starter Thickening Set,SH1 | Daily Thickening Shampoo,SH Plus | Ultra Thickening Anti-Hair Loss Shampoo,Serum | Hair Growth Serum,Booster | Follicle Stimulating Oil,Routine | Complete Hair System,Essentials | Travel Size Set" | split: "," -%}
+          {%- assign demo_prices = "13600,5800,2800,6800,4500,3200,8900,2400" | split: "," -%}
+          {%- assign demo_reviews = "384,612,334,209,156,89,421,67" | split: "," -%}
+          <a href="#" class="kestrel-product-card animate animate--fade-up animate-delay-{{ forloop.index | modulo: 4 | plus: 1 }}">
             <div class="kestrel-product-card__image">
               <img src="{{ images[img_index] | default: images[0] | asset_url }}" alt="" width="600" height="600" loading="lazy">
             </div>
-            <p class="kestrel-product-card__name">{{ images[img_index] | split: "/" | last | remove: ".png" | remove: ".jpg" | replace: "-", " " | upcase }}</p>
-            <div class="kestrel-product-card__reviews">
-              <span class="kestrel-product-card__stars">
-                {%- for i in (1..5) -%}<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>{%- endfor -%}
-              </span>
-              <span class="kestrel-product-card__review-count">({{ 100 | plus: forloop.index0 | times: 32 }} reviews)</span>
+            <div class="kestrel-product-card__info">
+              <p class="kestrel-product-card__name">{{ demo_titles[img_index] | upcase }}</p>
+              <div class="kestrel-product-card__reviews">
+                <span class="kestrel-product-card__stars" aria-hidden="true">
+                  {%- for i in (1..5) -%}<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>{%- endfor -%}
+                </span>
+                <span class="kestrel-product-card__rating">4.8</span>
+                <span class="kestrel-product-card__review-count">({{ demo_reviews[img_index] }} reviews)</span>
+              </div>
+              <p class="kestrel-product-card__price">{{ demo_prices[img_index] | money }}</p>
             </div>
-            <p class="kestrel-product-card__price">${{ 35 | plus: forloop.index0 | times: 7 }}.00</p>
           </a>
         {%- endfor -%}
       {%- endfor -%}

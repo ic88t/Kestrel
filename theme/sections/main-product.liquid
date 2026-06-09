@@ -51,8 +51,8 @@
         {%- form 'product', product, id: 'product-form', novalidate: 'novalidate' -%}
           <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
 
-          <div class="kestrel-product__options">
-            <div class="kestrel-product__option is-selected">
+          <div class="kestrel-product__options" data-product-options>
+            <div class="kestrel-product__option is-selected" data-product-option data-option-price="{{ product.price | default: 4410 }}" data-option-label="Auto Reorder">
               <div class="kestrel-product__option-left">
                 <span class="kestrel-product__option-radio"></span>
                 <div>
@@ -66,14 +66,14 @@
                 <span class="save">Save 10%</span>
               </div>
             </div>
-            <div class="kestrel-product__option">
+            <div class="kestrel-product__option" data-product-option data-option-price="{{ product.compare_at_price | default: 4900 }}" data-option-label="Just Once">
               <div class="kestrel-product__option-left">
                 <span class="kestrel-product__option-radio"></span>
                 <div>
                   <div class="kestrel-product__option-label">Just Once</div>
                 </div>
               </div>
-              <div class="kestrel-product__option-price">{{ product.price | default: 4900 | money }}</div>
+              <div class="kestrel-product__option-price">{{ product.compare_at_price | default: 4900 | money }}</div>
             </div>
           </div>
 
@@ -83,8 +83,8 @@
               <input type="number" name="quantity" value="1" min="1" data-qty-input>
               <button type="button" data-qty-plus>+</button>
             </div>
-            <button type="submit" class="kestrel-product__atc" name="add">
-              Add to Cart — {{ product.price | default: 4900 | money }}
+            <button type="submit" class="kestrel-product__atc" name="add" data-atc-button>
+              Add to Cart — {{ product.price | default: 4410 | money }}
             </button>
           </div>
         {%- endform -%}
