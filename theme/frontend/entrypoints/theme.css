@@ -1,31 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
 
 :root {
-  --color-bg: #0C0C0E;
-  --color-bg-elevated: #131316;
-  --color-bg-card: #1A1A1D;
-  --color-bg-hover: #222226;
-  --color-surface: #1E1E22;
-  --color-ink: #F5F3EF;
-  --color-text: #D8D4CC;
-  --color-text-secondary: #9A958D;
-  --color-text-muted: #6B6762;
-  --color-border: #2A2A2E;
-  --color-border-hover: #3D3D42;
-  --color-accent: #C4956A;
-  --color-accent-hover: #D4A87A;
-  --color-accent-soft: rgba(196,149,106,0.12);
-  --color-white: #F5F3EF;
-  --color-star: #C4956A;
-  --color-success: #6B9B7A;
-  --font-body: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-display: 'Playfair Display', Georgia, serif;
-  --font-heading: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  --color-bg: #FFFFFF;
+  --color-bg-elevated: #F7F7F7;
+  --color-bg-card: #F2F2F2;
+  --color-bg-hover: #EDEDED;
+  --color-surface: #FAFAFA;
+  --color-ink: #0F0F0F;
+  --color-text: #3D3D3D;
+  --color-text-secondary: #6B6B6B;
+  --color-text-muted: #A3A3A3;
+  --color-border: #E8E8E8;
+  --color-border-hover: #D0D0D0;
+  --color-accent: #1C1C1E;
+  --color-accent-hover: #333335;
+  --color-accent-soft: rgba(28,28,30,0.06);
+  --color-white: #FFFFFF;
+  --color-star: #B8925F;
+  --color-success: #4A7C59;
+  --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-heading: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
   --header-h: 64px;
   --trustbar-h: 40px;
-  --page-max: 1320px;
+  --page-max: 1280px;
   --page-pad: 24px;
 }
 
@@ -43,11 +43,11 @@ html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-fo
 
 body {
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.65;
   color: var(--color-text);
   background: var(--color-bg);
-  letter-spacing: 0.01em;
+  letter-spacing: 0;
 }
 
 a { color: inherit; text-decoration: none; }
@@ -176,7 +176,7 @@ input, textarea, select { font-family: inherit; }
 
 .kestrel-trustbar__item svg {
   color: var(--color-accent);
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 /* ========== HEADER ========== */
@@ -184,7 +184,7 @@ input, textarea, select { font-family: inherit; }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(12,12,14,0.92);
+  background: rgba(255,255,255,0.92);
   backdrop-filter: blur(20px) saturate(1.2);
   -webkit-backdrop-filter: blur(20px) saturate(1.2);
   border-bottom: 1px solid var(--color-border);
@@ -192,8 +192,8 @@ input, textarea, select { font-family: inherit; }
 }
 
 .kestrel-header.is-scrolled {
-  box-shadow: 0 8px 40px rgba(0,0,0,0.5);
-  background: rgba(12,12,14,0.98);
+  box-shadow: 0 4px 30px rgba(0,0,0,0.06);
+  background: rgba(255,255,255,0.98);
   border-bottom-color: var(--color-border-hover);
 }
 
@@ -241,18 +241,18 @@ input, textarea, select { font-family: inherit; }
 
 .kestrel-header__logo {
   font-family: var(--font-heading);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: var(--color-white);
+  color: var(--color-ink);
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
 
 @media (max-width: 1023px) {
-  .kestrel-header__logo { position: static; transform: none; font-size: 15px; }
+  .kestrel-header__logo { position: static; transform: none; font-size: 14px; }
 }
 
 .kestrel-header__actions {
@@ -269,7 +269,7 @@ input, textarea, select { font-family: inherit; }
   text-transform: uppercase;
   padding: 11px 20px;
   background: var(--color-accent);
-  color: var(--color-bg);
+  color: var(--color-white);
   border-radius: 4px;
   transition: all 0.3s var(--ease-out);
 }
@@ -277,7 +277,7 @@ input, textarea, select { font-family: inherit; }
 .kestrel-header__quiz:hover {
   background: var(--color-accent-hover);
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(196,149,106,0.25);
+  box-shadow: 0 6px 20px rgba(28,28,30,0.12);
 }
 
 @media (min-width: 768px) { .kestrel-header__quiz { display: inline-block; } }
@@ -294,7 +294,7 @@ input, textarea, select { font-family: inherit; }
 }
 
 .kestrel-header__icon-btn:hover {
-  background: var(--color-bg-card);
+  background: var(--color-bg-elevated);
   color: var(--color-accent);
 }
 
@@ -302,7 +302,7 @@ input, textarea, select { font-family: inherit; }
   position: absolute;
   top: -3px; right: -3px;
   background: var(--color-accent);
-  color: var(--color-bg);
+  color: var(--color-white);
   font-size: 9px; font-weight: 700;
   width: 16px; height: 16px;
   border-radius: 50%;
@@ -322,7 +322,7 @@ input, textarea, select { font-family: inherit; }
 }
 
 .kestrel-header__menu-btn:hover {
-  background: var(--color-bg-card);
+  background: var(--color-bg-elevated);
   color: var(--color-accent);
 }
 
@@ -333,7 +333,7 @@ input, textarea, select { font-family: inherit; }
   position: fixed;
   inset: 0;
   z-index: 200;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0,0,0,0.3);
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.5s var(--ease-out);
@@ -375,7 +375,7 @@ input, textarea, select { font-family: inherit; }
 }
 
 .kestrel-mobile-menu__close:hover {
-  background: var(--color-bg-card);
+  background: var(--color-bg-elevated);
   color: var(--color-accent);
 }
 
@@ -403,8 +403,8 @@ input, textarea, select { font-family: inherit; }
 /* ========== HERO ========== */
 .kestrel-hero {
   position: relative;
-  background: linear-gradient(145deg, #08080A 0%, var(--color-bg) 45%, #111114 100%);
-  color: var(--color-white);
+  background: linear-gradient(145deg, #FAFAFA 0%, var(--color-bg) 50%, #F5F5F5 100%);
+  color: var(--color-ink);
   min-height: calc(100vh - var(--header-h) - var(--trustbar-h));
   display: flex;
   align-items: center;
@@ -415,7 +415,7 @@ input, textarea, select { font-family: inherit; }
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 75% 40%, rgba(196,149,106,0.05) 0%, transparent 55%);
+  background: radial-gradient(ellipse at 75% 40%, rgba(184,146,95,0.06) 0%, transparent 55%);
   pointer-events: none;
 }
 
@@ -454,7 +454,7 @@ input, textarea, select { font-family: inherit; }
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--color-accent);
+  color: var(--color-text-secondary);
   margin-bottom: 24px;
   display: flex;
   align-items: center;
@@ -465,36 +465,35 @@ input, textarea, select { font-family: inherit; }
   content: '';
   width: 32px;
   height: 1px;
-  background: var(--color-accent);
-  opacity: 0.5;
+  background: var(--color-text-muted);
 }
 
 .kestrel-hero__title {
   font-family: var(--font-display);
-  font-size: 44px;
+  font-size: 52px;
   font-weight: 500;
   line-height: 1.05;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   max-width: 540px;
   margin-bottom: 24px;
-  color: var(--color-white);
+  color: var(--color-ink);
 }
 
 @media (min-width: 768px) {
-  .kestrel-hero__title { font-size: 60px; }
+  .kestrel-hero__title { font-size: 68px; }
 }
 
 @media (min-width: 1024px) {
-  .kestrel-hero__title { font-size: 76px; }
+  .kestrel-hero__title { font-size: 84px; }
 }
 
 .kestrel-hero__subtitle {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.7;
   color: var(--color-text-secondary);
   max-width: 440px;
   margin-bottom: 40px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .kestrel-hero__actions {
@@ -522,7 +521,7 @@ input, textarea, select { font-family: inherit; }
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
   transform: translateX(-100%);
   transition: transform 0.7s var(--ease-out);
 }
@@ -533,18 +532,18 @@ input, textarea, select { font-family: inherit; }
 
 .kestrel-hero__btn--primary {
   background: var(--color-accent);
-  color: var(--color-bg);
+  color: var(--color-white);
 }
 
 .kestrel-hero__btn--primary:hover {
   background: var(--color-accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(196,149,106,0.3);
+  box-shadow: 0 12px 40px rgba(28,28,30,0.18);
 }
 
 .kestrel-hero__btn--secondary {
   background: transparent;
-  color: var(--color-white);
+  color: var(--color-ink);
   border: 1.5px solid var(--color-border-hover);
 }
 
@@ -573,7 +572,7 @@ input, textarea, select { font-family: inherit; }
   max-height: 480px;
   width: auto;
   object-fit: contain;
-  filter: drop-shadow(0 40px 80px rgba(0,0,0,0.6));
+  filter: drop-shadow(0 30px 60px rgba(0,0,0,0.12));
   animation: float 6s ease-in-out infinite;
 }
 
@@ -585,7 +584,7 @@ input, textarea, select { font-family: inherit; }
   position: absolute;
   bottom: 100px;
   right: 48px;
-  background: rgba(26,26,29,0.85);
+  background: rgba(255,255,255,0.85);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   border: 1px solid var(--color-border);
@@ -596,18 +595,19 @@ input, textarea, select { font-family: inherit; }
   gap: 16px;
   max-width: 320px;
   transition: all 0.45s var(--ease-out);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.06);
 }
 
 .kestrel-hero__card:hover {
   border-color: var(--color-border-hover);
   transform: translateY(-5px);
-  box-shadow: 0 24px 48px rgba(0,0,0,0.35);
+  box-shadow: 0 20px 48px rgba(0,0,0,0.1);
 }
 
 .kestrel-hero__card-thumb {
   width: 52px;
   height: 52px;
-  background: var(--color-bg-card);
+  background: var(--color-bg-elevated);
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -627,9 +627,9 @@ input, textarea, select { font-family: inherit; }
 .kestrel-hero__card-title {
   font-size: 13px;
   font-weight: 600;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
   margin-bottom: 3px;
-  color: var(--color-white);
+  color: var(--color-ink);
 }
 
 .kestrel-hero__card-meta {
@@ -700,15 +700,15 @@ input, textarea, select { font-family: inherit; }
 
 .kestrel-system__title {
   font-family: var(--font-display);
-  font-size: 36px;
+  font-size: 42px;
   font-weight: 500;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-  color: var(--color-white);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: var(--color-ink);
 }
 
 @media (min-width: 768px) {
-  .kestrel-system__title { font-size: 44px; }
+  .kestrel-system__title { font-size: 52px; }
 }
 
 .kestrel-system__actions {
@@ -749,10 +749,10 @@ input, textarea, select { font-family: inherit; }
 }
 
 .kestrel-system__card {
-  background: linear-gradient(180deg, var(--color-bg-card) 0%, #151518 100%);
+  background: var(--color-bg-elevated);
   border-radius: 18px;
   padding: 36px;
-  color: var(--color-white);
+  color: var(--color-ink);
   display: flex;
   flex-direction: column;
   min-height: 480px;
@@ -765,7 +765,7 @@ input, textarea, select { font-family: inherit; }
 .kestrel-system__card:hover {
   border-color: var(--color-border-hover);
   transform: translateY(-8px);
-  box-shadow: 0 32px 64px rgba(0,0,0,0.45);
+  box-shadow: 0 24px 56px rgba(0,0,0,0.08);
 }
 
 .kestrel-system__card-badge {
@@ -778,26 +778,26 @@ input, textarea, select { font-family: inherit; }
   text-transform: uppercase;
   padding: 7px 14px;
   background: var(--color-accent);
-  color: var(--color-bg);
+  color: var(--color-white);
   border-radius: 6px;
 }
 
 .kestrel-system__card-title {
   font-family: var(--font-display);
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 500;
   margin-bottom: 12px;
   line-height: 1.15;
-  color: var(--color-white);
+  color: var(--color-ink);
 }
 
 .kestrel-system__card-desc {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--color-text-secondary);
   line-height: 1.55;
   margin-bottom: 24px;
   max-width: 280px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .kestrel-system__card-image {
@@ -817,7 +817,7 @@ input, textarea, select { font-family: inherit; }
   max-height: 220px;
   width: auto;
   object-fit: contain;
-  filter: drop-shadow(0 24px 48px rgba(0,0,0,0.35));
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.1));
 }
 
 .kestrel-system__card-actions {
@@ -862,16 +862,16 @@ input, textarea, select { font-family: inherit; }
 
 .kestrel-results__title {
   font-family: var(--font-display);
-  font-size: 40px;
+  font-size: 42px;
   font-weight: 500;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
   margin-bottom: 64px;
-  color: var(--color-white);
+  color: var(--color-ink);
 }
 
 @media (min-width: 768px) {
-  .kestrel-results__title { font-size: 48px; }
+  .kestrel-results__title { font-size: 52px; }
 }
 
 .kestrel-results__grid {
@@ -896,7 +896,7 @@ input, textarea, select { font-family: inherit; }
 
 .kestrel-results__image {
   aspect-ratio: 1;
-  background: var(--color-bg-card);
+  background: var(--color-bg);
   border-radius: 14px;
   overflow: hidden;
   position: relative;
@@ -929,7 +929,7 @@ input, textarea, select { font-family: inherit; }
   text-transform: uppercase;
   padding: 7px 16px;
   background: var(--color-accent);
-  color: var(--color-bg);
+  color: var(--color-white);
   border-radius: 6px;
 }
 
@@ -965,14 +965,15 @@ input, textarea, select { font-family: inherit; }
 
 .kestrel-results__text {
   font-family: var(--font-display);
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.45;
   color: var(--color-text);
+  font-style: italic;
 }
 
 @media (min-width: 768px) {
-  .kestrel-results__text { font-size: 30px; }
+  .kestrel-results__text { font-size: 32px; }
 }
 
 .kestrel-results__tags {
@@ -1001,8 +1002,8 @@ input, textarea, select { font-family: inherit; }
 /* ========== CLINICAL STATS ========== */
 .kestrel-clinical {
   position: relative;
-  background: linear-gradient(145deg, #08080A 0%, #0F0F12 50%, #16161A 100%);
-  color: var(--color-white);
+  background: linear-gradient(145deg, #F7F7F7 0%, #FAFAFA 50%, #F2F2F2 100%);
+  color: var(--color-ink);
   padding: 120px 0;
   overflow: hidden;
 }
@@ -1011,7 +1012,7 @@ input, textarea, select { font-family: inherit; }
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 25% 50%, rgba(196,149,106,0.04) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 25% 50%, rgba(184,146,95,0.06) 0%, transparent 60%);
   pointer-events: none;
 }
 
@@ -1036,7 +1037,7 @@ input, textarea, select { font-family: inherit; }
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--color-accent);
+  color: var(--color-text-secondary);
   margin-bottom: 24px;
   display: flex;
   align-items: center;
@@ -1047,9 +1048,9 @@ input, textarea, select { font-family: inherit; }
   font-family: var(--font-display);
   font-size: 44px;
   font-weight: 500;
-  line-height: 1.08;
+  line-height: 1.05;
   margin-bottom: 24px;
-  color: var(--color-white);
+  color: var(--color-ink);
 }
 
 @media (min-width: 768px) {
@@ -1057,12 +1058,12 @@ input, textarea, select { font-family: inherit; }
 }
 
 .kestrel-clinical__desc {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.75;
   color: var(--color-text-secondary);
   margin-bottom: 36px;
   max-width: 440px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .kestrel-clinical__btn {
@@ -1076,7 +1077,7 @@ input, textarea, select { font-family: inherit; }
   padding: 15px 32px;
   border: 1.5px solid var(--color-border-hover);
   border-radius: 6px;
-  color: var(--color-white);
+  color: var(--color-ink);
   transition: all 0.4s var(--ease-out);
 }
 
@@ -1093,7 +1094,7 @@ input, textarea, select { font-family: inherit; }
 }
 
 .kestrel-clinical__stat {
-  background: rgba(255,255,255,0.025);
+  background: var(--color-bg);
   backdrop-filter: blur(16px);
   border: 1px solid var(--color-border);
   border-radius: 18px;
@@ -1104,8 +1105,7 @@ input, textarea, select { font-family: inherit; }
 .kestrel-clinical__stat:hover {
   border-color: var(--color-border-hover);
   transform: translateY(-5px);
-  box-shadow: 0 24px 48px rgba(0,0,0,0.35);
-  background: rgba(255,255,255,0.035);
+  box-shadow: 0 24px 48px rgba(0,0,0,0.06);
 }
 
 .kestrel-clinical__stat-value {
@@ -1116,13 +1116,13 @@ input, textarea, select { font-family: inherit; }
   display: flex;
   align-items: center;
   gap: 14px;
-  color: var(--color-white);
+  color: var(--color-ink);
 }
 
 .kestrel-clinical__stat-value svg {
   width: 36px;
   height: 36px;
-  color: var(--color-accent);
+  color: var(--color-star);
 }
 
 .kestrel-clinical__stat-label {
@@ -1159,7 +1159,7 @@ input, textarea, select { font-family: inherit; }
 
 .kestrel-media__logo {
   font-family: var(--font-display);
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 600;
   color: var(--color-text-muted);
   opacity: 0.35;
@@ -1168,7 +1168,7 @@ input, textarea, select { font-family: inherit; }
 }
 
 .kestrel-media__logo:hover {
-  opacity: 0.75;
+  opacity: 0.7;
   color: var(--color-accent);
 }
 
@@ -1182,16 +1182,16 @@ input, textarea, select { font-family: inherit; }
 
 .kestrel-doctor__title {
   font-family: var(--font-display);
-  font-size: 40px;
+  font-size: 42px;
   font-weight: 500;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
   margin-bottom: 64px;
-  color: var(--color-white);
+  color: var(--color-ink);
 }
 
 @media (min-width: 768px) {
-  .kestrel-doctor__title { font-size: 48px; }
+  .kestrel-doctor__title { font-size: 52px; }
 }
 
 .kestrel-doctor__grid {
@@ -1210,7 +1210,7 @@ input, textarea, select { font-family: inherit; }
 
 .kestrel-doctor__image {
   aspect-ratio: 3/4;
-  background: var(--color-bg-card);
+  background: var(--color-bg);
   border-radius: 18px;
   overflow: hidden;
   transition: transform 0.55s var(--ease-out);
@@ -1265,21 +1265,22 @@ input, textarea, select { font-family: inherit; }
 
 .kestrel-doctor__quote {
   font-family: var(--font-display);
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 400;
   line-height: 1.45;
   color: var(--color-text);
+  font-style: italic;
 }
 
 @media (min-width: 768px) {
-  .kestrel-doctor__quote { font-size: 34px; }
+  .kestrel-doctor__quote { font-size: 36px; }
 }
 
 .kestrel-doctor__name {
   font-size: 15px;
   font-weight: 600;
   margin-bottom: 5px;
-  color: var(--color-white);
+  color: var(--color-ink);
   letter-spacing: 0.02em;
 }
 
@@ -1292,8 +1293,8 @@ input, textarea, select { font-family: inherit; }
 /* ========== SCIENCE SECTION ========== */
 .kestrel-science {
   padding: 120px 0;
-  background: linear-gradient(180deg, #08080A 0%, #0D0D10 100%);
-  color: var(--color-white);
+  background: linear-gradient(180deg, #FAFAFA 0%, #F7F7F7 100%);
+  color: var(--color-ink);
   position: relative;
   overflow: hidden;
 }
@@ -1302,7 +1303,7 @@ input, textarea, select { font-family: inherit; }
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 85% 25%, rgba(196,149,106,0.04) 0%, transparent 55%);
+  background: radial-gradient(ellipse at 85% 25%, rgba(184,146,95,0.06) 0%, transparent 55%);
   pointer-events: none;
 }
 
@@ -1313,7 +1314,7 @@ input, textarea, select { font-family: inherit; }
   line-height: 1.1;
   margin-bottom: 56px;
   max-width: 620px;
-  color: var(--color-white);
+  color: var(--color-ink);
   position: relative;
   z-index: 1;
 }
@@ -1348,7 +1349,7 @@ input, textarea, select { font-family: inherit; }
   display: flex;
   align-items: flex-start;
   gap: 18px;
-  background: rgba(255,255,255,0.02);
+  background: var(--color-bg);
   border: 1px solid var(--color-border);
   border-radius: 14px;
   padding: 24px 26px;
@@ -1357,7 +1358,7 @@ input, textarea, select { font-family: inherit; }
 
 .kestrel-science__point:hover {
   border-color: var(--color-border-hover);
-  background: rgba(255,255,255,0.04);
+  background: var(--color-bg-elevated);
   transform: translateX(5px);
 }
 
@@ -1379,10 +1380,10 @@ input, textarea, select { font-family: inherit; }
 }
 
 .kestrel-science__point-text {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.65;
   color: var(--color-text-secondary);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .kestrel-science__point-text strong {
@@ -1390,13 +1391,13 @@ input, textarea, select { font-family: inherit; }
   font-size: 13px;
   font-weight: 600;
   margin-bottom: 5px;
-  color: var(--color-white);
+  color: var(--color-ink);
   letter-spacing: 0.02em;
 }
 
 .kestrel-science__image {
   aspect-ratio: 4/3;
-  background: var(--color-bg-card);
+  background: var(--color-bg);
   border-radius: 18px;
   display: flex;
   align-items: center;
@@ -1445,16 +1446,16 @@ input, textarea, select { font-family: inherit; }
 
 .kestrel-timeline__title {
   font-family: var(--font-display);
-  font-size: 40px;
+  font-size: 42px;
   font-weight: 500;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
   margin-bottom: 56px;
-  color: var(--color-white);
+  color: var(--color-ink);
 }
 
 @media (min-width: 768px) {
-  .kestrel-timeline__title { font-size: 48px; }
+  .kestrel-timeline__title { font-size: 52px; }
 }
 
 .kestrel-timeline__items {
@@ -1471,7 +1472,7 @@ input, textarea, select { font-family: inherit; }
   top: 0;
   bottom: 0;
   width: 1px;
-  background: linear-gradient(to bottom, var(--color-accent), var(--color-border));
+  background: linear-gradient(to bottom, var(--color-star), var(--color-border));
 }
 
 .kestrel-timeline__item {
@@ -1494,7 +1495,7 @@ input, textarea, select { font-family: inherit; }
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--color-accent);
+  color: var(--color-star);
   white-space: nowrap;
   width: 76px;
   flex-shrink: 0;
@@ -1506,20 +1507,20 @@ input, textarea, select { font-family: inherit; }
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 7px;
-  color: var(--color-white);
+  color: var(--color-ink);
   letter-spacing: 0.01em;
 }
 
 .kestrel-timeline__content p {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--color-text-secondary);
   line-height: 1.6;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .kestrel-timeline__image {
   aspect-ratio: 4/3;
-  background: var(--color-bg-card);
+  background: var(--color-bg-elevated);
   border-radius: 18px;
   overflow: hidden;
   border: 1px solid var(--color-border);
@@ -1560,15 +1561,15 @@ input, textarea, select { font-family: inherit; }
 
 .kestrel-articles__title {
   font-family: var(--font-display);
-  font-size: 40px;
+  font-size: 42px;
   font-weight: 500;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-  color: var(--color-white);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: var(--color-ink);
 }
 
 @media (min-width: 768px) {
-  .kestrel-articles__title { font-size: 48px; }
+  .kestrel-articles__title { font-size: 52px; }
 }
 
 .kestrel-articles__btn {
@@ -1613,7 +1614,7 @@ input, textarea, select { font-family: inherit; }
 
 .kestrel-articles__image {
   aspect-ratio: 4/3;
-  background: var(--color-bg-card);
+  background: var(--color-bg);
   border-radius: 14px;
   overflow: hidden;
   margin-bottom: 18px;
@@ -1646,7 +1647,7 @@ input, textarea, select { font-family: inherit; }
 }
 
 .kestrel-articles__card-title {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   line-height: 1.45;
   color: var(--color-text);
@@ -1670,21 +1671,21 @@ input, textarea, select { font-family: inherit; }
 
 .kestrel-collection__title {
   font-family: var(--font-display);
-  font-size: 36px;
+  font-size: 42px;
   font-weight: 500;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   margin-bottom: 12px;
-  color: var(--color-white);
+  color: var(--color-ink);
 }
 
 @media (min-width: 768px) {
-  .kestrel-collection__title { font-size: 44px; }
+  .kestrel-collection__title { font-size: 52px; }
 }
 
 .kestrel-collection__count {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--color-text-muted);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .kestrel-collection__grid {
@@ -1714,7 +1715,7 @@ input, textarea, select { font-family: inherit; }
 
 .kestrel-product-card__image {
   aspect-ratio: 1;
-  background: var(--color-bg-card);
+  background: var(--color-bg-elevated);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1729,7 +1730,7 @@ input, textarea, select { font-family: inherit; }
 .kestrel-product-card:hover .kestrel-product-card__image {
   border-color: var(--color-border-hover);
   transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
 }
 
 .kestrel-product-card__image img {
@@ -1746,7 +1747,7 @@ input, textarea, select { font-family: inherit; }
 .kestrel-product-card__name {
   font-size: 12px;
   font-weight: 500;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   line-height: 1.4;
   margin-bottom: 10px;
@@ -1779,7 +1780,7 @@ input, textarea, select { font-family: inherit; }
 }
 
 .kestrel-product-card__price {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
   color: var(--color-text-secondary);
 }
@@ -1813,7 +1814,7 @@ input, textarea, select { font-family: inherit; }
 
 .kestrel-product__main-image {
   aspect-ratio: 1;
-  background: var(--color-bg-card);
+  background: var(--color-bg-elevated);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1850,7 +1851,7 @@ input, textarea, select { font-family: inherit; }
 
 .kestrel-product__thumb {
   width: 76px; height: 76px;
-  background: var(--color-bg-card);
+  background: var(--color-bg-elevated);
   border: 1.5px solid transparent;
   border-radius: 10px;
   flex-shrink: 0;
@@ -1897,16 +1898,16 @@ input, textarea, select { font-family: inherit; }
 
 .kestrel-product__title {
   font-family: var(--font-display);
-  font-size: 30px;
+  font-size: 32px;
   font-weight: 500;
   line-height: 1.1;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   margin-bottom: 16px;
-  color: var(--color-white);
+  color: var(--color-ink);
 }
 
 @media (min-width: 768px) {
-  .kestrel-product__title { font-size: 34px; }
+  .kestrel-product__title { font-size: 36px; }
 }
 
 .kestrel-product__reviews-summary {
@@ -1935,10 +1936,10 @@ input, textarea, select { font-family: inherit; }
 .kestrel-product__review-count:hover { color: var(--color-accent); }
 
 .kestrel-product__tagline {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--color-text-secondary);
   margin-bottom: 28px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .kestrel-product__options {
@@ -1998,7 +1999,7 @@ input, textarea, select { font-family: inherit; }
 .kestrel-product__option-label {
   font-size: 14px;
   font-weight: 500;
-  color: var(--color-white);
+  color: var(--color-ink);
 }
 
 .kestrel-product__option-sublabel {
@@ -2011,7 +2012,7 @@ input, textarea, select { font-family: inherit; }
   font-size: 14px;
   font-weight: 500;
   text-align: right;
-  color: var(--color-white);
+  color: var(--color-ink);
 }
 
 .kestrel-product__option-price .save {
@@ -2045,8 +2046,8 @@ input, textarea, select { font-family: inherit; }
 }
 
 .kestrel-product__qty button:hover {
-  color: var(--color-white);
-  background: var(--color-bg-card);
+  color: var(--color-ink);
+  background: var(--color-bg-hover);
 }
 
 .kestrel-product__qty input {
@@ -2056,7 +2057,7 @@ input, textarea, select { font-family: inherit; }
   font-size: 14px;
   font-weight: 500;
   background: transparent;
-  color: var(--color-white);
+  color: var(--color-ink);
   -moz-appearance: textfield;
 }
 
@@ -2070,7 +2071,7 @@ input, textarea, select { font-family: inherit; }
   flex: 1;
   height: 54px;
   background: var(--color-accent);
-  color: var(--color-bg);
+  color: var(--color-white);
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.12em;
@@ -2082,7 +2083,7 @@ input, textarea, select { font-family: inherit; }
 .kestrel-product__atc:hover {
   background: var(--color-accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 10px 35px rgba(196,149,106,0.3);
+  box-shadow: 0 10px 35px rgba(28,28,30,0.12);
 }
 
 .kestrel-product__atc:active { transform: scale(0.98); }
@@ -2163,10 +2164,10 @@ input, textarea, select { font-family: inherit; }
 
 .kestrel-accordion__body {
   padding: 0 0 28px;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.8;
   color: var(--color-text-secondary);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .kestrel-accordion__body p + p { margin-top: 16px; }
@@ -2177,7 +2178,7 @@ input, textarea, select { font-family: inherit; }
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--color-white);
+  color: var(--color-ink);
   margin-bottom: 5px;
   margin-top: 18px;
 }
@@ -2220,12 +2221,12 @@ input, textarea, select { font-family: inherit; }
 .kestrel-wtw__item:hover {
   border-color: var(--color-border-hover);
   transform: translateY(-2px);
-  box-shadow: 0 10px 28px rgba(0,0,0,0.25);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.06);
 }
 
 .kestrel-wtw__thumb {
   width: 68px; height: 68px;
-  background: var(--color-bg-card);
+  background: var(--color-bg);
   border-radius: 10px;
   flex-shrink: 0;
   display: flex;
@@ -2247,7 +2248,7 @@ input, textarea, select { font-family: inherit; }
   letter-spacing: 0.04em;
   text-transform: uppercase;
   margin-bottom: 5px;
-  color: var(--color-white);
+  color: var(--color-ink);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -2274,7 +2275,7 @@ input, textarea, select { font-family: inherit; }
   text-transform: uppercase;
   padding: 11px 22px;
   background: var(--color-accent);
-  color: var(--color-bg);
+  color: var(--color-white);
   border-radius: 6px;
   flex-shrink: 0;
   transition: all 0.3s var(--ease-out);
@@ -2307,7 +2308,7 @@ input, textarea, select { font-family: inherit; }
 }
 
 .kestrel-product-detail__image {
-  background: var(--color-bg-card);
+  background: var(--color-bg-elevated);
   aspect-ratio: 1;
   display: flex;
   align-items: center;
@@ -2336,18 +2337,18 @@ input, textarea, select { font-family: inherit; }
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 32px;
-  color: var(--color-white);
+  color: var(--color-ink);
 }
 
 .kestrel-product-detail__content ul { list-style: none; }
 
 .kestrel-product-detail__content li {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.75;
   color: var(--color-text-secondary);
   padding: 16px 0;
   border-bottom: 1px solid var(--color-border);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .kestrel-product-detail__content li:first-child {
@@ -2360,7 +2361,7 @@ input, textarea, select { font-family: inherit; }
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--color-white);
+  color: var(--color-ink);
   margin-bottom: 4px;
 }
 
@@ -2395,10 +2396,10 @@ input, textarea, select { font-family: inherit; }
 }
 
 .kestrel-reviews__rating {
-  font-size: 30px;
+  font-size: 32px;
   font-weight: 600;
   letter-spacing: -0.02em;
-  color: var(--color-white);
+  color: var(--color-ink);
 }
 
 .kestrel-reviews__stars {
@@ -2409,7 +2410,7 @@ input, textarea, select { font-family: inherit; }
 }
 
 .kestrel-reviews__count {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--color-text-muted);
 }
 
@@ -2443,7 +2444,7 @@ input, textarea, select { font-family: inherit; }
 
 .kestrel-reviews__bar-fill {
   height: 100%;
-  background: var(--color-accent);
+  background: var(--color-star);
   border-radius: 3px;
   transition: width 0.9s var(--ease-out);
 }
@@ -2476,18 +2477,18 @@ input, textarea, select { font-family: inherit; }
 
 .kestrel-reviews__btn:hover {
   border-color: var(--color-border-hover);
-  color: var(--color-white);
+  color: var(--color-ink);
 }
 
 .kestrel-reviews__btn--primary {
   background: var(--color-accent);
-  color: var(--color-bg);
+  color: var(--color-white);
   border-color: var(--color-accent);
 }
 
 .kestrel-reviews__btn--primary:hover {
   background: var(--color-accent-hover);
-  color: var(--color-bg);
+  color: var(--color-white);
 }
 
 .kestrel-review {
@@ -2499,7 +2500,7 @@ input, textarea, select { font-family: inherit; }
 }
 
 .kestrel-review:hover {
-  background: rgba(255,255,255,0.015);
+  background: rgba(0,0,0,0.015);
 }
 
 @media (min-width: 768px) {
@@ -2512,7 +2513,7 @@ input, textarea, select { font-family: inherit; }
 .kestrel-review__author {
   font-size: 14px;
   font-weight: 600;
-  color: var(--color-white);
+  color: var(--color-ink);
 }
 
 .kestrel-review__verified {
@@ -2551,17 +2552,17 @@ input, textarea, select { font-family: inherit; }
 }
 
 .kestrel-review__title-text {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   line-height: 1.4;
-  color: var(--color-white);
+  color: var(--color-ink);
 }
 
 .kestrel-review__text {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.8;
   color: var(--color-text-secondary);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .kestrel-review__date {
@@ -2605,12 +2606,12 @@ input, textarea, select { font-family: inherit; }
 
 .kestrel-related__tab:hover {
   border-color: var(--color-border-hover);
-  color: var(--color-white);
+  color: var(--color-ink);
 }
 
 .kestrel-related__tab.is-active {
   background: var(--color-accent);
-  color: var(--color-bg);
+  color: var(--color-white);
   border-color: var(--color-accent);
 }
 
@@ -2628,7 +2629,7 @@ input, textarea, select { font-family: inherit; }
 
 .kestrel-related__image {
   aspect-ratio: 1;
-  background: var(--color-bg-card);
+  background: var(--color-bg-elevated);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2642,7 +2643,7 @@ input, textarea, select { font-family: inherit; }
 .kestrel-related__card:hover .kestrel-related__image {
   border-color: var(--color-border-hover);
   transform: translateY(-5px);
-  box-shadow: 0 18px 36px rgba(0,0,0,0.25);
+  box-shadow: 0 18px 36px rgba(0,0,0,0.08);
 }
 
 .kestrel-related__image img {
@@ -2666,7 +2667,7 @@ input, textarea, select { font-family: inherit; }
 .kestrel-related__card:hover .kestrel-related__name { color: var(--color-accent); }
 
 .kestrel-related__price {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
   color: var(--color-text-secondary);
   margin-bottom: 16px;
@@ -2680,7 +2681,7 @@ input, textarea, select { font-family: inherit; }
   letter-spacing: 0.1em;
   text-transform: uppercase;
   background: var(--color-accent);
-  color: var(--color-bg);
+  color: var(--color-white);
   border-radius: 6px;
   transition: all 0.35s var(--ease-out);
 }
@@ -2718,14 +2719,14 @@ input, textarea, select { font-family: inherit; }
   letter-spacing: 0.12em;
   text-transform: uppercase;
   margin-bottom: 12px;
-  color: var(--color-white);
+  color: var(--color-ink);
 }
 
 .kestrel-trust__desc {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.7;
   color: var(--color-text-secondary);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /* ========== FOOTER ========== */
@@ -2751,7 +2752,7 @@ input, textarea, select { font-family: inherit; }
   letter-spacing: 0.12em;
   text-transform: uppercase;
   margin-bottom: 22px;
-  color: var(--color-white);
+  color: var(--color-ink);
 }
 
 .kestrel-footer__links {
@@ -2765,7 +2766,7 @@ input, textarea, select { font-family: inherit; }
   font-size: 14px;
   color: var(--color-text-secondary);
   transition: all 0.3s var(--ease-out);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .kestrel-footer__links a:hover {
@@ -2778,7 +2779,7 @@ input, textarea, select { font-family: inherit; }
   color: var(--color-text-secondary);
   margin-bottom: 20px;
   line-height: 1.7;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .kestrel-footer__form {
@@ -2795,7 +2796,7 @@ input, textarea, select { font-family: inherit; }
   font-size: 13px;
   font-family: inherit;
   background: var(--color-bg-elevated);
-  color: var(--color-white);
+  color: var(--color-ink);
   transition: border-color 0.25s;
 }
 
@@ -2812,7 +2813,7 @@ input, textarea, select { font-family: inherit; }
   height: 48px;
   padding: 0 24px;
   background: var(--color-accent);
-  color: var(--color-bg);
+  color: var(--color-white);
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -2854,24 +2855,24 @@ input, textarea, select { font-family: inherit; }
 
 .kestrel-page__title {
   font-family: var(--font-display);
-  font-size: 40px;
+  font-size: 42px;
   font-weight: 500;
   line-height: 1.05;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   margin-bottom: 28px;
-  color: var(--color-white);
+  color: var(--color-ink);
 }
 
 @media (min-width: 768px) {
-  .kestrel-page__title { font-size: 48px; }
+  .kestrel-page__title { font-size: 52px; }
 }
 
 .kestrel-page__body {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.85;
   color: var(--color-text-secondary);
   max-width: 680px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .kestrel-page__body p + p { margin-top: 20px; }
@@ -2885,11 +2886,11 @@ input, textarea, select { font-family: inherit; }
 
 .kestrel-cart__title {
   font-family: var(--font-display);
-  font-size: 36px;
+  font-size: 38px;
   font-weight: 500;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   margin-bottom: 40px;
-  color: var(--color-white);
+  color: var(--color-ink);
 }
 
 .kestrel-cart__table {
@@ -2921,7 +2922,7 @@ input, textarea, select { font-family: inherit; }
 
 .kestrel-cart__product-img {
   width: 88px; height: 88px;
-  background: var(--color-bg-card);
+  background: var(--color-bg-elevated);
   border-radius: 10px;
   flex-shrink: 0;
   overflow: hidden;
@@ -2939,7 +2940,7 @@ input, textarea, select { font-family: inherit; }
   text-transform: uppercase;
   letter-spacing: 0.03em;
   margin-bottom: 5px;
-  color: var(--color-white);
+  color: var(--color-ink);
 }
 
 .kestrel-cart__product-variant {
@@ -2980,8 +2981,8 @@ input, textarea, select { font-family: inherit; }
 }
 
 .kestrel-cart__qty button:hover {
-  color: var(--color-white);
-  background: var(--color-bg-card);
+  color: var(--color-ink);
+  background: var(--color-bg-hover);
 }
 
 .kestrel-cart__qty input {
@@ -2991,7 +2992,7 @@ input, textarea, select { font-family: inherit; }
   font-size: 13px;
   font-weight: 500;
   background: transparent;
-  color: var(--color-white);
+  color: var(--color-ink);
   -moz-appearance: textfield;
 }
 
@@ -3004,7 +3005,7 @@ input, textarea, select { font-family: inherit; }
 .kestrel-cart__price {
   font-size: 14px;
   font-weight: 500;
-  color: var(--color-white);
+  color: var(--color-ink);
 }
 
 .kestrel-cart__footer {
@@ -3027,7 +3028,7 @@ input, textarea, select { font-family: inherit; }
 .kestrel-cart__subtotal span {
   font-size: 22px;
   font-weight: 600;
-  color: var(--color-white);
+  color: var(--color-ink);
 }
 
 .kestrel-cart__checkout {
@@ -3035,7 +3036,7 @@ input, textarea, select { font-family: inherit; }
   max-width: 420px;
   height: 54px;
   background: var(--color-accent);
-  color: var(--color-bg);
+  color: var(--color-white);
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.12em;
@@ -3047,7 +3048,7 @@ input, textarea, select { font-family: inherit; }
 .kestrel-cart__checkout:hover {
   background: var(--color-accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 10px 35px rgba(196,149,106,0.2);
+  box-shadow: 0 10px 35px rgba(28,28,30,0.12);
 }
 
 .kestrel-cart__checkout:active { transform: scale(0.98); }
@@ -3066,18 +3067,18 @@ input, textarea, select { font-family: inherit; }
 
 .kestrel-account__title {
   font-family: var(--font-display);
-  font-size: 36px;
+  font-size: 38px;
   font-weight: 500;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   margin-bottom: 10px;
-  color: var(--color-white);
+  color: var(--color-ink);
 }
 
 .kestrel-account__subtitle {
-  font-size: 15px;
+  font-size: 16px;
   color: var(--color-text-secondary);
   margin-bottom: 40px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .kestrel-account__field {
@@ -3103,7 +3104,7 @@ input, textarea, select { font-family: inherit; }
   font-size: 14px;
   font-family: inherit;
   background: var(--color-bg-elevated);
-  color: var(--color-white);
+  color: var(--color-ink);
   transition: border-color 0.25s;
 }
 
@@ -3120,7 +3121,7 @@ input, textarea, select { font-family: inherit; }
   width: 100%;
   height: 52px;
   background: var(--color-accent);
-  color: var(--color-bg);
+  color: var(--color-white);
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.12em;
@@ -3133,7 +3134,7 @@ input, textarea, select { font-family: inherit; }
 .kestrel-account__submit:hover {
   background: var(--color-accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 10px 35px rgba(196,149,106,0.2);
+  box-shadow: 0 10px 35px rgba(28,28,30,0.12);
 }
 
 .kestrel-account__submit:active { transform: scale(0.98); }
