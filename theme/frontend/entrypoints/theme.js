@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initProductThumbs();
   initProductOptions();
   initQuantity();
+  initCartDrawer();
 });
 
 /* Mobile menu */
@@ -133,8 +134,6 @@ function formatMoney(cents) {
 /* ═══════════════════════════════════════════════════════════════
    AJAX CART DRAWER
    ═══════════════════════════════════════════════════════════════ */
-
-initCartDrawer();
 
 function initCartDrawer() {
   const drawer = document.querySelector('[data-cart-drawer]');

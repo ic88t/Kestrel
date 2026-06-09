@@ -93,110 +93,67 @@
           Or 4 interest-free payments with <strong>afterpay</strong> or <strong>Klarna</strong>.
         </p>
 
-        <!-- Accordion -->
-        <div class="kestrel-accordion" data-accordion-group>
-          <div class="kestrel-accordion__item" data-accordion-item>
-            <button class="kestrel-accordion__trigger" data-accordion-trigger>
-              Description
-              <span class="kestrel-accordion__icon"></span>
-            </button>
-            <div class="kestrel-accordion__content">
-              <div class="kestrel-accordion__body">
-                {{ product.description | default: "<p>Our clinically tested peptide complex supports hair density and reduces shedding. Formulated with biomimetic peptides, rosemary extract, and saw palmetto for visible results in 90 days.</p>" }}
-              </div>
-            </div>
-          </div>
-          <div class="kestrel-accordion__item" data-accordion-item>
-            <button class="kestrel-accordion__trigger" data-accordion-trigger>
-              How to Use
-              <span class="kestrel-accordion__icon"></span>
-            </button>
-            <div class="kestrel-accordion__content">
-              <div class="kestrel-accordion__body">
-                <p>Apply 1ml to dry or towel-dried scalp, focusing on thinning areas. Massage gently for 30 seconds. Use daily, morning or evening. Do not rinse. For best results, use consistently for 90 days.</p>
-              </div>
-            </div>
-          </div>
-          <div class="kestrel-accordion__item" data-accordion-item>
-            <button class="kestrel-accordion__trigger" data-accordion-trigger>
-              Key Actives
-              <span class="kestrel-accordion__icon"></span>
-            </button>
-            <div class="kestrel-accordion__content">
-              <div class="kestrel-accordion__body">
-                <p><strong>Redensyl®</strong>Targets stem cells to reactivate hair growth.</p>
-                <p><strong>Procapil®</strong>Strengthens follicles and improves anchoring.</p>
-                <p><strong>Rosemary Extract</strong>Natural DHT modulator with clinical backing.</p>
-                <p><strong>Biotin Peptide</strong>Supports keratin infrastructure.</p>
-              </div>
-            </div>
-          </div>
-          <div class="kestrel-accordion__item" data-accordion-item>
-            <button class="kestrel-accordion__trigger" data-accordion-trigger>
-              Ingredients
-              <span class="kestrel-accordion__icon"></span>
-            </button>
-            <div class="kestrel-accordion__content">
-              <div class="kestrel-accordion__body">
-                <p>Water (Aqua), Propanediol, Glycerin, Redensyl, Procapil, Rosemary Officinalis Leaf Extract, Biotinoyl Tripeptide-1, Apigenin, Oleanolic Acid, Caffeine, Niacinamide, Panthenol, Allantoin, Phenoxyethanol, Ethylhexylglycerin.</p>
-              </div>
-            </div>
-          </div>
-          <div class="kestrel-accordion__item" data-accordion-item>
-            <button class="kestrel-accordion__trigger" data-accordion-trigger>
-              Shipping and Returns
-              <span class="kestrel-accordion__icon"></span>
-            </button>
-            <div class="kestrel-accordion__content">
-              <div class="kestrel-accordion__body">
-                <p>Free shipping on orders over $60. Orders ship within 1 business day via USPS or UPS. 30-day satisfaction guarantee — return any unopened product for a full refund.</p>
-              </div>
-            </div>
+        <!-- Guarantee -->
+        <div class="kestrel-guarantee">
+          <div class="kestrel-guarantee__badge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span><strong>30-Day Satisfaction Guarantee</strong> — Love it or we'll make it right.</span>
           </div>
         </div>
 
-        <!-- Works Well With -->
-        <div class="kestrel-wtw">
-          <p class="kestrel-wtw__title">Works Well With</p>
-          <div class="kestrel-wtw__list">
-            <div class="kestrel-wtw__item">
-              <div class="kestrel-wtw__thumb">
-                <img src="{{ 'nd1.png' | asset_url }}" alt="" width="64" height="64">
-              </div>
-              <div class="kestrel-wtw__info">
-                <p class="kestrel-wtw__name">CD1 | Stimulating Conditioner</p>
-                <span class="kestrel-wtw__stars">
-                  {%- for i in (1..5) -%}<svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>{%- endfor -%}
-                </span>
-                <p class="kestrel-wtw__price">$39.00</p>
-              </div>
-              <button class="kestrel-wtw__add">Add</button>
+        <!-- Product Story -->
+        <div class="kestrel-story">
+          <p class="kestrel-story__lead">Expertly formulated by hair loss specialists, the Kestrel Bio-Pilixin® complex features our science-backed, nature-powered peptide blend that delivers vital nutrients directly to your follicles, working throughout the day to restore thicker, fuller hair.</p>
+
+          <ul class="kestrel-story__checks">
+            <li>Targets thinning areas with powerful botanicals</li>
+            <li>Shows visible results in 6 weeks, guaranteed</li>
+            <li>Easy daily application, no complex routines</li>
+            <li>Works continuously while you go about your day</li>
+          </ul>
+
+          <p class="kestrel-story__phases-intro"><em>Our unique Bio-Pilixin® formula revives your hair in three powerful phases:</em></p>
+
+          <div class="kestrel-story__phases">
+            <div class="kestrel-story__phase">
+              <span class="kestrel-story__phase-num">1</span>
+              <p>Citric Acid gently removes buildup while Copper Tripeptide-1 prepares your follicles for optimal nutrient absorption.</p>
             </div>
-            <div class="kestrel-wtw__item">
-              <div class="kestrel-wtw__thumb">
-                <img src="{{ 'sh-plus.png' | asset_url }}" alt="" width="64" height="64">
-              </div>
-              <div class="kestrel-wtw__info">
-                <p class="kestrel-wtw__name">SH Plus | Ultra Thickening</p>
-                <span class="kestrel-wtw__stars">
-                  {%- for i in (1..5) -%}<svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>{%- endfor -%}
-                </span>
-                <p class="kestrel-wtw__price">$59.00</p>
-              </div>
-              <button class="kestrel-wtw__add">Add</button>
+            <div class="kestrel-story__phase">
+              <span class="kestrel-story__phase-num">2</span>
+              <p>Redensyl® and Procapil® work together to stimulate dormant follicles, while boosting circulation for better nutrient delivery.</p>
             </div>
-            <div class="kestrel-wtw__item">
-              <div class="kestrel-wtw__thumb">
-                <img src="{{ 'uv2.png' | asset_url }}" alt="" width="64" height="64">
+            <div class="kestrel-story__phase">
+              <span class="kestrel-story__phase-num">3</span>
+              <p>The complete Bio-Pilixin® complex syncs with your natural growth cycle, supporting continuous improvement throughout the day.</p>
+            </div>
+          </div>
+
+          <p class="kestrel-story__closing"><em>Unlike other treatments that just sit on the surface and require complex routines, our formula delivers powerful ingredients directly to your roots, working continuously to revive thinning hair. Clean, safe, and never tested on animals.</em></p>
+        </div>
+
+        <!-- Shipping Accordion -->
+        <div class="kestrel-accordion kestrel-accordion--product" data-accordion-group>
+          <div class="kestrel-accordion__item" data-accordion-item>
+            <button class="kestrel-accordion__trigger" data-accordion-trigger>
+              Shipping &amp; Delivery
+              <span class="kestrel-accordion__icon"></span>
+            </button>
+            <div class="kestrel-accordion__content">
+              <div class="kestrel-accordion__body">
+                <p>We process orders within 1-2 business days from our US warehouse. After dispatch, the estimated delivery time varies based on the shipping method you choose and your location.</p>
               </div>
-              <div class="kestrel-wtw__info">
-                <p class="kestrel-wtw__name">Scalp Oil | Pre-Wash Treatment</p>
-                <span class="kestrel-wtw__stars">
-                  {%- for i in (1..5) -%}<svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>{%- endfor -%}
-                </span>
-                <p class="kestrel-wtw__price">$35.00</p>
+            </div>
+          </div>
+          <div class="kestrel-accordion__item" data-accordion-item>
+            <button class="kestrel-accordion__trigger" data-accordion-trigger>
+              Returns &amp; Refund Policy
+              <span class="kestrel-accordion__icon"></span>
+            </button>
+            <div class="kestrel-accordion__content">
+              <div class="kestrel-accordion__body">
+                <p>If you're not completely satisfied, simply contact our 24/7 customer service team and we'll make it right.</p>
               </div>
-              <button class="kestrel-wtw__add">Add</button>
             </div>
           </div>
         </div>
