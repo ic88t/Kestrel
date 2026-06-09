@@ -20,14 +20,6 @@
       "type": "clinical-stats",
       "settings": {}
     },
-    "doctor-quote": {
-      "type": "doctor-quote",
-      "settings": {}
-    },
-    "science-section": {
-      "type": "science-section",
-      "settings": {}
-    },
     "timeline": {
       "type": "timeline",
       "settings": {}
@@ -43,8 +35,6 @@
     "results-ba",
     "system-cards",
     "clinical-stats",
-    "doctor-quote",
-    "science-section",
     "timeline",
     "articles"
   ]
