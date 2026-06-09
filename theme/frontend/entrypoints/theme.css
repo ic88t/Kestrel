@@ -4032,8 +4032,8 @@ input, textarea, select { font-family: inherit; }
 
 .kestrel-testimonials {
   padding: 100px 0;
-  background: #242424;
-  color: #FFFFFF;
+  background: #FFFFFF;
+  color: var(--color-ink);
 }
 
 .kestrel-testimonials__title {
@@ -4044,7 +4044,7 @@ input, textarea, select { font-family: inherit; }
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 56px;
-  color: #FFFFFF;
+  color: var(--color-ink);
 }
 
 @media (min-width: 768px) {
@@ -4072,8 +4072,8 @@ input, textarea, select { font-family: inherit; }
 }
 
 .kestrel-testimonial-card {
-  background: #2E2E2E;
-  border: 1.5px solid #404040;
+  background: var(--color-bg-elevated);
+  border: 1.5px solid var(--color-border);
   border-radius: 16px;
   padding: 32px 24px;
   text-align: center;
@@ -4084,9 +4084,9 @@ input, textarea, select { font-family: inherit; }
 }
 
 .kestrel-testimonial-card:hover {
-  border-color: #555555;
+  border-color: var(--color-border-hover);
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
 }
 
 .kestrel-testimonial-card__avatar {
@@ -4095,7 +4095,7 @@ input, textarea, select { font-family: inherit; }
   border-radius: 50%;
   overflow: hidden;
   margin-bottom: 16px;
-  border: 2.5px solid #555555;
+  border: 2.5px solid var(--color-border);
 }
 
 .kestrel-testimonial-card__avatar img {
@@ -4107,7 +4107,7 @@ input, textarea, select { font-family: inherit; }
 .kestrel-testimonial-card__stars {
   display: flex;
   gap: 4px;
-  color: #E5B84C;
+  color: var(--color-star);
   margin-bottom: 16px;
 }
 
@@ -4122,14 +4122,14 @@ input, textarea, select { font-family: inherit; }
   font-weight: 800;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: var(--color-ink);
   margin-bottom: 16px;
 }
 
 .kestrel-testimonial-card__quote {
   font-size: 14px;
   line-height: 1.7;
-  color: #E0E0E0;
+  color: var(--color-text);
   margin-bottom: 20px;
   flex: 1;
 }
@@ -4137,7 +4137,7 @@ input, textarea, select { font-family: inherit; }
 .kestrel-testimonial-card__author {
   font-size: 14px;
   font-weight: 600;
-  color: #FFFFFF;
+  color: var(--color-ink);
   margin-bottom: 8px;
   letter-spacing: 0.02em;
 }
@@ -4145,12 +4145,12 @@ input, textarea, select { font-family: inherit; }
 .kestrel-testimonial-card__verified {
   font-weight: 800;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: var(--color-ink);
 }
 
 .kestrel-testimonial-card__meta {
   font-size: 13px;
-  color: #BBBBBB;
+  color: var(--color-text-secondary);
   margin-bottom: 3px;
   font-weight: 500;
 }
@@ -4179,13 +4179,13 @@ input, textarea, select { font-family: inherit; }
 }
 
 .kestrel-bestsellers__stars svg {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
 }
 
 .kestrel-bestsellers__title {
   font-family: var(--font-display);
-  font-size: clamp(36px, 5vw, 52px);
+  font-size: clamp(32px, 4.5vw, 46px);
   font-weight: 600;
   color: #fff;
   letter-spacing: 0.04em;
@@ -4195,7 +4195,7 @@ input, textarea, select { font-family: inherit; }
 
 .kestrel-bestsellers__subtitle {
   font-family: var(--font-body);
-  font-size: 18px;
+  font-size: 17px;
   color: rgba(255,255,255,0.6);
   font-weight: 400;
 }
@@ -4358,14 +4358,14 @@ input, textarea, select { font-family: inherit; }
     gap: 14px;
   }
   .kestrel-bestsellers__title {
-    font-size: 28px;
+    font-size: 26px;
   }
   .kestrel-bestsellers__subtitle {
-    font-size: 15px;
+    font-size: 14px;
   }
   .kestrel-bestsellers__stars svg {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
   }
   .kestrel-bestsellers__name {
     font-size: 13px;
