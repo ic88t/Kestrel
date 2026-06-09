@@ -1880,22 +1880,12 @@ input, textarea, select { font-family: inherit; }
   overflow: hidden;
   border-radius: 14px;
   border: 1px solid var(--color-border);
-  transition: border-color 0.35s;
-}
-
-.kestrel-product__main-image:hover {
-  border-color: var(--color-border-hover);
 }
 
 .kestrel-product__main-image img {
-  width: 75%;
-  height: 75%;
-  object-fit: contain;
-  transition: transform 0.55s var(--ease-out);
-}
-
-.kestrel-product__main-image:hover img {
-  transform: scale(1.03);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .kestrel-product__thumbs {
@@ -1918,21 +1908,17 @@ input, textarea, select { font-family: inherit; }
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.3s var(--ease-out);
+  overflow: hidden;
 }
 
-.kestrel-product__thumb.is-active,
-.kestrel-product__thumb:hover {
+.kestrel-product__thumb.is-active {
   border-color: var(--color-accent);
 }
 
-.kestrel-product__thumb:active {
-  transform: scale(0.96);
-}
-
 .kestrel-product__thumb img {
-  width: 70%; height: 70%;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .kestrel-product__info {
