@@ -1,0 +1,51 @@
+{%- assign card_images = "sh1.png,sh-plus.png,serum-1.jpg" | split: "," -%}
+
+<section class="kestrel-system">
+  <div class="page-width">
+    <div class="kestrel-system__header">
+      <h2 class="kestrel-system__title">Discover your system</h2>
+      <div class="kestrel-system__actions">
+        <a href="/collections/all" class="kestrel-system__btn">Shop Men</a>
+        <a href="/collections/all" class="kestrel-system__btn">Shop Women</a>
+      </div>
+    </div>
+    <div class="kestrel-system__grid">
+      <div class="kestrel-system__card">
+        <h3 class="kestrel-system__card-title">Bio-Pilixin® Activation Serum</h3>
+        <p class="kestrel-system__card-desc">Helps promote visibly reduced shedding as early as 45 days.</p>
+        <div class="kestrel-system__card-image">
+          <img src="{{ card_images[0] | asset_url }}" alt="" width="300" height="300">
+        </div>
+        <div class="kestrel-system__card-actions">
+          <a href="/collections/all" class="kestrel-system__card-btn kestrel-system__card-btn--primary">Shop Men</a>
+          <a href="/collections/all" class="kestrel-system__card-btn kestrel-system__card-btn--primary">Shop Women</a>
+        </div>
+        <p class="kestrel-system__card-price">Starting at $49/month</p>
+      </div>
+      <div class="kestrel-system__card">
+        <span class="kestrel-system__card-badge">New</span>
+        <h3 class="kestrel-system__card-title">Hairline Booster</h3>
+        <p class="kestrel-system__card-desc">Catch receding hairlines early with precision targeting.</p>
+        <div class="kestrel-system__card-image">
+          <img src="{{ card_images[1] | asset_url }}" alt="" width="300" height="300">
+        </div>
+        <div class="kestrel-system__card-actions">
+          <a href="/collections/all" class="kestrel-system__card-btn kestrel-system__card-btn--primary">Shop Now</a>
+        </div>
+        <p class="kestrel-system__card-price">Starting at $35/month</p>
+      </div>
+      <div class="kestrel-system__card">
+        <h3 class="kestrel-system__card-title">Hair Growth Routine</h3>
+        <p class="kestrel-system__card-desc">Support long-term growth & strength with complete system.</p>
+        <div class="kestrel-system__card-image">
+          <img src="{{ card_images[2] | asset_url }}" alt="" width="300" height="300">
+        </div>
+        <div class="kestrel-system__card-actions">
+          <a href="/collections/all" class="kestrel-system__card-btn kestrel-system__card-btn--primary">Shop Men</a>
+          <a href="/collections/all" class="kestrel-system__card-btn kestrel-system__card-btn--primary">Shop Women</a>
+        </div>
+        <p class="kestrel-system__card-price">Starting at $89/month</p>
+      </div>
+    </div>
+  </div>
+</section>

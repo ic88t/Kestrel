@@ -1,57 +1,43 @@
 <section class="kestrel-hero">
-  <div class="kestrel-hero__media">
-    {%- if section.settings.video_url != blank -%}
-      <video autoplay muted loop playsinline poster="{{ section.settings.image | image_url: width: 2000 }}">
-        <source src="{{ section.settings.video_url }}" type="video/mp4">
-      </video>
-    {%- elsif section.settings.image != blank -%}
-      <img src="{{ section.settings.image | image_url: width: 2000 }}"
-           alt="{{ section.settings.image.alt | escape }}"
-           width="2000" height="1333"
-           loading="eager">
-    {%- else -%}
-      <img src="{{ 'hero-dark.jpg' | asset_url }}" alt="" width="2000" height="1333" loading="eager">
-    {%- endif -%}
-  </div>
-  <div class="kestrel-hero__overlay"></div>
-  <div class="kestrel-hero__content">
-    {%- if section.settings.eyebrow != blank -%}
-      <p class="kestrel-hero__eyebrow">{{ section.settings.eyebrow }}</p>
-    {%- endif -%}
-    <h1 class="kestrel-hero__title">{{ section.settings.title | default: "Hair growth the natural way" }}</h1>
-    {%- if section.settings.button_label != blank -%}
-      <a href="{{ section.settings.button_link }}" class="kestrel-hero__btn">
-        {{ section.settings.button_label }}
-        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-        </svg>
-      </a>
-    {%- endif -%}
+  <div class="page-width kestrel-hero__grid">
+    <div class="kestrel-hero__content">
+      <h1 class="kestrel-hero__title">Hair growth the natural way</h1>
+      <p class="kestrel-hero__subtitle">50,000+ users trust our clinically tested formulation to help reduce shedding and support growth.</p>
+      <div class="kestrel-hero__actions">
+        <a href="/collections/all" class="kestrel-hero__btn kestrel-hero__btn--primary">
+          Shop Men
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+        </a>
+        <a href="/collections/all" class="kestrel-hero__btn kestrel-hero__btn--secondary">
+          Shop Women
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="kestrel-hero__media">
+      {%- if section.settings.image != blank -%}
+        <img src="{{ section.settings.image | image_url: width: 1000 }}" alt="{{ section.settings.image.alt | escape }}" width="1000" height="1000" loading="eager">
+      {%- else -%}
+        <img src="{{ 'sh1.png' | asset_url }}" alt="" width="600" height="800" loading="eager">
+      {%- endif -%}
+      <div class="kestrel-hero__card">
+        <div class="kestrel-hero__card-thumb">
+          <img src="{{ 'nd1.png' | asset_url }}" alt="" width="40" height="40">
+        </div>
+        <div>
+          <p class="kestrel-hero__card-title">Bio-Pilixin® Hairline Booster</p>
+          <p class="kestrel-hero__card-meta">Clinically Tested | Precision Delivery</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
-
-{%- if section.settings.show_cat_tabs -%}
-<div class="kestrel-cat-tabs">
-  <div class="page-width kestrel-cat-tabs__inner">
-    <a href="/collections/all" class="is-active">Best Sellers</a>
-    <a href="/collections/hair-loss">Hair Loss</a>
-    <a href="/collections/skincare">Skin Care</a>
-    <a href="/collections/systems">Systems</a>
-  </div>
-</div>
-{%- endif -%}
 
 {% schema %}
 {
   "name": "Hero",
   "settings": [
-    { "type": "image_picker", "id": "image", "label": "Hero image" },
-    { "type": "url", "id": "video_url", "label": "Video URL (MP4)" },
-    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Now Available" },
-    { "type": "text", "id": "title", "label": "Title", "default": "FS1 — Crushed Diamond Face Scrub" },
-    { "type": "text", "id": "button_label", "label": "Button label", "default": "Shop Now" },
-    { "type": "url", "id": "button_link", "label": "Button link" },
-    { "type": "checkbox", "id": "show_cat_tabs", "label": "Show category tabs", "default": true }
+    { "type": "image_picker", "id": "image", "label": "Hero product image" }
   ],
   "presets": [{ "name": "Hero" }]
 }

@@ -4,10 +4,53 @@
       "type": "hero",
       "settings": {}
     },
-    "featured-collection": {
-      "type": "featured-collection",
+    "review-marquee": {
+      "type": "review-marquee",
+      "settings": {}
+    },
+    "system-cards": {
+      "type": "system-cards",
+      "settings": {}
+    },
+    "results-ba": {
+      "type": "results-ba",
+      "settings": {}
+    },
+    "clinical-stats": {
+      "type": "clinical-stats",
+      "settings": {}
+    },
+    "media-strip": {
+      "type": "media-strip",
+      "settings": {}
+    },
+    "doctor-quote": {
+      "type": "doctor-quote",
+      "settings": {}
+    },
+    "science-section": {
+      "type": "science-section",
+      "settings": {}
+    },
+    "timeline": {
+      "type": "timeline",
+      "settings": {}
+    },
+    "articles": {
+      "type": "articles",
       "settings": {}
     }
   },
-  "order": ["hero", "featured-collection"]
+  "order": [
+    "hero",
+    "review-marquee",
+    "system-cards",
+    "results-ba",
+    "clinical-stats",
+    "media-strip",
+    "doctor-quote",
+    "science-section",
+    "timeline",
+    "articles"
+  ]
 }
