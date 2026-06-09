@@ -139,14 +139,14 @@ input, textarea, select { font-family: inherit; }
 
 /* ========== TRUST BAR ========== */
 .kestrel-trustbar {
-  background: var(--color-bg-elevated);
-  color: var(--color-text-secondary);
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 0.12em;
+  background: #0C0C0E;
+  color: rgba(255,255,255,0.7);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   overflow: hidden;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid #1A1A1D;
 }
 
 .kestrel-trustbar__track {
@@ -175,8 +175,8 @@ input, textarea, select { font-family: inherit; }
 }
 
 .kestrel-trustbar__item svg {
-  color: var(--color-accent);
-  opacity: 0.6;
+  color: var(--color-star);
+  opacity: 1;
 }
 
 /* ========== HEADER ========== */
@@ -241,9 +241,9 @@ input, textarea, select { font-family: inherit; }
 
 .kestrel-header__logo {
   font-family: var(--font-heading);
-  font-size: 15px;
-  font-weight: 600;
-  letter-spacing: 0.3em;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--color-ink);
   position: absolute;
@@ -252,7 +252,7 @@ input, textarea, select { font-family: inherit; }
 }
 
 @media (max-width: 1023px) {
-  .kestrel-header__logo { position: static; transform: none; font-size: 14px; }
+  .kestrel-header__logo { position: static; transform: none; font-size: 18px; }
 }
 
 .kestrel-header__actions {
@@ -640,8 +640,8 @@ input, textarea, select { font-family: inherit; }
 
 /* ========== REVIEW MARQUEE ========== */
 .kestrel-marquee {
-  background: var(--color-bg-elevated);
-  border-bottom: 1px solid var(--color-border);
+  background: #0C0C0E;
+  border-bottom: 1px solid #1A1A1D;
   overflow: hidden;
   padding: 18px 0;
 }
@@ -669,12 +669,12 @@ input, textarea, select { font-family: inherit; }
   gap: 12px;
   flex-shrink: 0;
   font-size: 13px;
-  color: var(--color-text-secondary);
+  color: rgba(255,255,255,0.6);
   transition: color 0.2s;
 }
 
 .kestrel-marquee__item:hover {
-  color: var(--color-text);
+  color: rgba(255,255,255,0.9);
 }
 
 .kestrel-marquee__stars {

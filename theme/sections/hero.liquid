@@ -1,27 +1,47 @@
 <section class="kestrel-hero">
   <div class="page-width kestrel-hero__grid">
     <div class="kestrel-hero__content">
-      <p class="kestrel-hero__eyebrow animate animate--fade-up">Clinically Tested Hair Growth</p>
-      <h1 class="kestrel-hero__title animate animate--fade-up animate-delay-1">Hair growth the natural way</h1>
-      <p class="kestrel-hero__subtitle animate animate--fade-up animate-delay-2">50,000+ users trust our clinically tested formulation to help reduce shedding and support growth.</p>
-      <div class="kestrel-hero__actions animate animate--fade-up animate-delay-3">
-        <a href="/collections/all" class="kestrel-hero__btn kestrel-hero__btn--primary">
-          Shop Men
-          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
-        </a>
-        <a href="/collections/all" class="kestrel-hero__btn kestrel-hero__btn--secondary">
-          Shop Women
-          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
-        </a>
+      <h1 class="kestrel-hero__title animate animate--fade-up">
+        <span>Hair Growth,</span>
+        <span>Real Results</span>
+      </h1>
+      <p class="kestrel-hero__subtitle animate animate--fade-up animate-delay-1">The Bio-Pilixin® system targets the root cause of hair loss — so you can stop worrying about your hairline and start living with confidence.</p>
+
+      <div class="hero-checks animate animate--fade-up animate-delay-2">
+        <div class="hero-check">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+          Visibly reduced shedding
+        </div>
+        <div class="hero-check">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+          Healthier, stronger strands
+        </div>
+        <div class="hero-check">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+          Clinically tested formula
+        </div>
+        <div class="hero-check">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+          Feel confident, every day
+        </div>
+      </div>
+
+      <div class="hero-cta animate animate--fade-up animate-delay-3">
+        <a href="/collections/all" class="hero-cta__btn">Save $30 on The King Set</a>
+      </div>
+
+      <div class="kestrel-hero__trust animate animate--fade animate-delay-4">
+        <span class="kestrel-hero__stars">★★★★★</span>
+        <span class="kestrel-hero__trust-text">Trusted by 50,000+ men</span>
       </div>
     </div>
-    <div class="kestrel-hero__media animate animate--scale animate-delay-2">
+    <div class="kestrel-hero__media animate animate--scale animate-delay-1">
       {%- if section.settings.image != blank -%}
         <img src="{{ section.settings.image | image_url: width: 1000 }}" alt="{{ section.settings.image.alt | escape }}" width="1000" height="1000" loading="eager">
       {%- else -%}
         <img src="{{ 'sh1.png' | asset_url }}" alt="" width="600" height="800" loading="eager">
       {%- endif -%}
-      <div class="kestrel-hero__card animate animate--fade-up animate-delay-4">
+      <div class="kestrel-hero__card animate animate--fade-up animate-delay-3">
         <div class="kestrel-hero__card-thumb">
           <img src="{{ 'nd1.png' | asset_url }}" alt="" width="40" height="40">
         </div>
@@ -33,6 +53,65 @@
     </div>
   </div>
 </section>
+
+<style>
+.kestrel-hero__content {
+  text-align: center;
+}
+
+.hero-checks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 28px;
+  margin: 0 auto 32px;
+  max-width: 420px;
+  text-align: left;
+}
+
+@media (max-width: 520px) {
+  .hero-checks {
+    grid-template-columns: 1fr;
+    max-width: 260px;
+  }
+}
+
+.hero-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.hero-check svg {
+  color: var(--color-success);
+  flex-shrink: 0;
+}
+
+.hero-cta {
+  margin-bottom: 20px;
+}
+
+.hero-cta__btn {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 18px 40px;
+  border-radius: 4px;
+  color: var(--color-white);
+  background: #6B8E5E;
+  transition: all 0.35s var(--ease-out);
+}
+
+.hero-cta__btn:hover {
+  background: #5A7D4E;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(107,142,94,0.25);
+}
+</style>
 
 {% schema %}
 {
