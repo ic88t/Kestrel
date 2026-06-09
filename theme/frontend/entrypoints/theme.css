@@ -4031,24 +4031,24 @@ input, textarea, select { font-family: inherit; }
    ═══════════════════════════════════════════════════════════════ */
 
 .kestrel-testimonials {
-  padding: 80px 0;
-  background: #2A2A2A;
+  padding: 100px 0;
+  background: #242424;
   color: #FFFFFF;
 }
 
 .kestrel-testimonials__title {
   font-family: var(--font-heading);
-  font-size: 28px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 56px;
   color: #FFFFFF;
 }
 
 @media (min-width: 768px) {
-  .kestrel-testimonials__title { font-size: 36px; }
+  .kestrel-testimonials__title { font-size: 42px; }
 }
 
 .kestrel-testimonials__grid {
@@ -4072,10 +4072,10 @@ input, textarea, select { font-family: inherit; }
 }
 
 .kestrel-testimonial-card {
-  background: #333333;
-  border: 1px solid #444444;
-  border-radius: 14px;
-  padding: 28px 24px;
+  background: #2E2E2E;
+  border: 1.5px solid #404040;
+  border-radius: 16px;
+  padding: 32px 24px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -4086,15 +4086,16 @@ input, textarea, select { font-family: inherit; }
 .kestrel-testimonial-card:hover {
   border-color: #555555;
   transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.25);
 }
 
 .kestrel-testimonial-card__avatar {
-  width: 72px;
-  height: 72px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   overflow: hidden;
-  margin-bottom: 14px;
-  border: 2px solid #555555;
+  margin-bottom: 16px;
+  border: 2.5px solid #555555;
 }
 
 .kestrel-testimonial-card__avatar img {
@@ -4105,46 +4106,53 @@ input, textarea, select { font-family: inherit; }
 
 .kestrel-testimonial-card__stars {
   display: flex;
-  gap: 3px;
-  color: #D4A853;
-  margin-bottom: 14px;
+  gap: 4px;
+  color: #E5B84C;
+  margin-bottom: 16px;
+}
+
+.kestrel-testimonial-card__stars svg {
+  width: 18px;
+  height: 18px;
 }
 
 .kestrel-testimonial-card__headline {
   font-family: var(--font-heading);
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #FFFFFF;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .kestrel-testimonial-card__quote {
   font-size: 14px;
-  line-height: 1.65;
-  color: #CCCCCC;
-  margin-bottom: 18px;
+  line-height: 1.7;
+  color: #E0E0E0;
+  margin-bottom: 20px;
   flex: 1;
 }
 
 .kestrel-testimonial-card__author {
-  font-size: 13px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 600;
   color: #FFFFFF;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
 }
 
 .kestrel-testimonial-card__verified {
-  font-weight: 700;
+  font-weight: 800;
   text-transform: uppercase;
   color: #FFFFFF;
 }
 
 .kestrel-testimonial-card__meta {
-  font-size: 12px;
-  color: #AAAAAA;
-  margin-bottom: 2px;
+  font-size: 13px;
+  color: #BBBBBB;
+  margin-bottom: 3px;
+  font-weight: 500;
 }
 
 /* ═══════════════════════════════════════════════════════════════
@@ -4165,24 +4173,29 @@ input, textarea, select { font-family: inherit; }
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3px;
-  margin-bottom: 12px;
+  gap: 4px;
+  margin-bottom: 16px;
   color: var(--color-star);
+}
+
+.kestrel-bestsellers__stars svg {
+  width: 24px;
+  height: 24px;
 }
 
 .kestrel-bestsellers__title {
   font-family: var(--font-display);
-  font-size: clamp(28px, 4vw, 40px);
+  font-size: clamp(36px, 5vw, 52px);
   font-weight: 600;
   color: #fff;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 
 .kestrel-bestsellers__subtitle {
   font-family: var(--font-body);
-  font-size: 16px;
+  font-size: 18px;
   color: rgba(255,255,255,0.6);
   font-weight: 400;
 }
@@ -4345,10 +4358,14 @@ input, textarea, select { font-family: inherit; }
     gap: 14px;
   }
   .kestrel-bestsellers__title {
-    font-size: 24px;
+    font-size: 28px;
   }
   .kestrel-bestsellers__subtitle {
-    font-size: 14px;
+    font-size: 15px;
+  }
+  .kestrel-bestsellers__stars svg {
+    width: 20px;
+    height: 20px;
   }
   .kestrel-bestsellers__name {
     font-size: 13px;
