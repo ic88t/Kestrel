@@ -5,7 +5,7 @@
         {%- if product.featured_image -%}
           <img src="{{ product.featured_image | image_url: width: 800 }}" alt="" width="800" height="800" loading="lazy">
         {%- else -%}
-          <div style="width:70%;height:70%;background:linear-gradient(135deg,#ddd,#bbb);border-radius:8px;"></div>
+          <img src="{{ 'bottle-2.jpg' | asset_url }}" alt="" width="800" height="800" loading="lazy">
         {%- endif -%}
       </div>
       <div class="kestrel-product-detail__content">

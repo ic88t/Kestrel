@@ -1,3 +1,5 @@
+{%- assign images = "patricks/nd1.png,patricks/sh-plus.png,patricks/uv2.png,patricks/serum-1.jpg" | split: "," -%}
+
 <section class="kestrel-related">
   <div class="page-width">
     <div class="kestrel-related__tabs">
@@ -8,9 +10,10 @@
     </div>
     <div class="kestrel-related__grid">
       {%- for i in (1..4) -%}
+        {%- assign img_index = forloop.index0 | modulo: 4 -%}
         <div class="kestrel-related__card">
           <div class="kestrel-related__image">
-            <div style="width:70%;height:70%;background:linear-gradient(135deg,#ddd,#bbb);border-radius:4px;"></div>
+            <img src="{{ images[img_index] | default: images[0] | asset_url }}" alt="" width="400" height="400" loading="lazy">
           </div>
           <p class="kestrel-related__name">ND1 | Natural Deodorant</p>
           <p class="kestrel-related__price">$38.00</p>

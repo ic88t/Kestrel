@@ -8,7 +8,7 @@
             <img data-product-main-image src="{{ product.featured_image | image_url: width: 1200 }}"
                  alt="{{ product.featured_image.alt | escape }}" width="800" height="800" loading="eager">
           {%- else -%}
-            <div style="width:75%;height:75%;background:linear-gradient(135deg,#ddd,#bbb);border-radius:8px;"></div>
+            <img data-product-main-image src="{{ 'sh1.png' | asset_url }}" alt="" width="800" height="800" loading="eager">
           {%- endif -%}
         </div>
         <div class="kestrel-product__thumbs">
@@ -19,7 +19,13 @@
             </div>
           {%- else -%}
             <div class="kestrel-product__thumb is-active" data-product-thumb>
-              <div style="width:70%;height:70%;background:linear-gradient(135deg,#ddd,#bbb);border-radius:4px;"></div>
+              <img src="{{ 'sh1.png' | asset_url }}" data-src="{{ 'sh1.png' | asset_url }}" alt="" width="200" height="200">
+            </div>
+            <div class="kestrel-product__thumb" data-product-thumb>
+              <img src="{{ 'bottle-1.jpg' | asset_url }}" data-src="{{ 'bottle-1.jpg' | asset_url }}" alt="" width="200" height="200">
+            </div>
+            <div class="kestrel-product__thumb" data-product-thumb>
+              <img src="{{ 'serum-1.jpg' | asset_url }}" data-src="{{ 'serum-1.jpg' | asset_url }}" alt="" width="200" height="200">
             </div>
           {%- endfor -%}
         </div>
@@ -27,6 +33,8 @@
 
       <!-- Product Info -->
       <div class="kestrel-product__info">
+        <p class="kestrel-product__breadcrumbs"><a href="/collections/all">Shop</a> <span style="color:var(--color-text-muted);"> / </span> {{ product.title | default: "SH1 | Daily Thickening Shampoo" }}</p>
+
         <h1 class="kestrel-product__title">{{ product.title | default: "SH1 | Daily Thickening Shampoo" }}</h1>
 
         <div class="kestrel-product__reviews-summary">
@@ -43,7 +51,6 @@
         {%- form 'product', product, id: 'product-form', novalidate: 'novalidate' -%}
           <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
 
-          <!-- Purchase Options -->
           <div class="kestrel-product__options">
             <div class="kestrel-product__option is-selected">
               <div class="kestrel-product__option-left">
@@ -54,7 +61,7 @@
                 </div>
               </div>
               <div class="kestrel-product__option-price">
-                <span style="text-decoration:line-through;color:var(--color-text-muted);">{{ product.compare_at_price | default: 4900 | money }}</span>
+                <span style="text-decoration:line-through;color:var(--color-text-muted);">{{ product.compare_at_price | default: 4900 | money }}</span><br>
                 {{ product.price | default: 4410 | money }}
                 <span class="save">Save 10%</span>
               </div>
@@ -70,7 +77,6 @@
             </div>
           </div>
 
-          <!-- Quantity + ATC -->
           <div class="kestrel-product__actions">
             <div class="kestrel-product__qty">
               <button type="button" data-qty-minus>−</button>
@@ -118,10 +124,10 @@
             </button>
             <div class="kestrel-accordion__content">
               <div class="kestrel-accordion__body">
-                <p><strong>Redensyl®</strong> — Targets stem cells to reactivate hair growth.</p>
-                <p><strong>Procapil®</strong> — Strengthens follicles and improves anchoring.</p>
-                <p><strong>Rosemary Extract</strong> — Natural DHT modulator with clinical backing.</p>
-                <p><strong>Biotin Peptide</strong> — Supports keratin infrastructure.</p>
+                <p><strong>Redensyl®</strong>Targets stem cells to reactivate hair growth.</p>
+                <p><strong>Procapil®</strong>Strengthens follicles and improves anchoring.</p>
+                <p><strong>Rosemary Extract</strong>Natural DHT modulator with clinical backing.</p>
+                <p><strong>Biotin Peptide</strong>Supports keratin infrastructure.</p>
               </div>
             </div>
           </div>
@@ -153,21 +159,45 @@
         <div class="kestrel-wtw">
           <p class="kestrel-wtw__title">Works Well With</p>
           <div class="kestrel-wtw__list">
-            {%- for i in (1..3) -%}
-              <div class="kestrel-wtw__item">
-                <div class="kestrel-wtw__thumb">
-                  <div style="width:80%;height:80%;background:linear-gradient(135deg,#ddd,#bbb);border-radius:4px;"></div>
-                </div>
-                <div class="kestrel-wtw__info">
-                  <p class="kestrel-wtw__name">CD1 | Stimulating Conditioner</p>
-                  <span class="kestrel-wtw__stars">
-                    {%- for i in (1..5) -%}<svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>{%- endfor -%}
-                  </span>
-                  <p class="kestrel-wtw__price">$39.00</p>
-                </div>
-                <button class="kestrel-wtw__add">Add</button>
+            <div class="kestrel-wtw__item">
+              <div class="kestrel-wtw__thumb">
+                <img src="{{ 'nd1.png' | asset_url }}" alt="" width="64" height="64">
               </div>
-            {%- endfor -%}
+              <div class="kestrel-wtw__info">
+                <p class="kestrel-wtw__name">CD1 | Stimulating Conditioner</p>
+                <span class="kestrel-wtw__stars">
+                  {%- for i in (1..5) -%}<svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>{%- endfor -%}
+                </span>
+                <p class="kestrel-wtw__price">$39.00</p>
+              </div>
+              <button class="kestrel-wtw__add">Add</button>
+            </div>
+            <div class="kestrel-wtw__item">
+              <div class="kestrel-wtw__thumb">
+                <img src="{{ 'sh-plus.png' | asset_url }}" alt="" width="64" height="64">
+              </div>
+              <div class="kestrel-wtw__info">
+                <p class="kestrel-wtw__name">SH Plus | Ultra Thickening</p>
+                <span class="kestrel-wtw__stars">
+                  {%- for i in (1..5) -%}<svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>{%- endfor -%}
+                </span>
+                <p class="kestrel-wtw__price">$59.00</p>
+              </div>
+              <button class="kestrel-wtw__add">Add</button>
+            </div>
+            <div class="kestrel-wtw__item">
+              <div class="kestrel-wtw__thumb">
+                <img src="{{ 'uv2.png' | asset_url }}" alt="" width="64" height="64">
+              </div>
+              <div class="kestrel-wtw__info">
+                <p class="kestrel-wtw__name">Scalp Oil | Pre-Wash Treatment</p>
+                <span class="kestrel-wtw__stars">
+                  {%- for i in (1..5) -%}<svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>{%- endfor -%}
+                </span>
+                <p class="kestrel-wtw__price">$35.00</p>
+              </div>
+              <button class="kestrel-wtw__add">Add</button>
+            </div>
           </div>
         </div>
       </div>
