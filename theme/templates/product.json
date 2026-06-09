@@ -4,6 +4,10 @@
       "type": "main-product",
       "settings": {}
     },
+    "product-trust-bar": {
+      "type": "product-trust-bar",
+      "settings": {}
+    },
     "product-testimonials": {
       "type": "product-testimonials",
       "settings": {}
@@ -13,5 +17,5 @@
       "settings": {}
     }
   },
-  "order": ["main-product", "product-testimonials", "product-science"]
+  "order": ["main-product", "product-trust-bar", "product-testimonials", "product-science"]
 }

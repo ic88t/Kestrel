@@ -4160,7 +4160,7 @@ input, textarea, select { font-family: inherit; }
    ═══════════════════════════════════════════════════════════════ */
 
 .kestrel-bestsellers {
-  background: #0C0C0E;
+  background: var(--color-bg);
   padding: 80px 0 60px;
 }
 
@@ -4187,7 +4187,7 @@ input, textarea, select { font-family: inherit; }
   font-family: var(--font-display);
   font-size: clamp(32px, 4.5vw, 46px);
   font-weight: 600;
-  color: #fff;
+  color: var(--color-ink);
   letter-spacing: 0.04em;
   text-transform: uppercase;
   margin-bottom: 14px;
@@ -4196,7 +4196,7 @@ input, textarea, select { font-family: inherit; }
 .kestrel-bestsellers__subtitle {
   font-family: var(--font-body);
   font-size: 17px;
-  color: rgba(255,255,255,0.6);
+  color: var(--color-text-secondary);
   font-weight: 400;
 }
 
@@ -4228,7 +4228,6 @@ input, textarea, select { font-family: inherit; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  mix-blend-mode: multiply;
 }
 
 .kestrel-bestsellers__info {
@@ -4249,7 +4248,7 @@ input, textarea, select { font-family: inherit; }
 .kestrel-bestsellers__rating-count {
   font-family: var(--font-body);
   font-size: 12px;
-  color: rgba(255,255,255,0.5);
+  color: var(--color-text-muted);
   margin-left: 4px;
 }
 
@@ -4257,7 +4256,7 @@ input, textarea, select { font-family: inherit; }
   font-family: var(--font-body);
   font-size: 15px;
   font-weight: 600;
-  color: #fff;
+  color: var(--color-ink);
   line-height: 1.35;
   min-height: 40px;
   display: flex;
@@ -4287,14 +4286,14 @@ input, textarea, select { font-family: inherit; }
   font-family: var(--font-body);
   font-size: 15px;
   font-weight: 700;
-  color: #fff;
+  color: var(--color-ink);
 }
 
 .kestrel-bestsellers__price-compare {
   font-family: var(--font-body);
   font-size: 13px;
   font-weight: 400;
-  color: rgba(255,255,255,0.4);
+  color: var(--color-text-muted);
   text-decoration: line-through;
 }
 
@@ -4303,7 +4302,7 @@ input, textarea, select { font-family: inherit; }
   width: 100%;
   max-width: 220px;
   padding: 13px 20px;
-  background: #6B7B8D;
+  background: var(--color-accent);
   color: #fff;
   font-family: var(--font-body);
   font-size: 12px;
@@ -4318,7 +4317,7 @@ input, textarea, select { font-family: inherit; }
 }
 
 .kestrel-bestsellers__btn:hover {
-  background: #556673;
+  background: #000;
 }
 
 .kestrel-bestsellers__footer {
@@ -4330,7 +4329,7 @@ input, textarea, select { font-family: inherit; }
   font-family: var(--font-body);
   font-size: 13px;
   font-weight: 500;
-  color: rgba(255,255,255,0.6);
+  color: var(--color-text-secondary);
   text-decoration: underline;
   text-underline-offset: 3px;
   letter-spacing: 0.06em;
@@ -4339,7 +4338,7 @@ input, textarea, select { font-family: inherit; }
 }
 
 .kestrel-bestsellers__shopall:hover {
-  color: #fff;
+  color: var(--color-ink);
 }
 
 @media (max-width: 991px) {
@@ -4380,4 +4379,78 @@ input, textarea, select { font-family: inherit; }
     border-radius: 8px;
     margin-bottom: 12px;
   }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   PRODUCT TRUST BAR — Slate stats bar
+   ═══════════════════════════════════════════════════════════════ */
+
+.kestrel-trust-bar {
+  padding: 48px 0;
+  background: #5A6E7A;
+  color: #FFFFFF;
+}
+
+.kestrel-trust-bar__grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .kestrel-trust-bar__grid {
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+}
+
+.kestrel-trust-bar__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-width: 140px;
+  padding: 0 20px;
+}
+
+@media (min-width: 768px) {
+  .kestrel-trust-bar__item {
+    padding: 0 40px;
+    min-width: 180px;
+  }
+}
+
+.kestrel-trust-bar__num {
+  font-family: var(--font-heading);
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+@media (min-width: 768px) {
+  .kestrel-trust-bar__num { font-size: 48px; }
+}
+
+.kestrel-trust-bar__label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.85);
+}
+
+.kestrel-trust-bar__divider {
+  width: 1px;
+  height: 60px;
+  background: rgba(255,255,255,0.35);
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .kestrel-trust-bar__divider { display: block; }
 }
