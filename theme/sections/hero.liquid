@@ -1,9 +1,10 @@
 <section class="kestrel-hero">
   <div class="page-width kestrel-hero__grid">
     <div class="kestrel-hero__content">
-      <h1 class="kestrel-hero__title">Hair growth the natural way</h1>
-      <p class="kestrel-hero__subtitle">50,000+ users trust our clinically tested formulation to help reduce shedding and support growth.</p>
-      <div class="kestrel-hero__actions">
+      <p class="kestrel-hero__eyebrow animate animate--fade-up">Clinically Tested Hair Growth</p>
+      <h1 class="kestrel-hero__title animate animate--fade-up animate-delay-1">Hair growth the natural way</h1>
+      <p class="kestrel-hero__subtitle animate animate--fade-up animate-delay-2">50,000+ users trust our clinically tested formulation to help reduce shedding and support growth.</p>
+      <div class="kestrel-hero__actions animate animate--fade-up animate-delay-3">
         <a href="/collections/all" class="kestrel-hero__btn kestrel-hero__btn--primary">
           Shop Men
           <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
@@ -14,13 +15,13 @@
         </a>
       </div>
     </div>
-    <div class="kestrel-hero__media">
+    <div class="kestrel-hero__media animate animate--scale animate-delay-2">
       {%- if section.settings.image != blank -%}
         <img src="{{ section.settings.image | image_url: width: 1000 }}" alt="{{ section.settings.image.alt | escape }}" width="1000" height="1000" loading="eager">
       {%- else -%}
         <img src="{{ 'sh1.png' | asset_url }}" alt="" width="600" height="800" loading="eager">
       {%- endif -%}
-      <div class="kestrel-hero__card">
+      <div class="kestrel-hero__card animate animate--fade-up animate-delay-4">
         <div class="kestrel-hero__card-thumb">
           <img src="{{ 'nd1.png' | asset_url }}" alt="" width="40" height="40">
         </div>
