@@ -1,213 +1,51 @@
+{%- assign card_images = "sh1.png,sh-plus.png,serum-1.jpg" | split: "," -%}
+
 <section class="kestrel-system">
   <div class="page-width">
-    <div class="kestrel-story__grid">
-      <div class="kestrel-story__media animate animate--slide-left">
-        <div class="kestrel-story__images">
-          <div class="kestrel-story__image">
-            <img src="{{ 'bottle-3.jpg' | asset_url }}" alt="Before hair treatment" width="400" height="500">
-            <span class="kestrel-story__image-label kestrel-story__image-label--before">Before</span>
-          </div>
-          <div class="kestrel-story__image">
-            <img src="{{ 'bottle-2.jpg' | asset_url }}" alt="After 5 months of treatment" width="400" height="500">
-            <span class="kestrel-story__image-label kestrel-story__image-label--after">After</span>
-          </div>
-        </div>
-        <p class="kestrel-story__caption">Marcus — 5 months with Kestrel</p>
+    <div class="kestrel-system__header">
+      <h2 class="kestrel-system__title animate animate--fade-up">Discover your system</h2>
+      <div class="kestrel-system__actions animate animate--fade-up animate-delay-1">
+        <a href="/collections/all" class="kestrel-system__btn">Shop Men</a>
+        <a href="/collections/all" class="kestrel-system__btn">Shop Women</a>
       </div>
-      <div class="kestrel-story__content animate animate--slide-right animate-delay-1">
-        <h2 class="kestrel-story__title">Noticing More Hair in the Shower Drain Than on Your Head?</h2>
-        <div class="kestrel-story__body">
-          <p class="kestrel-story__lead">You've tried it all...</p>
-          <p>—biotin gummies, caffeine shampoos, that one supplement your mate swore by—and still, the mirror tells the same story. A little less density. A slightly wider part. That nagging thought every time you catch your reflection: <em>"Is it getting worse?"</em></p>
-          <p>But it's not just about the hair. It's the way you stop letting people take photos from above. The way you second-guess a fresh cut because your barber can only do so much with what's left. The quiet hit to your confidence that nobody talks about.</p>
-          <p>Here's the truth most brands won't tell you: male pattern hair loss isn't just about genetics. It's about DHT binding to your follicles, slowly choking them until they give up. Most products sit on the surface and do nothing about the root cause.</p>
-          <p>That's why we developed Bio-Pilixin® — a formula that doesn't just mask the problem. It targets the three mechanisms of hair loss at the follicle level: blocking DHT, restoring microcirculation, and extending the growth phase of each strand.</p>
-          <p>No gimmicks. No magic pills. Just clinically tested science that works.</p>
+    </div>
+    <div class="kestrel-system__grid">
+      <div class="kestrel-system__card animate animate--fade-up animate-delay-1">
+        <h3 class="kestrel-system__card-title">Bio-Pilixin® Activation Serum</h3>
+        <p class="kestrel-system__card-desc">Helps promote visibly reduced shedding as early as 45 days.</p>
+        <div class="kestrel-system__card-image">
+          <img src="{{ card_images[0] | asset_url }}" alt="" width="300" height="300" loading="lazy">
         </div>
-        <div class="kestrel-story__cta">
-          <a href="/collections/all" class="kestrel-story__btn">Start Your Routine</a>
-          <span class="kestrel-story__guarantee">150-day money-back guarantee</span>
+        <div class="kestrel-system__card-actions">
+          <a href="/collections/all" class="kestrel-system__card-btn kestrel-system__card-btn--primary">Shop Men</a>
+          <a href="/collections/all" class="kestrel-system__card-btn kestrel-system__card-btn--primary">Shop Women</a>
         </div>
+        <p class="kestrel-system__card-price">Starting at $49/month</p>
+      </div>
+      <div class="kestrel-system__card animate animate--fade-up animate-delay-2">
+        <span class="kestrel-system__card-badge">New</span>
+        <h3 class="kestrel-system__card-title">Hairline Booster</h3>
+        <p class="kestrel-system__card-desc">Catch receding hairlines early with precision targeting.</p>
+        <div class="kestrel-system__card-image">
+          <img src="{{ card_images[1] | asset_url }}" alt="" width="300" height="300" loading="lazy">
+        </div>
+        <div class="kestrel-system__card-actions">
+          <a href="/collections/all" class="kestrel-system__card-btn kestrel-system__card-btn--primary">Shop Now</a>
+        </div>
+        <p class="kestrel-system__card-price">Starting at $35/month</p>
+      </div>
+      <div class="kestrel-system__card animate animate--fade-up animate-delay-3">
+        <h3 class="kestrel-system__card-title">Hair Growth Routine</h3>
+        <p class="kestrel-system__card-desc">Support long-term growth & strength with complete system.</p>
+        <div class="kestrel-system__card-image">
+          <img src="{{ card_images[2] | asset_url }}" alt="" width="300" height="300" loading="lazy">
+        </div>
+        <div class="kestrel-system__card-actions">
+          <a href="/collections/all" class="kestrel-system__card-btn kestrel-system__card-btn--primary">Shop Men</a>
+          <a href="/collections/all" class="kestrel-system__card-btn kestrel-system__card-btn--primary">Shop Women</a>
+        </div>
+        <p class="kestrel-system__card-price">Starting at $89/month</p>
       </div>
     </div>
   </div>
 </section>
-
-<style>
-.kestrel-story__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 56px;
-  align-items: start;
-}
-
-@media (min-width: 1024px) {
-  .kestrel-story__grid {
-    grid-template-columns: 1fr 1.2fr;
-    gap: 88px;
-  }
-}
-
-.kestrel-story__media {
-  position: sticky;
-  top: calc(var(--header-h) + 40px);
-}
-
-@media (max-width: 1023px) {
-  .kestrel-story__media { position: relative; top: auto; }
-}
-
-.kestrel-story__images {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin-bottom: 20px;
-}
-
-.kestrel-story__image {
-  aspect-ratio: 3/4;
-  background: var(--color-bg-elevated);
-  border-radius: 14px;
-  overflow: hidden;
-  position: relative;
-  border: 1px solid var(--color-border);
-  transition: transform 0.5s var(--ease-out);
-}
-
-.kestrel-story__image:hover {
-  transform: scale(1.015);
-}
-
-.kestrel-story__image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.7s var(--ease-out);
-}
-
-.kestrel-story__image:hover img {
-  transform: scale(1.05);
-}
-
-.kestrel-story__image-label {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  padding: 7px 16px;
-  border-radius: 6px;
-}
-
-.kestrel-story__image-label--before {
-  background: var(--color-ink);
-  color: var(--color-white);
-}
-
-.kestrel-story__image-label--after {
-  background: var(--color-star);
-  color: var(--color-white);
-}
-
-.kestrel-story__caption {
-  font-size: 13px;
-  color: var(--color-text-muted);
-  text-align: center;
-  letter-spacing: 0.02em;
-}
-
-.kestrel-story__content {
-  padding-top: 8px;
-}
-
-.kestrel-story__title {
-  font-family: var(--font-display);
-  font-size: 38px;
-  font-weight: 500;
-  line-height: 1.1;
-  letter-spacing: -0.01em;
-  margin-bottom: 36px;
-  color: var(--color-ink);
-}
-
-@media (min-width: 768px) {
-  .kestrel-story__title { font-size: 48px; }
-}
-
-.kestrel-story__body {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin-bottom: 36px;
-}
-
-.kestrel-story__lead {
-  font-size: 16px;
-  font-weight: 500;
-  color: var(--color-text);
-  margin-bottom: -4px;
-}
-
-.kestrel-story__body p {
-  font-size: 15px;
-  line-height: 1.8;
-  color: var(--color-text-secondary);
-  font-weight: 400;
-}
-
-.kestrel-story__body p em {
-  font-style: italic;
-  color: var(--color-text);
-}
-
-.kestrel-story__cta {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  align-items: flex-start;
-}
-
-.kestrel-story__btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 18px 36px;
-  border-radius: 4px;
-  background: var(--color-accent);
-  color: var(--color-white);
-  transition: all 0.4s var(--ease-out);
-  position: relative;
-  overflow: hidden;
-}
-
-.kestrel-story__btn::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
-  transform: translateX(-100%);
-  transition: transform 0.7s var(--ease-out);
-}
-
-.kestrel-story__btn:hover::before {
-  transform: translateX(100%);
-}
-
-.kestrel-story__btn:hover {
-  background: var(--color-accent-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(28,28,30,0.15);
-}
-
-.kestrel-story__guarantee {
-  font-size: 12px;
-  color: var(--color-text-muted);
-  letter-spacing: 0.03em;
-}
-</style>

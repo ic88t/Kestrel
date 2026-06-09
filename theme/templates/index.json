@@ -8,12 +8,16 @@
       "type": "review-marquee",
       "settings": {}
     },
-    "system-cards": {
-      "type": "system-cards",
+    "story-section": {
+      "type": "story-section",
       "settings": {}
     },
     "results-ba": {
       "type": "results-ba",
+      "settings": {}
+    },
+    "system-cards": {
+      "type": "system-cards",
       "settings": {}
     },
     "clinical-stats": {
@@ -44,8 +48,9 @@
   "order": [
     "hero",
     "review-marquee",
-    "system-cards",
+    "story-section",
     "results-ba",
+    "system-cards",
     "clinical-stats",
     "media-strip",
     "doctor-quote",
